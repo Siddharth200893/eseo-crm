@@ -1,0 +1,930 @@
+INFO - 2023-08-21 04:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:22:54 --> Undefined array key "id"
+in APPPATH\Views\admin\all-projects.php on line 37.
+ 1 APPPATH\Views\admin\all-projects.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(262): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:24:45 --> Undefined array key "projects_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(262): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:28:03 --> Undefined array key "projects_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(264): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:28:40 --> Undefined array key "projects_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(264): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:32:44 --> Array to string conversion
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(266): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:33:49 --> Undefined array key "projects_count"
+in APPPATH\Controllers\AdminController.php on line 253.
+ 1 APPPATH\Controllers\AdminController.php(253): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 253)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:37:51 --> Undefined array key "project_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "project_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:40:05 --> Undefined array key "projects_count"
+in APPPATH\Controllers\AdminController.php on line 254.
+ 1 APPPATH\Controllers\AdminController.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 254)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:42:46 --> Undefined array key "project_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "project_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:43:28 --> Undefined array key "project_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "project_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:44:59 --> Undefined array key "projects_count"
+in APPPATH\Views\admin\all-projects.php on line 38.
+ 1 APPPATH\Views\admin\all-projects.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:46:40 --> Undefined variable $projects_count
+in APPPATH\Views\admin\all-projects.php on line 30.
+ 1 APPPATH\Views\admin\all-projects.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $projects_count', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 04:46:56 --> Array to string conversion
+in APPPATH\Views\admin\all-projects.php on line 40.
+ 1 APPPATH\Views\admin\all-projects.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 40)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(267): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 04:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 04:54:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `project...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `project...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `project...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `project...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 04:54:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `projects`.`id`, COUNT(projects.id) AS projects_count, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `projects`.`id`, COUNT(projects.id) AS projects_count, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `projects`.`id`, COUNT(projects.id) AS projects_count, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `projects`.`id`, COUNT(projects.id) AS projects_count, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 04:55:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `project...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `project...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `project...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `project...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 04:55:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 04:56:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 04:56:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` =...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `projects`.`id`, `projects`.`name` as `project_name`, `projects`.`user_id`, `projects`.`created_at`, `projects`.`updated_at`, `guestpost_leads`.`name` as `guestpost_leads_name`, COUNT(guestpost_leads.id) AS guestposts count
+FROM `projects`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`id` = `projects`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(252): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 04:58:04 --> mysqli_sql_exception: Unknown column 'guestpost_leads.id' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(251): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 04:58:04 --> Unknown column 'guestpost_leads.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`
+FROM `projects`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`
+FROM `projects`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`
+FROM `projects`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`
+FROM `projects`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(251): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 04:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:19:33 --> Undefined array key "projects_count"
+in APPPATH\Views\admin\all-projects.php on line 40.
+ 1 APPPATH\Views\admin\all-projects.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "projects_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 40)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(278): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 05:21:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') = '13'' at line 3 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(265): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 05:21:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') = '13'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`
+FROM `guestpost_leads`
+WHERE guestpost_leads.project_id) = \'13\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`
+FROM `guestpost_leads`
+WHERE guestpost_leads.project_id) = \'13\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`
+FROM `guestpost_leads`
+WHERE guestpost_leads.project_id) = \'13\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`
+FROM `guestpost_leads`
+WHERE guestpost_leads.project_id) = :guestpost_leads.project_id):', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(265): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:29:16 --> Undefined array key "guestpost_leads_count"
+in APPPATH\Controllers\AdminController.php on line 269.
+ 1 APPPATH\Controllers\AdminController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "guestpost_leads_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 269)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:29:44 --> Undefined array key "guestpost_leads_count"
+in APPPATH\Controllers\AdminController.php on line 269.
+ 1 APPPATH\Controllers\AdminController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "guestpost_leads_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 269)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:30:00 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 269.
+ 1 APPPATH\Controllers\AdminController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 269)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:30:19 --> Undefined array key "id"
+in APPPATH\Controllers\AdminController.php on line 269.
+ 1 APPPATH\Controllers\AdminController.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Controllers\\AdminController.php', 269)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:37:26 --> Undefined variable $project_count
+in APPPATH\Views\admin\all-projects.php on line 45.
+ 1 APPPATH\Views\admin\all-projects.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project_count', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(279): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:39:02 --> Undefined array key "guestpost_count"
+in APPPATH\Views\admin\all-projects.php on line 46.
+ 1 APPPATH\Views\admin\all-projects.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "guestpost_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(279): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-21 05:41:01 --> Undefined array key "guestpost_count"
+in APPPATH\Views\admin\all-projects.php on line 46.
+ 1 APPPATH\Views\admin\all-projects.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "guestpost_count"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\all-projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/all-projects', [], true)
+ 5 APPPATH\Controllers\AdminController.php(279): view('admin/all-projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->all_projects()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 05:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 05:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 06:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 07:16:12 --> mysqli_sql_exception: Unknown column 'sale.created_at' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(342): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 07:16:12 --> Unknown column 'sale.created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= :DATE(sale.created_at):
+AND DATE(sale.created_at) <= :DATE(sale.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(342): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 07:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 07:16:23 --> mysqli_sql_exception: Unknown column 'sale.created_at' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(342): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 07:16:23 --> Unknown column 'sale.created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= :DATE(sale.created_at):
+AND DATE(sale.created_at) <= :DATE(sale.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(342): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 07:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 07:19:23 --> mysqli_sql_exception: Unknown column 'sale.created_at' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 07:19:23 --> Unknown column 'sale.created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-08-15\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= :DATE(sale.created_at):
+AND DATE(sale.created_at) <= :DATE(sale.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 07:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 07:20:00 --> mysqli_sql_exception: Unknown column 'sale.created_at' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 07:20:00 --> Unknown column 'sale.created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= :DATE(sale.created_at):
+AND DATE(sale.created_at) <= :DATE(sale.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 07:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-21 07:20:47 --> mysqli_sql_exception: Unknown column 'sale.created_at' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-21 07:20:47 --> Unknown column 'sale.created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= \'2023-07-23\'
+AND DATE(sale.created_at) <= \'2023-08-21\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`
+FROM `guestpost_leads`
+JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+WHERE DATE(sale.created_at) >= :DATE(sale.created_at):
+AND DATE(sale.created_at) <= :DATE(sale.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(343): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-21 07:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 07:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 08:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 09:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 10:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:13:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 12:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-21 13:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

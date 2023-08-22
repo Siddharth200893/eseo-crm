@@ -1,0 +1,198 @@
+.copytext_center {
+  text-align: center;
+}
+
+.wrapper_inner {
+  min-height: 83vh;
+}
+
+.copytext_center p {
+  margin: 0;
+}
+
+.table.default_table thead tr th {
+  background: #459dfb;
+  color: #fff;
+  font-weight: 400;
+}
+.table.default_table tbody tr td {
+  background: none;
+  border: none;
+}
+
+.table.default_table tbody tr.Approved td {
+  background: #e4f7dc !important;
+  border: none;
+}
+.table.default_table tbody tr td {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.table.default_table tbody tr td .btn.badge {
+  padding: 8px 13px;
+  display: inline-block;
+  width: 100px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+
+#sidenav a.active {
+  background-color: #04aa6d !important;
+  color: #ffffff !important;
+}
+
+.table.tabledesign thead tr th {
+  background: #459dfb;
+
+  color: #fff;
+  font-weight: 400;
+}
+
+.table.tabledesign tbody tr td {
+  border: none;
+}
+.table.tabledesign tbody tr:nth-child(even) td {
+  background: #e3eaf2;
+}
+
+.add_btninfos a {
+  font-size: 16px;
+  padding: 10px 15px;
+  background: #222e3c !important;
+  transition: all 0.5s ease;
+}
+.add_btninfos {
+  text-align: right;
+  padding: 0 0 10px 0;
+}
+.add_btninfos a:hover {
+  background: #000;
+}
+
+.pagination_new {
+  text-align: right;
+}
+
+.pagination_new .pagination {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pagination_new .pagination li {
+  display: inline-block;
+}
+.pagination_new .pagination li a {
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.pagination_new .pagination li.active a {
+  background: #459dfb;
+  color: #fff;
+  border-color: #459dfb;
+}
+.pagination_new .pagination li a:hover {
+  text-decoration: none;
+}
+.pagination_new .pagination li a:hover {
+  background: #459dfb;
+  color: #fff;
+}
+
+.eseo_form {
+  background: #fff;
+  padding: 40px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.eseo_form .form_title {
+  text-align: center;
+}
+.eseo_form .form-label {
+  color: #333;
+  font-size: 16px;
+}
+.eseo_form .form-control {
+  height: 41px;
+}
+
+.right_submit {
+  text-align: right;
+  padding: 10px 0 0 0;
+}
+
+.alert.alert-success {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  background: #caf7b7;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+.alert.alert-danger {
+  text-align: center;
+  background: #ff000061;
+  font-size: 20px !important;
+}
+.error {
+  color: red;
+}
+.Approved {
+  pointer-events: none;
+}
+.card-logo {
+  text-align: center;
+  padding-top: 30px;
+}
+.card-logo img {
+  width: 150px;
+}
+.add-user-button {
+  background: #459dfb;
+  border: 1px solid #459dfb;
+}
+.add-user-btn {
+  font-size: 1.53125rem;
+}
+.form-control-lg-1 {
+  min-height: 45px;
+}
+.card-body-another {
+  padding-top: 0px;
+}
+.card-body-another .form-label {
+  color: #333;
+  font-size: 16px;
+}
+.remember-btn {
+  background: #459dfb;
+  border: 1px solid #459dfb;
+}
+.badge-edit-btn {
+  padding: 8px 10px;
+  display: inline-block;
+  width: 120px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.edit-gp-btn {
+  background: #459dfb !important;
+  color: #fff !important;
+  border-radius: 4px;
+  padding: 0.425rem 1.625rem;
+  text-align: center;
+}
+.edited {
+  background: #04aa6d !important;
+}
