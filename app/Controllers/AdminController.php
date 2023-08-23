@@ -66,6 +66,7 @@ class AdminController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $ProjectsModel = new ProjectsModel();
         $all_projects = $ProjectsModel->select('*')->findAll();
+
         // print("<pre>" . print_r($all_projects, true) . "</pre>");
         // die('hi');
 
@@ -125,6 +126,8 @@ class AdminController extends BaseController
                 'email' => $this->request->getVar('email'),
                 'phone' => $this->request->getVar('phone'),
                 'role_id' => $this->request->getVar('role_id'),
+                'updated_at' => date('Y-m-d H:s:a'),
+
             ];
             // print_r($data);
             // die('hi');
@@ -142,18 +145,29 @@ class AdminController extends BaseController
         $payment_status = 1;
         $data = [
             'payment_approvel' => $payment_status,
+
         ];
         $GuestPostLeadsModel->update($id, $data);
         return redirect()->back();
     }
     public function edit_guestpost($id)
     {
+        // print_r($id);
+        // die('hi');
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username')->where('guestpost_leads.id', $id)->join('users', 'users.id = guestpost_leads.user_id')->orderBy('guestpost_leads.id', 'desc')->first();
+        $ProjectsModel = new ProjectsModel();
+
+        // $project = $ProjectsModel->select('*')->where('id', $id)->first();
+        $projects = $ProjectsModel->select('*')->findAll();
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name')
+            ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+            ->join('projects', 'projects.id = guestpost_leads.Project_id', 'left')
+            ->where('guestpost_leads.id', $id)->orderBy('guestpost_leads.id', 'desc')->first();
         // print_r($all_guestposts);
         // die('hi');
         $data = [
-            'guest_posts' => $all_guestposts
+            'guest_posts' => $all_guestposts,
+            'projects' => $projects,
         ];
         return view('admin/edit-guestpost', $data);
     }
@@ -163,6 +177,8 @@ class AdminController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
+        // print_r($id);
+        // die('hi');
         $reference_number = $this->request->getVar('reference_number');
         if (!$reference_number) {
             $rules = [
@@ -171,14 +187,16 @@ class AdminController extends BaseController
             ];
             if ($this->validate($rules)) {
                 $data = [
+                    'project_id' => $this->request->getVar('projectName'),
                     'amount' => $this->request->getVar('amount'),
                     'currency' => $this->request->getVar('currency'),
-                    'reference_number' => $this->request->getVar('reference_number'),
                     'payment_mode' => $this->request->getVar('paymentmode'),
                     'payment_status' => $this->request->getVar('paymentStatus'),
+                    'updated_at' => date('Y-m-d H:s:a'),
+
                 ];
                 // echo gettype($reference_number);
-                // print("<pre>" . print_r($reference_number, true) . "</pre>");
+                // print("<pre>" . print_r($data, true) . "</pre>");
                 // die('hi');
                 // $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $GuestPostLeadsModel->update($id, $data);
@@ -197,11 +215,14 @@ class AdminController extends BaseController
                 // die('111');
                 $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $data = [
+                    'project_id' => $this->request->getVar('projectName'),
                     'amount' => $this->request->getVar('amount'),
                     'currency' => $this->request->getVar('currency'),
                     'reference_number' => $this->request->getVar('reference_number'),
                     'payment_mode' => $this->request->getVar('paymentmode'),
                     'payment_status' => $this->request->getVar('paymentStatus'),
+                    'updated_at' => date('Y-m-d H:s:a'),
+
                 ];
                 // echo gettype($reference_number);
                 // print("<pre>" . print_r($data, true) . "</pre>");
@@ -259,7 +280,7 @@ class AdminController extends BaseController
     {
         $ProductsModel = new ProjectsModel();
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-        $leads_count = $GuestPostLeadsModel->select('guestpost_leads.id', 'COUNT(guestpost_leads.id)')->findAll();
+        // $leads_count = $GuestPostLeadsModel->select('*')->findAll();
 
 
         // print_r($project_count['projects_count']);
@@ -283,7 +304,7 @@ class AdminController extends BaseController
         $data = [
             'all_projects' => $all_projects,
             'pager' => $ProductsModel->pager,
-            'projects_count' => $leads_count
+
         ];
 
         return view('admin/all-projects', $data);
@@ -311,6 +332,8 @@ class AdminController extends BaseController
 
         $data = [
             'name' => $this->request->getVar('name'),
+            'updated_at' => date('Y-m-d H:s:a'),
+
         ];
         // print_r($data);
         // die('hi');
@@ -327,14 +350,17 @@ class AdminController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $UsersModel = new UsersModel();
 
-        $project_leads = $ProjectsModel->select('guestpost_leads.id as guestpost_id,guestpost_leads.id as guestpost_id, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.project_id, guestpost_leads.link, guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_mode, guestpost_leads.payment_status,guestpost_leads.payment_approvel,guestpost_leads.payment_approvel,guestpost_leads.reference_number,guestpost_leads.created_at ,guestpost_leads.updated_at,users.name as user_name')
-            ->join('guestpost_leads', 'guestpost_leads.id = projects.id')
-            ->join('users', 'users.id = projects.id')
-            ->where('projects.id', $id)->paginate(20);
+        $project_leads = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id,guestpost_leads.id as guestpost_id, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.project_id, guestpost_leads.link, guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_mode, guestpost_leads.payment_status,guestpost_leads.payment_approvel,guestpost_leads.payment_approvel,guestpost_leads.reference_number,guestpost_leads.created_at ,guestpost_leads.updated_at,users.name as user_name')
+            ->join('projects', 'guestpost_leads.project_id = projects.id', 'left')
+            ->join('users', 'guestpost_leads.user_id = users.id', 'left')
+            ->where('guestpost_leads.project_id', $id)->paginate(20);
+
+        // print_r($project_leads);
+        // die('hi');
 
         $data = [
             'projects_leads' => $project_leads,
-            'pager' => $ProjectsModel->pager
+            'pager' => $GuestPostLeadsModel->pager
         ];
         return view('admin/view-project-leads', $data);
     }

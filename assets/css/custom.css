@@ -195,4 +195,8 @@
 }
 .edited {
   background: #04aa6d !important;
+  pointer-events: none;
 }
+/* .Approve {
+  background-color: red;
+} */

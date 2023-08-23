@@ -39,12 +39,26 @@
                     <h2>Edit Guest Posting</h2>
                 </div>
                 <form id="update-guestpost-form" method="post" action="<?= base_url() ?>admin/update-guestpost">
-                    <input type="hidden" value="<?= $guest_posts['id'] ?>" class="form-control" id="" name="id">
+                    <input type="hidden" value="<?= $guest_posts['guestpost_id'] ?>" class="form-control" id="" name="id">
 
 
                     <div class="mb-3">
                         <label for="amount" class="form-label">Amount</label>
                         <input type="number" value="<?= $guest_posts['amount'] ?>" class="form-control focus" id="amount" name="amount">
+                    </div>
+                    <div class="mb-3">
+                        <label for="projectName" class="form-label">Project Name</label>
+
+                        <select class="form-select" id="projectName" name="projectName">
+                            <option value="<?= $guest_posts['project_id'] ?>"><?= $guest_posts['project_name'] ?></option>
+                            <?php foreach ($projects as $projects) {
+                            ?>
+                                <option value="<?= $projects['id'] ?>"><?= $projects['name'] ?></option>
+                            <?php
+                            } ?>
+
+                        </select>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="paymentStatus" class="form-label">Payment Status</label>
@@ -54,7 +68,7 @@
                             <option value="1">Completed</option>
                         </select>
                     </div>
-                    <div id="currencyINR" style="display: none;">
+                    <div id="currencyINR">
                         <div class="mb-3">
                             <label for="currencyINR" class="form-label">Currency (INR)</label>
                             <select class="form-select" id="" name="currency">
@@ -84,7 +98,7 @@
     </main>
     </main>
     <?php echo view('admin/footer') ?>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
 
             var payment_status = $('#paymentStatus').val();
@@ -101,7 +115,7 @@
                 }
             });
         })
-    </script>
+    </script> -->
     <!-- <script>
         $(document).ready(function() {
             $('#paymentmode').on('change', function() {
@@ -115,7 +129,8 @@
     </script> -->
 
     <script>
-        var ref_num = `<?= $guest_posts['reference_number'] ?>`;
+        var ref_num = `<?= $guest_posts['reference_number']
+                        ?>`;
         if (ref_num) {
             $("#reference_number").prop('disabled', true);
         } else {
@@ -133,6 +148,9 @@
                 amount: {
                     required: true,
                 },
+                projectName: {
+                    required: true,
+                },
                 paymentStatus: {
                     required: true,
                 },
@@ -148,6 +166,24 @@
 
                 },
             }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            if ($('#paymentStatus').val() == "0") {
+                $("#reference_number").hide();
+            } else {
+                $("#reference_number").show();
+            }
+
+            $("#paymentStatus").change(function() {
+                if ($(this).val() == "0") {
+                    $("#reference_number").hide();
+                } else {
+                    $("#reference_number").show();
+                }
+            });
         });
     </script>
     </body>

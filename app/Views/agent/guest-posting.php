@@ -150,8 +150,8 @@
 
     <script>
         $(document).ready(function() {
-            $("#paymentmode").change(function() {
-                if ($(this).val() === "na") {
+            $("#paymentStatus").change(function() {
+                if ($(this).val() == "0") {
                     $("#reference_number").hide();
                 } else {
                     $("#reference_number").show();

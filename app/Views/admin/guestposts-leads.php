@@ -18,6 +18,7 @@
                     <!-- <option value="0">No value</option> -->
                     <option value="paypal">Paypal</option>
                     <option value="upi">Upi</option>
+                    <option value="na">NA</option>
                 </select>
             </div>
             <div class="col-md-3">
@@ -68,7 +69,7 @@
                                 <tbody id="sales_table_body">
                                     <?php
                                     foreach ($guest_posts as $guestpost) : ?>
-                                        <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "Approve"  ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>">
+                                        <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : ""  ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>">
                                             <td class="d-xl-table-cell td_date" data-td_date="<?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?>"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
                                             <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
                                             <td class="d-xl-table-cell td_link"><?php echo $guestpost['link']; ?></td>
@@ -79,7 +80,9 @@
                                             <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
                                             <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
                                             <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
-                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit"  ?></a></td>
+
+
+                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_status'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_status'] == 1 ? "Edited" : "Edit" ?></a></td>
                                         </tr>
                                     <?php
                                     endforeach; ?>
@@ -146,12 +149,13 @@
                                 for (var i = 0; i < data.length; i++) {
                                     var row = data[i];
                                     const payment_status_text = row.payment_status == 1 ? "Completed " : "Pending ";
-                                    const payment_status = row.payment_status == 1 ? "Completed badge bg-success" : "Pending Approve badge bg-danger";
-                                    const payment_approvel = row.payment_approvel == 1 ? "Approved" : "Pending";
-                                    const aproove_status = row.payment_approvel == 1 ? "Approved" : "Approve";
-                                    const editing_status = row.payment_approvel == 1 ? "edited" : "";
-                                    const editing_text = row.payment_approvel == 1 ? "Edited" : "Edit";
-                                    tableRow += '<tr class="' + payment_approvel + " " + aproove_status + '">' +
+                                    const payment_status = row.payment_status == 1 ? "Completed" : "Pending Approve badge bg-danger";
+                                    const payment_approvel = row.payment_approvel == 1 ? "btn Completed Approved badge bg-success" : "Pending Approve badge bg-danger";
+                                    const aproove_status = row.payment_approvel == 1 ? "Approved " : "Approve badge bg-danger";
+                                    const aproove_status_text = row.payment_approvel == 1 ? "Approved " : "Approve ";
+                                    const editing_status = row.payment_status == 1 ? "edited" : "";
+                                    const editing_text = row.payment_status == 1 ? "Edited" : "Edit";
+                                    tableRow += '<tr class="' + aproove_status_text + " " + payment_status_text + '">' +
                                         '<td>' + row.created_at + '</td>' +
                                         '<td class="td_project_name" data-td_project_name ="' + row.project_name + '">' + row.project_name + '</td>' +
                                         '<td>' + row.link + '</td>' +
@@ -162,9 +166,9 @@
                                         '<td>' + row.reference_number + '</td>' +
                                         '<td>' + row.username + '</td>' +
 
-                                        '<td>' + '<button class="btn ' + payment_status + " " + aproove_status + '" type="button" onclick="payemnt_approvel(' + row.payment_status + ',' + row.id + ')">' + aproove_status + '</button> ' + ' </td>' +
+                                        '<td>' + '<button class="btn ' + " " + payment_approvel + '" type="button" onclick="payemnt_approvel(' + row.payment_status + ',' + row.id + ')">' + aproove_status_text + '</button> ' + ' </td>' +
                                         // '<td>' + row.agent_id + '</td>' +
-                                        '<td>' + '<a target="_blank" href="<?= base_url('admin/edit-guestpost/') ?>' + '/' + row.id + '" class="edit-gp-btn ' +
+                                        '<td>' + '<a target="_blank" href="<?= base_url('admin/edit-guestpost/') ?>' + '/' + row.id + '" class="sidebar-link edit-gp-btn  ' +
                                         editing_status + '"">' + editing_text + '</a>'; + '</td > ' +
                                     '</tr>';
                                     $("#sales_table_body").html(tableRow);
@@ -173,6 +177,7 @@
                             // console.log(tableRow);
                             // console.log("Row count: " + rowCount);
                             $("#sale_count").text(rowCount);
+                            $('.pagination').hide();
                             filter()
                         },
                         error: function(xhr, status, error) {
@@ -191,7 +196,7 @@
             // var date_val = $('#date_range_filter').val();
             // console.log(date_val + 'date_val');
             // alert(date_val);
-            $('.pagination').hide();
+
             // alert(1);
             filter_function();
             //calling filter function each select box value change

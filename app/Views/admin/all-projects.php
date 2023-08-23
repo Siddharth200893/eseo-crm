@@ -17,7 +17,7 @@ use function PHPSTORM_META\type; ?>
                 <div class="col-12">
                     <!-- <h2>All Leads</h2> -->
                     <div class="add_btninfos">
-                        <a class="badge bg-success" href="<?= base_url('admin/add-project') ?>" style="text-decoration:none;">Add Project</a>
+                        <a class="badge bg-success" href="<?= base_url('admin/project') ?>" style="text-decoration:none;">Add Project</a>
                     </div>
                     <table id="businessTable" class="table tabledesign table-hover my-0">
                         <thead>
@@ -26,7 +26,7 @@ use function PHPSTORM_META\type; ?>
                                 <th class="d-xl-table-cell">Project Name</th>
                                 <th class="d-xl-table-cell">User Name</th>
                                 <th class="d-xl-table-cell">Action</th>
-                                <th class="d-xl-table-cell">View</th>
+                                <th class="d-xl-table-cell">View Leads</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,7 +39,10 @@ use function PHPSTORM_META\type; ?>
                                     <td class="d-xl-table-cell"><a class="badge badge-edit-btn bg-warning" href="<?= base_url() ?>admin/edit-project/<?= $project['id'] ?>"> Edit<a></td>
                                     <td class="d-xl-table-cell"><a class="badge badge-edit-btn bg-warning" href="<?= base_url() ?>admin/view-project-leads/<?= $project['id'] ?>"> View Leads <?php $ProductsModel = new ProjectsModel();
                                                                                                                                                                                                 $GuestPostLeadsModel = new GuestPostLeadsModel();
-                                                                                                                                                                                                $leads_count = $GuestPostLeadsModel->select('guestpost_leads.id, COUNT(guestpost_leads.id) as guestpost_count')->where('guestpost_leads.id', $project['id'])->findAll();
+                                                                                                                                                                                                $leads_count = $GuestPostLeadsModel->select('guestpost_leads.id, COUNT(guestpost_leads.id) as guestpost_count,projects.id')
+                                                                                                                                                                                                    ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+
+                                                                                                                                                                                                    ->where('guestpost_leads.project_id', $project['id'])->findAll();
                                                                                                                                                                                                 // print_r($project_count['projects_count']);
                                                                                                                                                                                                 echo "(" . $leads_count[0]['guestpost_count'] . ")";
                                                                                                                                                                                                 // print("<pre>" . print_r($leads_count[0]['guestpost_count'], true) . "</pre>");

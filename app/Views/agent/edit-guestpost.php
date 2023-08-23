@@ -39,7 +39,7 @@
                     <h2>Edit Guest Posting</h2>
                 </div>
                 <form id="update-guestpost-form" method="post" action="<?= base_url() ?>agent/update-guestpost">
-                    <input type="hidden" value="<?= $guest_posts['id'] ?>" class="form-control" id="" name="id">
+                    <input type="hidden" value="<?= $guest_posts['guestpost_id'] ?>" class="form-control" id="" name="id">
 
 
                     <div class="mb-3">
@@ -50,10 +50,10 @@
                         <label for="projectName" class="form-label">Project Name</label>
 
                         <select class="form-select" id="projectName" name="projectName">
-                            <option value="<?= $project['name'] ?>"><?= $project['name'] ?></option>
+                            <option value="<?= $guest_posts['project_id'] ?>"><?= $guest_posts['project_name'] ?></option>
                             <?php foreach ($projects as $projects) {
                             ?>
-                                <option value="<?= $projects['name'] ?>"><?= $projects['name'] ?></option>
+                                <option value="<?= $projects['id'] ?>"><?= $projects['name'] ?></option>
                             <?php
                             } ?>
 
@@ -165,6 +165,22 @@
 
                 },
             }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($('#paymentStatus').val() == "0") {
+                $("#reference_number").hide();
+            } else {
+                $("#reference_number").show();
+            }
+            $("#paymentStatus").change(function() {
+                if ($(this).val() == "0") {
+                    $("#reference_number").hide();
+                } else {
+                    $("#reference_number").show();
+                }
+            });
         });
     </script>
     </body>

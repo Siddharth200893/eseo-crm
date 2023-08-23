@@ -130,7 +130,9 @@ class AgentController extends BaseController
         $ssn_id = $session->get('id');
         // print_r($ssn_id);
         // die('hi');
-        $all_guestposts = $GuestPostLeadsModel->select('*')->where('user_id', $ssn_id)->orderBy('id', 'desc')->paginate(20);
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name')
+            ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+            ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')->orderBy('guestpost_leads.id', 'desc')->paginate(20);
 
         $data = [
 
@@ -146,14 +148,16 @@ class AgentController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $ProjectsModel = new ProjectsModel();
 
-        $project = $ProjectsModel->select('*')->where('id', $id)->first();
+        // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username')->where('guestpost_leads.id', $id)->join('users', 'users.id = guestpost_leads.user_id')->orderBy('guestpost_leads.id', 'desc')->first();
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name')
+            ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+            ->join('projects', 'projects.id = guestpost_leads.Project_id', 'left')
+            ->where('guestpost_leads.id', $id)->orderBy('guestpost_leads.id', 'desc')->first();
         // print_r($all_guestposts);
         // die('hi');
         $data = [
             'guest_posts' => $all_guestposts,
-            'project' => $project,
             'projects' => $projects,
         ];
         return view('agent/edit-guestpost', $data);
@@ -164,29 +168,68 @@ class AgentController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
-        // $reference_number = $this->request->getVar('reference_number');
-        // $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
-
-        $rules = [
-            'amount' => 'required',
-            'paymentStatus' => 'required',
-        ];
-        if ($this->validate($rules)) {
-            $data = [
-                'amount' => $this->request->getVar('amount'),
-                'currency' => $this->request->getVar('currency'),
-                'reference_number' => $this->request->getVar('reference_number'),
-                'payment_mode' => $this->request->getVar('paymentmode'),
-                'payment_status' => $this->request->getVar('paymentStatus'),
+        // print_r($id);
+        // die('hi');
+        $reference_number = $this->request->getVar('reference_number');
+        if (!$reference_number) {
+            $rules = [
+                'amount' => 'required',
+                'paymentStatus' => 'required',
             ];
-            $reference_number = $this->request->getVar('reference_number');
-            $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
-            if (!$existing_reference_number) {
+            if ($this->validate($rules)) {
+                $data = [
+                    'project_id' => $this->request->getVar('projectName'),
+
+                    'amount' => $this->request->getVar('amount'),
+                    'currency' => $this->request->getVar('currency'),
+                    'payment_mode' => $this->request->getVar('paymentmode'),
+                    'payment_status' => $this->request->getVar('paymentStatus'),
+                    'updated_at' => date('Y-m-d H:s:a'),
+
+                ];
+                // echo gettype($reference_number);
+                // print("<pre>" . print_r($reference_number, true) . "</pre>");
+                // die('hi');
+                // $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $GuestPostLeadsModel->update($id, $data);
                 $session->setFlashdata('success_save', 'Updated successfully');
                 return redirect()->back();
+            }
+        } else {
+            helper(['form', 'url']);
+            $rules = [
+                'amount' => 'required',
+                'paymentStatus' => 'required',
+            ];
+            if ($this->validate($rules)) {
+                $reference_number = $this->request->getVar('reference_number');
+                // print_r($reference_number);
+                // die('111');
+                $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
+                $data = [
+                    'project_id' => $this->request->getVar('projectName'),
+
+                    'amount' => $this->request->getVar('amount'),
+                    'currency' => $this->request->getVar('currency'),
+                    'reference_number' => $this->request->getVar('reference_number'),
+                    'payment_mode' => $this->request->getVar('paymentmode'),
+                    'payment_status' => $this->request->getVar('paymentStatus'),
+                    'updated_at' => date('Y-m-d H:s:a'),
+
+                ];
+                // echo gettype($reference_number);
+                // print("<pre>" . print_r($data, true) . "</pre>");
+                // die('hi');
+                if (!$existing_reference_number) {
+                    $GuestPostLeadsModel->update($id, $data);
+                    $session->setFlashdata('success_save', 'Updated successfully');
+                    return redirect()->back();
+                } else {
+                    $session->setFlashdata('error_save', 'This reference number is already exists');
+                    return  redirect()->back();
+                }
             } else {
-                $session->setFlashdata('error_save', 'This reference number is already exists');
+                $session->setFlashdata('error_save', 'Please enter valid details');
                 return  redirect()->back();
             }
         }
