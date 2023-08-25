@@ -7,7 +7,7 @@
 		<div class="col-xl-12 col-lg-12 col-md-12">
 			<?php
 			if ($session->getFlashdata('error_registration')) { ?>
-				<div class="alert alert-success" role="alert">
+				<div class="alert alert-danger" role="alert">
 					<?php echo $session->getFlashdata('error_registration'); ?>
 				</div>
 			<?php

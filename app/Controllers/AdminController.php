@@ -71,15 +71,12 @@ class AdminController extends BaseController
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
 
-        // print("<pre>" . print_r($lastDayOfMonth, true) . "</pre>");
-        // die('hi');
-
         $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->where('DATE(guestpost_leads.created_at) >=', $firstDayOfMonth)
             ->where('DATE(guestpost_leads.created_at) <=', $lastDayOfMonth)
-            ->orderBy('guestpost_leads.id', 'desc')->paginate(1);
+            ->orderBy('guestpost_leads.id', 'desc')->paginate(20);
         // print_r($all_guestposts);
         // die('hi');
 
@@ -202,10 +199,6 @@ class AdminController extends BaseController
                     'updated_at' => date('Y-m-d H:s:a'),
 
                 ];
-                // echo gettype($reference_number);
-                // print("<pre>" . print_r($data, true) . "</pre>");
-                // die('hi');
-                // $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $GuestPostLeadsModel->update($id, $data);
                 $session->setFlashdata('success_save', 'Updated successfully');
                 return redirect()->back();
@@ -286,28 +279,10 @@ class AdminController extends BaseController
     public function all_projects()
     {
         $ProductsModel = new ProjectsModel();
-        $GuestPostLeadsModel = new GuestPostLeadsModel();
-        // $leads_count = $GuestPostLeadsModel->select('*')->findAll();
-
-
-        // print_r($project_count['projects_count']);
-        // print("<pre>" . print_r($leads_count, true) . "</pre>");
-        // die('hi');
         $all_projects =  $ProductsModel->select('projects.id, projects.name as project_name,projects.user_id,projects.created_at,projects.updated_at,users.name as user_name')
             ->join('users', 'users.id = projects.user_id', 'left')
             ->orderBy('projects.id', 'desc')
             ->paginate(20);
-
-        // foreach ($all_projects as $project) :
-
-        //     $leads_count = $GuestPostLeadsModel->select('guestpost_leads.id, COUNT(guestpost_leads.id) as guestpost_leads_count')->where('guestpost_leads.project_id', $project['id'])->findAll();
-
-
-
-
-        // endforeach;
-        // print("<pre>" . print_r($leads_count, true) . "</pre>");
-        // die('hi');
         $data = [
             'all_projects' => $all_projects,
             'pager' => $ProductsModel->pager,
@@ -352,18 +327,12 @@ class AdminController extends BaseController
 
     public function view_project_leads($id)
     {
-
-        $ProjectsModel = new ProjectsModel();
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-        $UsersModel = new UsersModel();
 
         $project_leads = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id,guestpost_leads.id as guestpost_id, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.project_id, guestpost_leads.link, guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_mode, guestpost_leads.payment_status,guestpost_leads.payment_approvel,guestpost_leads.payment_approvel,guestpost_leads.reference_number,guestpost_leads.created_at ,guestpost_leads.updated_at,users.name as user_name')
             ->join('projects', 'guestpost_leads.project_id = projects.id', 'left')
             ->join('users', 'guestpost_leads.user_id = users.id', 'left')
             ->where('guestpost_leads.project_id', $id)->paginate(20);
-
-        // print_r($project_leads);
-        // die('hi');
 
         $data = [
             'projects_leads' => $project_leads,
@@ -375,8 +344,6 @@ class AdminController extends BaseController
     {
         // die('hi');
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-        // $ProjectsModel = new ProjectsModel();
-        // $all_projects = $ProjectsModel->select('*')->findAll();
 
         $startDate = $this->request->getPost('start_date');
         $endDate = $this->request->getPost('end_date');
@@ -386,12 +353,7 @@ class AdminController extends BaseController
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->where('DATE(guestpost_leads.created_at) >=', $startDate)
-            ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->paginate(1);
-
-        // $paginationLinks = $GuestPostLeadsModel->pager->links();
-
-        // print_r($paginationLinks);
-        // die('hi');
+            ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->findAll();
 
         $response = [
             'status' => 'success',
@@ -402,45 +364,4 @@ class AdminController extends BaseController
 
         return $this->response->setJSON($response);
     }
-    // public function get_guestpost_leads_pagination()
-    // {
-    //     $GuestPostLeadsModel = new GuestPostLeadsModel();
-
-    //     // Get the start and end dates from the POST data
-    //     $startDate = $this->request->getPost('start_date');
-    //     $endDate = $this->request->getPost('end_date');
-
-    //     // Get the current page number from the query string
-    //     $currentPage = $this->request->getGet('page') ?? 1;
-
-    //     // Set up pagination
-    //     $perPage = 10; // Number of items per page
-
-    //     // Initialize the GuestPostLeadsModel and query
-    //     $query = $GuestPostLeadsModel->select('guestpost_leads.id, guestpost_leads.payment_approvel,users.id')
-    //         ->join('users', 'users.id = guestpost_leads.user_id', 'left')
-    //         ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
-    //         ->where('DATE(guestpost_leads.created_at) >=', $startDate . ' 00:00:00') // Add the time component
-    //         ->where('DATE(guestpost_leads.created_at) <=', $endDate . ' 23:59:59')   // Add the time component
-    //         ->orderBy('guestpost_leads.id', 'desc');
-    //     $all_guestposts = $query->paginate($perPage, 'group1', $currentPage); // Pass current page to paginate()
-
-    //     // Return a JSON response with the paginated data and pagination links
-    //     if ($this->request->isAJAX()) {
-    //         $paginationLinks = $GuestPostLeadsModel->pager->links('group1'); // Pass pagination group
-
-    //         $response = [
-    //             'status' => 'success',
-    //             'data' => $all_guestposts,
-    //             'pagination' => [
-    //                 'links' => $paginationLinks,
-    //             ],
-    //         ];
-
-    //         return $this->response->setJSON($response);
-    //     } else {
-    //         // Handle non-AJAX case
-    //         // ...
-    //     }
-    // }
 }

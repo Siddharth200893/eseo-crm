@@ -56,7 +56,7 @@
                         <tbody>
                             <?php
                             foreach ($guest_posts as $guestpost) : ?>
-                                <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Completed" : "Pending"  ?>">
+                                <tr class="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "Approve"  ?>">
                                     <td class="d-xl-table-cell"><?php echo date("F j, Y, g:i a", strtotime($guestpost['created_at'])); ?></td>
                                     <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['link']; ?></td>

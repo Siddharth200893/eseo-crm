@@ -92,8 +92,8 @@
             </div>
         </div>
 
-        <!-- <div class="pagination_new"><? //= $pager->links() 
-                                            ?></div> -->
+        <div class="pagination_new"><?= $pager->links() ?></div>
+
     </main>
     <div id="pagination-container"></div>
     <?php echo view('admin/footer') ?>
@@ -134,11 +134,7 @@
                         // contentType: "application/json; charset=utf-8",
                         success: function(response) {
                             console.log(response.data);
-                            // console.log(response.pagination.links);
-                            // $('#pagination-container').html(response.pagination.links);
-                            // form.reset();
-                            // swal("Success!", "Your data has been saved. Thank you!", "success");
-                            // Assuming the response contains the 'data' array
+
                             var data = response.data;
                             // Get the count of rows
                             var rowCount = data.length;
@@ -151,6 +147,25 @@
                                 $("#sale_result").hide();
                                 for (var i = 0; i < data.length; i++) {
                                     var row = data[i];
+
+                                    // Dynamic date string
+                                    var dynamicDateString = row.created_at;
+
+                                    // Convert the date string to a Date object
+                                    var date = new Date(dynamicDateString);
+
+                                    // Options for formatting the date
+                                    var options = {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    };
+
+                                    // Format the date using the Intl.DateTimeFormat object
+                                    var formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+
+                                    console.log(formattedDate); // Output: "August 24, 2023"
+
                                     const payment_status_text = row.payment_status == 1 ? "Completed " : "Pending ";
                                     const payment_status = row.payment_status == 1 ? "Completed" : "Pending Approve badge bg-danger";
                                     const payment_approvel = row.payment_approvel == 1 ? "btn Completed Approved badge bg-success" : "Pending Approve badge bg-danger";
@@ -159,7 +174,7 @@
                                     const editing_status = row.payment_approvel == 1 ? "edited" : "";
                                     const editing_text = row.payment_approvel == 1 ? "Edited" : "Edit";
                                     tableRow += '<tr class="' + aproove_status_text + " " + payment_status_text + '">' +
-                                        '<td>' + row.created_at + '</td>' +
+                                        '<td>' + formattedDate + '</td>' +
                                         '<td class="td_project_name" data-td_project_name ="' + row.project_name + '">' + row.project_name + '</td>' +
                                         '<td>' + row.link + '</td>' +
                                         '<td>' + row.amount + '</td>' +
@@ -180,7 +195,8 @@
                             // console.log(tableRow);
                             // console.log("Row count: " + rowCount);
                             $("#sale_count").text(rowCount);
-                            // $('.pagination').hide();
+                            $('.pagination').hide();
+                            // alert(1);
                             filter()
                         },
                         error: function(xhr, status, error) {
@@ -195,10 +211,6 @@
     </script>
     <script>
         function filter() {
-
-            // var date_val = $('#date_range_filter').val();
-            // console.log(date_val + 'date_val');
-            // alert(date_val);
 
             // alert(1);
             filter_function();
