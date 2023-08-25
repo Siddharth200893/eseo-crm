@@ -1,11 +1,7 @@
 <!DOCTYPE php>
 <php lang="en">
     <?php echo view('admin/header') ?>
-    <style>
-        .Pending {
-            background: #ffed0063;
-        }
-    </style>
+
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/daterangepicker.css" />
     <main class="content">
         <div class="row">
@@ -82,19 +78,24 @@
                                             <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
 
 
-                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_status'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_status'] == 1 ? "Edited" : "Edit" ?></a></td>
+                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
                                         </tr>
                                     <?php
                                     endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pagination_new"><?= $pager->links() ?></div>
+
+        <!-- <div class="pagination_new"><? //= $pager->links() 
+                                            ?></div> -->
     </main>
+    <div id="pagination-container"></div>
     <?php echo view('admin/footer') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
@@ -133,6 +134,8 @@
                         // contentType: "application/json; charset=utf-8",
                         success: function(response) {
                             console.log(response.data);
+                            // console.log(response.pagination.links);
+                            // $('#pagination-container').html(response.pagination.links);
                             // form.reset();
                             // swal("Success!", "Your data has been saved. Thank you!", "success");
                             // Assuming the response contains the 'data' array
@@ -153,8 +156,8 @@
                                     const payment_approvel = row.payment_approvel == 1 ? "btn Completed Approved badge bg-success" : "Pending Approve badge bg-danger";
                                     const aproove_status = row.payment_approvel == 1 ? "Approved " : "Approve badge bg-danger";
                                     const aproove_status_text = row.payment_approvel == 1 ? "Approved " : "Approve ";
-                                    const editing_status = row.payment_status == 1 ? "edited" : "";
-                                    const editing_text = row.payment_status == 1 ? "Edited" : "Edit";
+                                    const editing_status = row.payment_approvel == 1 ? "edited" : "";
+                                    const editing_text = row.payment_approvel == 1 ? "Edited" : "Edit";
                                     tableRow += '<tr class="' + aproove_status_text + " " + payment_status_text + '">' +
                                         '<td>' + row.created_at + '</td>' +
                                         '<td class="td_project_name" data-td_project_name ="' + row.project_name + '">' + row.project_name + '</td>' +
@@ -177,7 +180,7 @@
                             // console.log(tableRow);
                             // console.log("Row count: " + rowCount);
                             $("#sale_count").text(rowCount);
-                            $('.pagination').hide();
+                            // $('.pagination').hide();
                             filter()
                         },
                         error: function(xhr, status, error) {
@@ -252,6 +255,8 @@
             });
         }
     </script>
+
+
 
     </body>
 </php>

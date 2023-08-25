@@ -67,12 +67,19 @@ class AdminController extends BaseController
         $ProjectsModel = new ProjectsModel();
         $all_projects = $ProjectsModel->select('*')->findAll();
 
-        // print("<pre>" . print_r($all_projects, true) . "</pre>");
+        $currentDate = date('Y-m-d');
+        $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
+        $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
+
+        // print("<pre>" . print_r($lastDayOfMonth, true) . "</pre>");
         // die('hi');
 
         $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
-            ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')->orderBy('guestpost_leads.id', 'desc')->paginate(20);
+            ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+            ->where('DATE(guestpost_leads.created_at) >=', $firstDayOfMonth)
+            ->where('DATE(guestpost_leads.created_at) <=', $lastDayOfMonth)
+            ->orderBy('guestpost_leads.id', 'desc')->paginate(1);
         // print_r($all_guestposts);
         // die('hi');
 
@@ -379,14 +386,61 @@ class AdminController extends BaseController
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->where('DATE(guestpost_leads.created_at) >=', $startDate)
-            ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->findAll();
+            ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->paginate(1);
+
+        // $paginationLinks = $GuestPostLeadsModel->pager->links();
+
+        // print_r($paginationLinks);
+        // die('hi');
 
         $response = [
             'status' => 'success',
             'message' => 'Sale dates received successfully.',
-            'data' => $all_guestposts
+            'data' => $all_guestposts,
+
         ];
 
         return $this->response->setJSON($response);
     }
+    // public function get_guestpost_leads_pagination()
+    // {
+    //     $GuestPostLeadsModel = new GuestPostLeadsModel();
+
+    //     // Get the start and end dates from the POST data
+    //     $startDate = $this->request->getPost('start_date');
+    //     $endDate = $this->request->getPost('end_date');
+
+    //     // Get the current page number from the query string
+    //     $currentPage = $this->request->getGet('page') ?? 1;
+
+    //     // Set up pagination
+    //     $perPage = 10; // Number of items per page
+
+    //     // Initialize the GuestPostLeadsModel and query
+    //     $query = $GuestPostLeadsModel->select('guestpost_leads.id, guestpost_leads.payment_approvel,users.id')
+    //         ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+    //         ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+    //         ->where('DATE(guestpost_leads.created_at) >=', $startDate . ' 00:00:00') // Add the time component
+    //         ->where('DATE(guestpost_leads.created_at) <=', $endDate . ' 23:59:59')   // Add the time component
+    //         ->orderBy('guestpost_leads.id', 'desc');
+    //     $all_guestposts = $query->paginate($perPage, 'group1', $currentPage); // Pass current page to paginate()
+
+    //     // Return a JSON response with the paginated data and pagination links
+    //     if ($this->request->isAJAX()) {
+    //         $paginationLinks = $GuestPostLeadsModel->pager->links('group1'); // Pass pagination group
+
+    //         $response = [
+    //             'status' => 'success',
+    //             'data' => $all_guestposts,
+    //             'pagination' => [
+    //                 'links' => $paginationLinks,
+    //             ],
+    //         ];
+
+    //         return $this->response->setJSON($response);
+    //     } else {
+    //         // Handle non-AJAX case
+    //         // ...
+    //     }
+    // }
 }

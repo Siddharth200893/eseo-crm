@@ -1,30 +1,6 @@
 <!DOCTYPE php>
 <php lang="en">
-    <?php $session = session(); ?>
-    <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12">
-            <?php
-            if ($session->getFlashdata('success_save')) { ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $session->getFlashdata('success_save'); ?>
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12">
-            <?php
-            if ($session->getFlashdata('error_save')) { ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $session->getFlashdata('error_save'); ?>
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-    </div>
+
     <?php echo view('agent/header') ?>
     <main class="content">
         <div class="container-fluid p-0">

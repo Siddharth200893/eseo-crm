@@ -1,5 +1,30 @@
 <!DOCTYPE php>
 <php lang="en">
+    <?php $session = session(); ?>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <?php
+            if ($session->getFlashdata('success_save')) { ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $session->getFlashdata('success_save'); ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <?php
+            if ($session->getFlashdata('error_save')) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $session->getFlashdata('error_save'); ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 
     <?php echo view('agent/header') ?>
     <main class="content">
@@ -9,6 +34,9 @@
                     <h2>
                         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
                     </h2>
+                    <div class="add_btninfos">
+                        <a class="badge bg-success" href="<?= base_url('agent/guest-posting') ?>" style="text-decoration:none;">Add Guestpost</a>
+                    </div>
                     <table id="" class="table default_table  table-hover my-0">
                         <thead>
                             <tr>
@@ -28,7 +56,7 @@
                         <tbody>
                             <?php
                             foreach ($guest_posts as $guestpost) : ?>
-                                <tr class="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>">
+                                <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Completed" : "Pending"  ?>">
                                     <td class="d-xl-table-cell"><?php echo date("F j, Y, g:i a", strtotime($guestpost['created_at'])); ?></td>
                                     <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['link']; ?></td>
@@ -39,8 +67,13 @@
 
 
 
-                                    <td class="d-xl-table-cell"><button class="btn <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-warning "  ?>" type="button"><?php echo $guestpost['payment_approvel'] == 1 ? " <i class='fa fa-check-square-o' aria-hidden='true'></i> Approved" : "Pending"  ?></button></td>
-                                    <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_status'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_status'] == 1 ? "Edited" : "Edit"  ?></a></td>
+                                    <td class="d-xl-table-cell  ">
+                                        <?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "Pending"  ?>
+
+
+
+                                    </td>
+                                    <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit"  ?></a></td>
 
 
 

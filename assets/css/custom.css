@@ -197,6 +197,11 @@
   background: #04aa6d !important;
   pointer-events: none;
 }
+
+.Pending {
+  background: #ffed0063;
+}
+
 /* .Approve {
   background-color: red;
 } */
