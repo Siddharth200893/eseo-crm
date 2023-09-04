@@ -72,18 +72,24 @@
                         <div class="mb-3">
                             <label for="currencyINR" class="form-label">Currency (INR)</label>
                             <select class="form-select" id="" name="currency">
-                                <option value="<?= $guest_posts['currency'] ?>"><?= $guest_posts['currency'] ?></option>
-                                <option value="inr">INR</option>
-                                <option value="usd">USD</option>
+                                <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
+                                <?php foreach ($all_currencies as $currency) : ?>
+                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                <?php
+                                endforeach;
+                                ?>
                                 <!-- Add more currency options here if needed -->
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="paymentMode" class="form-label">Payment Mode</label>
                             <select class="form-select" id="" name="paymentmode">
-                                <option value="<?= $guest_posts['payment_mode'] ?>"><?= $guest_posts['payment_mode'] ?></option>
-                                <option value="upi">Upi</option>
-                                <option value="paypal">Paypal</option>
+                                <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
+                                <?php foreach ($all_payment_modes as $payment_mode) : ?>
+                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
+                                <?php
+                                endforeach;
+                                ?>
                             </select>
                             <div id="" class="reference_number" name="">
                                 <label for="paymentMode" class="form-label">Reference Number</label>
@@ -185,6 +191,21 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            var url = "<?php echo current_url() ?>";
+            alert(url);
+            console.log('<?php echo current_url() ?>');
+            console.log(<?php echo substr(current_url(), -4) === 'mode' ? 'active' : ''; ?>);
+            if (<?php echo substr(current_url(), -4) === 'mode' ? 'active' : ''; ?> === 'active') {
+                console.log('yes');
+                $('.sidebar-link').attr('aria-expanded', 'true');
+                $('.sidebar-link').removeClass('collapsed');
+            }
+        })
     </script>
     </body>
 </php>

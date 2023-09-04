@@ -33,7 +33,7 @@
                                     <td class="d-xl-table-cell"><?php echo $user['role']; ?></td>
 
 
-                                    <td class="d-xl-table-cell"><a class="badge badge-edit-btn bg-warning" href="<?= base_url() ?>admin/edit-users/<?= $user['user_id'] ?>"> Edit<a></td>
+                                    <td class="d-xl-table-cell"><a class="badge badge-edit-btn bg-warning" href="<?= base_url() ?>admin/edit-users/<?= md5($user['user_id']) ?>"> Edit<a></td>
                                 </tr>
                             <?php
                             endforeach; ?>

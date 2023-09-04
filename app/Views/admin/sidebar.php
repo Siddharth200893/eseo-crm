@@ -64,6 +64,25 @@ $role = $session->get('role');
 					<i class="align-middle" data-feather="user"></i> <span class="align-middle">All Projects</span>
 				</a>
 			</li>
+			<li class="sidebar-item ">
+				<a class="sidebar-link" href="#collapseExample" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+					<i class="align-middle" data-feather="user"></i> <span class="align-middle">Payment Options</span>
+				</a>
+			</li>
+			<div class="collapse" id="collapseExample">
+				<div class="card-body">
+					<ul>
+						<li class="sidebar-item <?php echo substr(current_url(), -4) === 'mode' ? 'active' : ''; ?>"><a class="sidebar-link" href="<?= base_url() ?>admin/payment-mode">
+								<span class="align-middle">Add Payment Mode</span>
+							</a></li>
+						<li class="sidebar-item <?php echo substr(current_url(), -8) === 'currency' ? 'active' : ''; ?>"><a class="sidebar-link" href="<?= base_url() ?>admin/currency">
+								<span class="align-middle">Add Currency</span>
+							</a></li>
+
+					</ul>
+				</div>
+			</div>
+
 			<!-- <li class="sidebar-item">
 							<a class="sidebar-link" href="pages-profile.php">
 								<i class="align-middle" data-feather="user"></i> <span class="align-middle">Guest Posting</span>
@@ -90,6 +109,8 @@ $role = $session->get('role');
 					<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Logout</span>
 				</a>
 			</li>
+
+
 
 			<!-- <li class="sidebar-item">
 							<a class="sidebar-link" href="pages-blank.php">
@@ -147,6 +168,8 @@ $role = $session->get('role');
 							</a>
 						</li> -->
 		</ul>
+
+
 
 		<!-- <div class="sidebar-cta">
 						<div class="sidebar-cta-content">

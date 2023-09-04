@@ -43,9 +43,11 @@
                             <select class="form-select" id="" name="currency">
                                 <option value="">Select</option>
 
-                                <option value="inr">INR</option>
-                                <option value="usd">USD</option>
-                                <option value="na">NA</option>
+                                <?php foreach ($all_currencies as $currency) : ?>
+                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                <?php
+                                endforeach;
+                                ?>
                                 <!-- Add more currency options here if needed -->
                             </select>
                         </div>
@@ -53,9 +55,11 @@
                             <label for="paymentMode" class="form-label">Payment Mode</label>
                             <select class="form-select" id="paymentmode" name="paymentmode">
                                 <option value="">Select</option>
-                                <option value="upi">Upi</option>
-                                <option value="paypal">Paypal</option>
-                                <option value="na">NA</option>
+                                <?php foreach ($all_payment_modes as $payment_mode) : ?>
+                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
+                                <?php
+                                endforeach;
+                                ?>
                             </select>
                             <div id="reference_number" class="reference_number" name="">
                                 <label for="reference_number" class="form-label">Reference Number</label>

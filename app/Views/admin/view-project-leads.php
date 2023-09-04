@@ -36,7 +36,7 @@
 
                                     <td class="d-xl-table-cell"><?php echo $lead['amount']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $lead['payment_status'] == 1 ? "Completed" : "Pending"; ?></td>
-                                    <td class="d-xl-table-cell"><?php echo $lead['currency']; ?></td>
+                                    <td class="d-xl-table-cell"><?php echo $lead['currency_name']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $lead['payment_mode']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $lead['reference_number']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $lead['payment_approvel'] == 1 ? "Completed" : "Pending";; ?></td>

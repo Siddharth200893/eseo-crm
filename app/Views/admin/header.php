@@ -29,6 +29,7 @@ $role = $session->get('role');
     <link href="<?= base_url(); ?>assets/css/app.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <!-- <style>
             .container.mt-5 {
                 background: azure;

@@ -300,3 +300,17 @@
 
      })
  </script>
+ <script>
+     $(document).ready(function() {
+         var currentUrl = window.location.href;
+         var paymentMode = currentUrl.substr(-4) === 'mode' ? 'active' : '';
+         var currency = currentUrl.substr(-8) === 'currency' ? 'active' : '';
+
+         if (paymentMode === "active" || currency === "active") {
+             //  console.log('yes');
+             $('.sidebar-link').attr('aria-expanded', 'true');
+             $('.sidebar-link').removeClass('collapsed');
+             $('#collapseExample').addClass('show');
+         }
+     })
+ </script>

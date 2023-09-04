@@ -61,7 +61,7 @@
                                     <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['link']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['amount']; ?></td>
-                                    <td class="d-xl-table-cell"><?php echo $guestpost['currency']; ?></td>
+                                    <td class="d-xl-table-cell"><?php echo $guestpost['currency_name']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['payment_mode']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
 
@@ -73,7 +73,7 @@
 
 
                                     </td>
-                                    <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit"  ?></a></td>
+                                    <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit"  ?></a></td>
 
 
 

@@ -11,19 +11,22 @@
             <div class="col-md-3">
                 <select id="paymentModeFilter" class="form-control filter">
                     <option value="0">All Payment Mode</option>
-                    <!-- <option value="0">No value</option> -->
-                    <option value="paypal">Paypal</option>
-                    <option value="upi">Upi</option>
-                    <option value="na">NA</option>
+                    <?php foreach ($all_payment_modes as $payment_mode) : ?>
+                        <option value="<?= $payment_mode['name'] ?>"><?= $payment_mode['name'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
                 </select>
             </div>
             <div class="col-md-3">
                 <select id="currencyFilter" class="form-control filter">
                     <!-- <option value="0">No value</option> -->
                     <option value="0">All Currencies</option>
-                    <option value="inr">Inr</option>
-                    <option value="usd">Usd</option>
-                    <option value="NA">NA</option>
+                    <?php foreach ($all_Currencies as $currency) : ?>
+                        <option value="<?= $currency['name'] ?>"><?= $currency['name'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
                 </select>
             </div>
             <div class="col-md-3">
@@ -71,14 +74,14 @@
                                             <td class="d-xl-table-cell td_link"><?php echo $guestpost['link']; ?></td>
                                             <td class="d-xl-table-cell range td_amount"><?php echo $guestpost['amount']; ?></td>
                                             <td class="d-xl-table-cell td_pmt_status" data-td_pmt_status="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>"><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
-                                            <td class="td_currency" data-td_currency="<?php echo $guestpost['currency']; ?>"><?php echo $guestpost['currency']; ?></td>
+                                            <td class="td_currency" data-td_currency="<?php echo $guestpost['currency_name']; ?>"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payment_mode']; ?>"><?php echo $guestpost['payment_mode']; ?></td>
                                             <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
                                             <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
                                             <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
 
 
-                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . $guestpost['id']; ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
+                                            <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
                                         </tr>
                                     <?php
                                     endforeach; ?>

@@ -10,5 +10,5 @@ class projectsModel extends Model
     protected $table = 'projects';
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['name', 'user_id', 'project_id', 'role_id', 'created_at', 'updated_at'];
+    protected $allowedFields = ['name', 'user_id', 'created_at', 'updated_at'];
 }
