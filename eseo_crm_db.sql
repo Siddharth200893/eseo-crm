@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2023 at 11:09 AM
+-- Generation Time: Sep 05, 2023 at 02:19 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.28
 
@@ -24,16 +24,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `currencies`
+--
+
+CREATE TABLE `currencies` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `currencies`
+--
+
+INSERT INTO `currencies` (`id`, `name`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'ww', NULL, '2023-09-04 12:49:38', '2023-09-04 12:49:38'),
+(2, 'ee', 1, '2023-09-04 12:55:51', '2023-09-04 12:55:51'),
+(3, 'yyy', 1, '2023-09-04 13:03:33', '2023-09-04 13:03:33'),
+(4, 'pp', 1, '2023-09-04 15:19:38', '2023-09-04 15:19:38');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `guestpost_leads`
 --
 
 CREATE TABLE `guestpost_leads` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  `project_id` int(11) DEFAULT NULL,
+  `payment_mode_id` int(11) DEFAULT NULL,
+  `currency_id` int(11) DEFAULT NULL,
   `link` varchar(255) NOT NULL,
   `amount` varchar(255) NOT NULL,
-  `currency` varchar(255) NOT NULL,
-  `payment_mode` varchar(255) NOT NULL,
   `payment_status` tinyint(255) NOT NULL,
+  `payment_approvel` tinyint(4) NOT NULL,
+  `reference_number` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -42,10 +71,54 @@ CREATE TABLE `guestpost_leads` (
 -- Dumping data for table `guestpost_leads`
 --
 
-INSERT INTO `guestpost_leads` (`id`, `link`, `amount`, `currency`, `payment_mode`, `payment_status`, `created_at`, `updated_at`) VALUES
-(1, 'dfgfdgfdgfdg', '2323', 'inr', 'pending', 0, '2023-08-10 17:50:03', '2023-08-10 17:50:03'),
-(2, 'sdfsdfsdf', '1111', 'inr', 'pending', 0, '2023-08-11 10:18:26', '2023-08-11 10:18:26'),
-(3, 'fr', '212', 'inr', 'pending', 1, '2023-08-11 11:18:39', '2023-08-11 11:18:39');
+INSERT INTO `guestpost_leads` (`id`, `user_id`, `role_id`, `project_id`, `payment_mode_id`, `currency_id`, `link`, `amount`, `payment_status`, `payment_approvel`, `reference_number`, `created_at`, `updated_at`) VALUES
+(1, 2, 2, 1, 3, 1, 'https://www.html.com', '1212', 0, 0, '', '2023-09-04 16:34:02', '2023-09-04 11:58:00'),
+(2, 2, 2, 1, 2, 2, 'https://www.ddd.com', '121233', 0, 0, '', '2023-09-04 18:19:38', '2023-09-04 12:51:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment_modes`
+--
+
+CREATE TABLE `payment_modes` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `payment_modes`
+--
+
+INSERT INTO `payment_modes` (`id`, `name`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'siddharth', NULL, '2023-09-04 12:25:55', '2023-09-04 06:55:55'),
+(2, 'dd', NULL, '2023-09-04 12:42:32', '2023-09-04 07:12:32'),
+(3, 'uu', 1, '2023-09-04 13:07:11', '2023-09-04 07:37:11'),
+(4, 'll', 1, '2023-09-04 15:19:47', '2023-09-04 09:49:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `name`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'siddharthssss', 1, '2023-08-24 12:19:31', '2023-08-24 12:19:31');
 
 -- --------------------------------------------------------
 
@@ -90,22 +163,44 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `phone`, `password`, `created_at`, `updated_at`) VALUES
-(1, 1, 'siddharth', 'sharmasiddharth385@gmail.com', '', '$2y$10$adkAgLeLJJ1zxZ8fDeaEPeYeSS3.q/FvDyqqCEbmCW8DTTHvt5Eha', '2023-08-09 12:21:40', '2023-08-09 12:21:40'),
-(3, NULL, 'siddharth sharma', 'patlu@gmaill.com', '07206771558', '$2y$10$3XwLb1YwJ.DxMQzqpQoEpuc/sci8uaF5EVl5OtErdU9aF8SrszKi6', '2023-08-09 13:16:29', '2023-08-09 13:16:29'),
-(4, 2, 'SIDDHARTH SHARMA', 'sharmasiddharth5@gmail.com', '07206771558', '$2y$10$80bMrLfL58s/NvvM/mJ0ruhz1bQQXG.Lzbwg7OuONuj/S2fi0J5AW', '2023-08-11 12:14:26', '2023-08-11 12:14:26'),
-(5, 1, 'SIDDHARTH SHARMA', 'sharmasiddh385@gmail.com', '07206771558', '$2y$10$UnjXQqA2IT5VF2zRsfYmZeklGAs8CrIMKZZPP2XHjUwCcSgqPFw5O', '2023-08-11 12:17:32', '2023-08-11 12:17:32'),
-(6, 1, 'SIDDHARTH SHARMA', 'sharmarth385@gmail.com', '07206771559', '$2y$10$msll8O10lxynsNyEyq7uW.tiUEHlTk9fCx21m8MWoS8nGEf.2U2Ou', '2023-08-11 12:20:26', '2023-08-11 12:20:26'),
-(7, NULL, 'SIDDHARTH SHARMA', 'shh385@gmail.com', '07206771558', '$2y$10$MbFJ1ruDaVUZOxmSD7EMluL9VB8EREoT2tSdug5v8KU9oTlNuOb4m', '2023-08-11 12:24:24', '2023-08-11 12:24:24');
+(1, 1, 'Siddharth', 'admin@eseo.com', '7206771558', '$2y$10$blvDqe8WUWm1LEuXxFJLfehNvfpnPZJmxZ6/2yuS0amkpzjP.lRJi', '2023-08-24 12:08:04', '2023-08-24 12:08:04'),
+(2, 2, 'Priyanka', 'priyanka@eseo.com', '7206771558', '$2y$10$x1NLHEZe5e0Bc1Leskh3UexRUlnAcqL9//2EZDIrVQn9qDOJSQMOy', '2023-08-24 12:08:47', '2023-08-24 12:08:47');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `currencies`
+--
+ALTER TABLE `currencies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fkkkk_user_id` (`user_id`);
+
+--
 -- Indexes for table `guestpost_leads`
 --
 ALTER TABLE `guestpost_leads`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_user_id` (`user_id`),
+  ADD KEY `fk_role_id` (`role_id`),
+  ADD KEY `fk_project_id` (`project_id`),
+  ADD KEY `fk_payment_mode_id` (`payment_mode_id`),
+  ADD KEY `fk_currency_id` (`currency_id`);
+
+--
+-- Indexes for table `payment_modes`
+--
+ALTER TABLE `payment_modes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `f_user_id` (`user_id`);
+
+--
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fkk_user_id` (`user_id`);
 
 --
 -- Indexes for table `role`
@@ -125,10 +220,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `currencies`
+--
+ALTER TABLE `currencies`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `guestpost_leads`
 --
 ALTER TABLE `guestpost_leads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `payment_modes`
+--
+ALTER TABLE `payment_modes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -140,11 +253,39 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `currencies`
+--
+ALTER TABLE `currencies`
+  ADD CONSTRAINT `fkkkk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `guestpost_leads`
+--
+ALTER TABLE `guestpost_leads`
+  ADD CONSTRAINT `fk_currency_id` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`),
+  ADD CONSTRAINT `fk_payment_mode_id` FOREIGN KEY (`payment_mode_id`) REFERENCES `payment_modes` (`id`),
+  ADD CONSTRAINT `fk_project_id` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`),
+  ADD CONSTRAINT `fk_role_id` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`),
+  ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `payment_modes`
+--
+ALTER TABLE `payment_modes`
+  ADD CONSTRAINT `f_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `projects`
+--
+ALTER TABLE `projects`
+  ADD CONSTRAINT `fkk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `users`
