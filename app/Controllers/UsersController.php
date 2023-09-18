@@ -73,11 +73,12 @@ class UsersController extends BaseController
                 // print_r($ses_data);
                 // die('hi');
                 $session->set($ses_data);
-                if ($session->get('role') == "admin") {
+                if ($session->get('role') == "Admin") {
                     return redirect()->to(base_url() . 'admin');
-                }
-                if ($session->get('role') == "agent") {
+                } else if ($session->get('role') == "Agent") {
                     return redirect()->to(base_url() . 'agent');
+                } else if ($session->get('role') == "Manager") {
+                    return redirect()->to(base_url() . 'manager');
                 }
                 // return view('index', $data);
             } else {

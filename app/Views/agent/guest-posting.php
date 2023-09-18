@@ -2,6 +2,31 @@
 <php lang="en">
 
     <?php echo view('agent/header') ?>
+    <?php $session = session(); ?>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <?php
+            if ($session->getFlashdata('success_save')) { ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $session->getFlashdata('success_save'); ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <?php
+            if ($session->getFlashdata('error_save')) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $session->getFlashdata('error_save'); ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
     <main class="content">
         <div class="container-fluid p-0">
             <div class="eseo_form">
@@ -29,44 +54,28 @@
 
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="paymentStatus" class="form-label">Payment Status</label>
-                        <select class="form-select" id="paymentStatus" name="paymentStatus">
-                            <option value="">Select</option>
-                            <option value="0">Pending</option>
-                            <option value="1">Completed</option>
-                        </select>
-                    </div>
-                    <div id="currencyINR">
-                        <div class="mb-3">
-                            <label for="currencyINR" class="form-label">Currency (INR)</label>
-                            <select class="form-select" id="" name="currency">
-                                <option value="">Select</option>
 
-                                <?php foreach ($all_currencies as $currency) : ?>
-                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
-                                <?php
-                                endforeach;
-                                ?>
-                                <!-- Add more currency options here if needed -->
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="paymentMode" class="form-label">Payment Mode</label>
-                            <select class="form-select" id="paymentmode" name="paymentmode">
-                                <option value="">Select</option>
-                                <?php foreach ($all_payment_modes as $payment_mode) : ?>
-                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
-                                <?php
-                                endforeach;
-                                ?>
-                            </select>
-                            <div id="reference_number" class="reference_number" name="">
-                                <label for="reference_number" class="form-label">Reference Number</label>
-                                <input type="" class="form-control" id="" name="reference_number">
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <label for="agent_email" class="form-label">Agent Email</label>
+                        <input type="email" class="form-control " id="agent_email" name="agent_email" value="<?= $session->get('email') ?>">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="blogger_name" class="form-label">Blogger Name</label>
+                        <input type="text" class="form-control" id="blogger_name" name="blogger_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="blogger_email" class="form-label">Blogger Email</label>
+                        <input type="email" class="form-control" id="blogger_email" name="blogger_email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="blogger_phone" class="form-label">Blogger Phone</label>
+                        <input type="number" class="form-control" id="blogger_phone" name="blogger_phone">
+                    </div>
+
+
+
+
                     <div class="right_submit"> <button type="submit" class="btn btn-primary">Submit</button></div>
                 </form>
             </div>
@@ -95,8 +104,33 @@
             });
         })
     </script> -->
+
+
+    <script>
+        var agent_email = `<?= $session->get('email') ?>`;
+        if (agent_email) {
+            $("#agent_email").prop('disabled', true);
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <script>
+        jQuery.validator.addMethod('check_phone',
+            function(value, element) {
+                return this.optional(element) || /^[0-9]{10}$/i.test(value);
+            },
+            'Enter valid phone number'
+        );
+        jQuery.validator.addMethod(
+            'letters',
+            function(value, element) {
+                return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
+            },
+            'Letters only please'
+        );
+    </script>
+
     <script>
         $("#guest-posting-form").validate({
             rules: {
@@ -112,19 +146,37 @@
                 projectName: {
                     required: true,
                 },
-                paymentStatus: {
+                agent_email: {
                     required: true,
+                    email: true
                 },
-                paymentmode: {
+
+                blogger_name: {
                     required: true,
+                    letters: true
                 },
-                currency: {
+                blogger_email: {
                     required: true,
+                    email: true
                 },
-                reference_number: {
+                blogger_phone: {
                     required: true,
+                    check_phone: true
                 },
-            }
+
+            },
+            // messages: {
+            //     link: "Please submit a valid url",
+            //     amount: "Please enter amount",
+            //     projectName: "Please select project name",
+            //     agent_email: "Please enter agent email",
+            //     blogger_name: "Please enter blogger name",
+            //     blogger_email: "Please enter blogger email",
+            //     blogger_phone: "Please enter blogger phone number",
+
+
+
+            // }
         });
     </script>
 

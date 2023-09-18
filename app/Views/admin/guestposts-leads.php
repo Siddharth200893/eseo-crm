@@ -1,14 +1,40 @@
 <!DOCTYPE php>
+
+<?php $session = session(); ?>
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <?php
+        if ($session->getFlashdata('success_save')) { ?>
+            <div class="alert alert-success" role="alert">
+                <?php echo $session->getFlashdata('success_save'); ?>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <?php
+        if ($session->getFlashdata('error_save')) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $session->getFlashdata('error_save'); ?>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
+</div>
 <php lang="en">
     <?php echo view('admin/header') ?>
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/daterangepicker.css" />
     <main class="content">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <input type="text" id="date_range_filter" class="form-control filter ">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <select id="paymentModeFilter" class="form-control filter">
                     <option value="0">All Payment Mode</option>
                     <?php foreach ($all_payment_modes as $payment_mode) : ?>
@@ -18,7 +44,7 @@
                     ?>
                 </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <select id="currencyFilter" class="form-control filter">
                     <!-- <option value="0">No value</option> -->
                     <option value="0">All Currencies</option>
@@ -29,12 +55,30 @@
                     ?>
                 </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <select id="projectFilter" class="form-control filter">
                     <!-- <option value="0">No value</option> -->
                     <option value="0">All Projects</option>
                     <?php foreach ($all_projects as $project) : ?>
                         <option value="<?= $project['name'] ?>"><?= $project['name'] ?></option>
+                    <?php
+                    endforeach; ?>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select id="paymentFilter" class="form-control filter">
+                    <option value="0">Payment Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select id="bloggerFilter" class="form-control filter">
+                    <!-- <option value="0">No value</option> -->
+                    <option value="0">Bloggers</option>
+                    <?php foreach ($blogger_names as $blogger) : ?>
+                        <option value="<?= $blogger['blogger_name'] ?>"><?= $blogger['blogger_name'] ?></option>
                     <?php
                     endforeach; ?>
                 </select>
@@ -54,6 +98,7 @@
                                     <tr>
                                         <th class="d-xl-table-cell">Date</th>
                                         <th class="d-xl-table-cell">Project Name</th>
+                                        <th class="d-xl-table-cell">Blogger Name</th>
                                         <th class="d-xl-table-cell">Link</th>
                                         <th class="d-xl-table-cell">Amount</th>
                                         <th class="d-xl-table-cell">Payment Status</th>
@@ -71,6 +116,7 @@
                                         <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : ""  ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>">
                                             <td class="d-xl-table-cell td_date" data-td_date="<?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?>"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
                                             <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
+                                            <td class="td_blogger_name" data-td_blogger_name="<?php echo $guestpost['blogger_name']; ?>"><?php echo $guestpost['blogger_name']; ?></td>
                                             <td class="d-xl-table-cell td_link"><?php echo $guestpost['link']; ?></td>
                                             <td class="d-xl-table-cell range td_amount"><?php echo $guestpost['amount']; ?></td>
                                             <td class="d-xl-table-cell td_pmt_status" data-td_pmt_status="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>"><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
@@ -169,27 +215,28 @@
 
                                     console.log(formattedDate); // Output: "August 24, 2023"
 
-                                    const payment_status_text = row.payment_status == 1 ? "Completed " : "Pending ";
+                                    const payment_status_text = row.payment_status == 1 ? "Completed" : "Pending";
                                     const payment_status = row.payment_status == 1 ? "Completed" : "Pending Approve badge bg-danger";
                                     const payment_approvel = row.payment_approvel == 1 ? "btn Completed Approved badge bg-success" : "Pending Approve badge bg-danger";
-                                    const aproove_status = row.payment_approvel == 1 ? "Approved " : "Approve badge bg-danger";
-                                    const aproove_status_text = row.payment_approvel == 1 ? "Approved " : "Approve ";
+                                    const aproove_status = row.payment_approvel == 1 ? "Approved" : "Approve badge bg-danger";
+                                    const aproove_status_text = row.payment_approvel == 1 ? "Approved" : "Approve";
                                     const editing_status = row.payment_approvel == 1 ? "edited" : "";
                                     const editing_text = row.payment_approvel == 1 ? "Edited" : "Edit";
                                     tableRow += '<tr class="' + aproove_status_text + " " + payment_status_text + '">' +
                                         '<td>' + formattedDate + '</td>' +
                                         '<td class="td_project_name" data-td_project_name ="' + row.project_name + '">' + row.project_name + '</td>' +
+                                        '<td class="td_blogger_name" data-td_blogger_name ="' + row.blogger_name + '">' + row.blogger_name + '</td>' +
                                         '<td>' + row.link + '</td>' +
                                         '<td>' + row.amount + '</td>' +
-                                        '<td>' + payment_status_text + '</td>' +
-                                        '<td class="td_currency" data-td_currency ="' + row.currency + '">' + row.currency + '</td>' +
+                                        '<td class="td_pmt_status" data-td_pmt_status ="' + payment_status_text + '">' + payment_status_text + '</td>' +
+                                        '<td class="td_currency" data-td_currency ="' + row.currency_name + '">' + row.currency_name + '</td>' +
                                         '<td class="td_pmt_mode" data-td_pmt_mode="' + row.payment_mode + '">' + row.payment_mode + '</td>' +
                                         '<td>' + row.reference_number + '</td>' +
                                         '<td>' + row.username + '</td>' +
 
                                         '<td>' + '<button class="btn ' + " " + payment_approvel + '" type="button" onclick="payemnt_approvel(' + row.payment_status + ',' + row.id + ')">' + aproove_status_text + '</button> ' + ' </td>' +
                                         // '<td>' + row.agent_id + '</td>' +
-                                        '<td>' + '<a target="_blank" href="<?= base_url('admin/edit-guestpost/') ?>' + '/' + row.id + '" class="sidebar-link edit-gp-btn  ' +
+                                        '<td>' + '<a target="_blank" href="<?= base_url('admin/edit-guestpost/') ?>' + md5(row.id) + '" class="sidebar-link edit-gp-btn  ' +
                                         editing_status + '"">' + editing_text + '</a>'; + '</td > ' +
                                     '</tr>';
                                     $("#sales_table_body").html(tableRow);
@@ -228,12 +275,27 @@
             var contactFlag = 0;
             var contactValue = $('#paymentModeFilter').val();
             console.log(contactValue);
+
+
             var rangeFlag = 0;
             var rangeValue = $('#currencyFilter').val();
             console.log(rangeValue);
+
+
             var projectFlag = 0;
             var projectValue = $('#projectFilter').val();
             console.log(projectValue + "projectflag");
+
+            var paymentFlag = 0;
+
+            var paymentValue = $('#paymentFilter').val();
+            // alert(paymentValue);
+            console.log(paymentValue + "paymentFilterflag");
+
+            var bloggerFlag = 0;
+
+            var bloggerValue = $('#bloggerFilter').val();
+            console.log(bloggerValue + "bloggerValuetflag");
             //setting intial values and flags needed
             //traversing each row one by one
             $('#sales_table_body tr').each(function() {
@@ -260,7 +322,21 @@
                 } else {
                     projectFlag = 0;
                 }
-                if (contactFlag && rangeFlag && projectFlag) {
+                if (paymentValue == 0) {
+                    paymentFlag = 1;
+                } else if (paymentValue == $(this).find('td.td_pmt_status').data('td_pmt_status')) {
+                    paymentFlag = 1;
+                } else {
+                    paymentFlag = 0;
+                }
+                if (bloggerValue == 0) {
+                    bloggerFlag = 1;
+                } else if (bloggerValue == $(this).find('td.td_blogger_name').data('td_blogger_name')) {
+                    bloggerFlag = 1;
+                } else {
+                    bloggerFlag = 0;
+                }
+                if (contactFlag && rangeFlag && projectFlag && bloggerFlag && paymentFlag) {
                     // console.log(companyFlag);
                     console.log('yes');
                     console.log(contactFlag);

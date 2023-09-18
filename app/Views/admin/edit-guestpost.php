@@ -193,19 +193,6 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function() {
 
-            var url = "<?php echo current_url() ?>";
-            alert(url);
-            console.log('<?php echo current_url() ?>');
-            console.log(<?php echo substr(current_url(), -4) === 'mode' ? 'active' : ''; ?>);
-            if (<?php echo substr(current_url(), -4) === 'mode' ? 'active' : ''; ?> === 'active') {
-                console.log('yes');
-                $('.sidebar-link').attr('aria-expanded', 'true');
-                $('.sidebar-link').removeClass('collapsed');
-            }
-        })
-    </script>
     </body>
 </php>

@@ -82,6 +82,23 @@ $role = $session->get('role');
 					</ul>
 				</div>
 			</div>
+			<li class="sidebar-item ">
+				<a class="sidebar-link" href="#collapseExample1" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+					<i class="align-middle" data-feather="user"></i> <span class="align-middle">Bloggers</span>
+				</a>
+			</li>
+			<div class="collapse" id="collapseExample1">
+				<div class="card-body">
+					<ul>
+						<li class="sidebar-item <?php echo substr(current_url(), -7) === 'blogger' ? 'active' : ''; ?>"><a class="sidebar-link" href="<?= base_url() ?>admin/bloggers">
+								<span class="align-middle">Blogger Leads</span>
+							</a></li>
+
+
+					</ul>
+				</div>
+			</div>
+
 
 			<!-- <li class="sidebar-item">
 							<a class="sidebar-link" href="pages-profile.php">

@@ -13,7 +13,7 @@ class AgentController extends BaseController
 {
     public function __construct()
     {
-        if (session()->get('role') != "agent") {
+        if (session()->get('role') != "Agent") {
             echo 'Access denied';
             exit;
         }
@@ -58,78 +58,49 @@ class AgentController extends BaseController
         // die('hi');
 
 
-        if (!empty($existing_reference_number['reference_number'])) {
+        // if (!empty($existing_reference_number['reference_number'])) {
 
-            if (!$existing_guestpostlink) {
-
-                if (!$existing_reference_number) {
-                    helper(['form', 'url']);
-                    $rules = [
-                        'link' => 'required',
-                        'amount' => 'required',
-                        'paymentStatus' => 'required',
-                    ];
-                    if ($this->validate($rules)) {
-                        $data = [
-                            'user_id' => $ssn_id,
-                            'role_id' => $ssn_role_id,
-                            'link' => $this->request->getVar('link'),
-                            'project_mode_id' => $this->request->getVar('projectName'),
-                            'amount' => $this->request->getVar('amount'),
-                            'currency_id' => $this->request->getVar('currency'),
-                            'reference_number' => $this->request->getVar('reference_number'),
-                            'payment_mode' => $this->request->getVar('paymentmode'),
-                            'payment_status' => $this->request->getVar('paymentStatus'),
-                        ];
+        if (!$existing_guestpostlink) {
 
 
-                        $GuestPostLeadsModel->insert($data);
-                        $session->setFlashdata('success_save', 'Saved');
-                        return redirect()->to(base_url() . 'agent/guest-posting-leads');
-                    } else {
-                        $session->setFlashdata('error_save', 'Please enter valid details');
-                        return  redirect()->to(base_url() . 'agent/guest-posting');
-                    }
-                } else {
-                    $session->setFlashdata('error_save', 'Please enter unique reference number');
-                    return  redirect()->to(base_url() . 'agent/guest-posting');
-                }
+            helper(['form', 'url']);
+            $rules = [
+                'link' => 'required',
+                'amount' => 'required',
+                'projectName' => 'required',
+                'agent_email' => 'required',
+                'blogger_name' => 'required',
+                'blogger_email' => 'required',
+                'blogger_phone' => 'required',
+            ];
+            if ($this->validate($rules)) {
+                $data = [
+                    'user_id' => $ssn_id,
+                    'role_id' => $ssn_role_id,
+                    'link' => $this->request->getVar('link'),
+                    'project_id' => $this->request->getVar('projectName'),
+                    'amount' => $this->request->getVar('amount'),
+                    'agent_email' => $this->request->getVar('agent_email'),
+                    'blogger_name' => $this->request->getVar('blogger_name'),
+                    'blogger_email' => $this->request->getVar('blogger_email'),
+                    'blogger_phone' => $this->request->getVar('blogger_phone'),
+
+                ];
+
+                // print_r($data);
+                // die();
+
+
+                $GuestPostLeadsModel->insert($data);
+                $session->setFlashdata('success_save', 'Saved');
+                return redirect()->to(base_url() . 'agent/guest-posting-leads');
             } else {
-                $session->setFlashdata('error_save', 'this guest post link already exists');
+                $session->setFlashdata('error_save', 'Please enter valid details');
                 return  redirect()->to(base_url() . 'agent/guest-posting');
             }
         } else {
-            if (!$existing_guestpostlink) {
-
-                helper(['form', 'url']);
-                $rules = [
-                    'link' => 'required',
-                    'amount' => 'required',
-                    'paymentStatus' => 'required',
-                ];
-                if ($this->validate($rules)) {
-                    $data = [
-                        'user_id' => $ssn_id,
-                        'role_id' => $ssn_role_id,
-                        'link' => $this->request->getVar('link'),
-                        'project_id' => $this->request->getVar('projectName'),
-                        'amount' => $this->request->getVar('amount'),
-                        'currency_id' => $this->request->getVar('currency'),
-                        'reference_number' => $this->request->getVar('reference_number'),
-                        'payment_mode_id' => $this->request->getVar('paymentmode'),
-                        'payment_status' => $this->request->getVar('paymentStatus'),
-                    ];
-                    $GuestPostLeadsModel->insert($data);
-                    $session->setFlashdata('success_save', 'Saved');
-                    return redirect()->to(base_url() . 'agent/guest-posting-leads');
-                } else {
-                    $session->setFlashdata('error_save', 'Please enter valid details');
-                    return  redirect()->to(base_url() . 'agent/guest-posting');
-                }
-            } else {
-                $session->setFlashdata('error_save', 'this guest post link already exists');
-                return  redirect()->to(base_url() . 'agent/guest-posting');
-            }
+            $session->setFlashdata('error_save', 'this guest post link already exists');
+            return  redirect()->to(base_url() . 'agent/guest-posting');
         }
     }
 
@@ -219,7 +190,7 @@ class AgentController extends BaseController
                 // $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $GuestPostLeadsModel->update($id, $data);
                 $session->setFlashdata('success_save', 'Updated successfully');
-                return redirect()->back();
+                return redirect()->to(base_url() . 'agent/guest-posting-leads');
             }
         } else {
             helper(['form', 'url']);

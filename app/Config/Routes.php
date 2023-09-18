@@ -68,6 +68,8 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
     $routes->post('add-payment-mode', 'AdminController::add_payment_method');
     $routes->get('currency', 'AdminController::currency');
     $routes->post('add-currency', 'AdminController::add_currency');
+    $routes->get('bloggers', 'AdminController::bloggers');
+    $routes->get('blogger-leads/(:any)', 'AdminController::blogger_leads/$1');
 
 
 
@@ -83,6 +85,40 @@ $routes->group("agent", ["filter" => "authGuard"], function ($routes) {
     $routes->get('guest-posting-leads', 'AgentController::guest_posting_leads');
     $routes->get('edit-guestpost/(:alphanum)', 'AgentController::edit_guestpost/$1');
     $routes->post('update-guestpost', 'AgentController::update_guestpost');
+});
+
+$routes->group("manager", ["filter" => "authGuard"], function ($routes) {
+    $routes->get("/", "ManagerController::guest_posting_leads");
+    // $routes->get('guest-posting', 'ManagerController::guest_posting');
+    $routes->get('guest-posting-leads', 'ManagerController::guest_posting_leads');
+    $routes->get('manage-users', 'ManagerController::manage_users');
+    $routes->get('edit-users/(:alphanum)', 'ManagerController::edit_users/$1');
+    $routes->post('update-user', 'ManagerController::update_user');
+    $routes->get('approve-payment/(:alphanum)', 'ManagerController::approve_payment/$1');
+    $routes->get('add-user', 'ManagerController::add_user');
+    $routes->post('users-registration', 'ManagerController::users_registration');
+    $routes->get('edit-guestpost/(:alphanum)', 'ManagerController::edit_guestpost/$1');
+    $routes->post('update-guestpost', 'ManagerController::update_guestpost');
+    $routes->get('project', 'ManagerController::project');
+    $routes->post('add-project', 'ManagerController::add_project');
+    $routes->get('all-projects', 'ManagerController::all_projects');
+    $routes->get('edit-project/(:alphanum)', 'ManagerController::edit_project/$1');
+    $routes->post('update-project', 'ManagerController::update_project/$1');
+    $routes->get('view-project-leads/(:alphanum)', 'ManagerController::view_project_leads/$1');
+    $routes->post('guestpost-leads-date-range', 'ManagerController::guestpost_leads_date_range');
+    // $routes->get('guestpost-leads-date-range', 'ManagerController::get_guestpost_leads_pagination');
+    $routes->get('payment-mode', 'ManagerController::payment_method');
+    $routes->post('add-payment-mode', 'ManagerController::add_payment_method');
+    $routes->get('currency', 'ManagerController::currency');
+    $routes->post('add-currency', 'ManagerController::add_currency');
+    $routes->get('bloggers', 'ManagerController::bloggers');
+    $routes->get('blogger-leads/(:any)', 'ManagerController::blogger_leads/$1');
+
+
+
+
+
+    // $routes->get('update-user', 'ManagerController::update_user');
 });
 // $routes->post('/logining-in', 'UsersController/loginAuth':: 'UsersController::loginAuth');
 

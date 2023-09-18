@@ -1,0 +1,593 @@
+INFO - 2023-09-07 05:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 05:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 06:21:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 06:21:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 06:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 06:22:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 06:22:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 06:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 06:22:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 06:22:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(377): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 06:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 06:23:19 --> mysqli_sql_exception: Unknown column 'guestpost_leads.currency' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 06:23:19 --> Unknown column 'guestpost_leads.currency' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-09\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-09\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-09\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 06:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 06:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 07:04:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5 in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 07:04:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_le...' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) > IS NULL
+AND DATE(guestpost_leads.created_at) < IS NULL
+ORDER BY `guestpost_leads`.`id` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 07:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 07:08:55 --> mysqli_sql_exception: Unknown column 'guestpost_leads.currency' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 07:08:55 --> Unknown column 'guestpost_leads.currency' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-07\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 07:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 07:09:30 --> mysqli_sql_exception: Unknown column 'guestpost_leads.currency' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 07:09:30 --> Unknown column 'guestpost_leads.currency' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 07:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-07 07:12:22 --> mysqli_sql_exception: Unknown column 'guestpost_leads.payment_mode' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-07 07:12:22 --> Unknown column 'guestpost_leads.payment_mode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-08-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-08-31\'
+ORDER BY `guestpost_leads`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AdminController.php(379): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-07 07:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 07:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 08:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 09:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 10:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 10:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-07 10:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-07 10:01:16 --> Undefined variable $all_payment_modes
+in APPPATH\Views\admin\guestposts-leads.php on line 14.
+ 1 APPPATH\Views\admin\guestposts-leads.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $all_payment_modes', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\guestposts-leads.php', 14)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\guestposts-leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/guestposts-leads', [], true)
+ 5 APPPATH\Controllers\AdminController.php(396): view('admin/guestposts-leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

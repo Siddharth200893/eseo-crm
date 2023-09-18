@@ -15,7 +15,7 @@ class AdminController extends BaseController
 {
     public function __construct()
     {
-        if (session()->get('role') != "admin") {
+        if (session()->get('role') != "Admin") {
             echo 'Access denied';
             exit;
         }
@@ -72,12 +72,17 @@ class AdminController extends BaseController
         $all_projects = $ProjectsModel->select('*')->findAll();
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_Currencies = $CurrenciesModel->select('*')->findAll();
+        $blogger_names = $GuestPostLeadsModel->select('blogger_name')
+            ->groupBy('blogger_name')
+            ->findAll();
+        // print("<pre>" . print_r($blogger_names, true) . "</pre>");
+        // die();
 
         $currentDate = date('Y-m-d');
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
 
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
@@ -94,6 +99,7 @@ class AdminController extends BaseController
             'all_projects' => $all_projects,
             'all_payment_modes' => $all_payment_modes,
             'all_Currencies' => $all_Currencies,
+            'blogger_names' => $blogger_names,
             'pager' => $GuestPostLeadsModel->pager
         ];
         return view('admin/guestposts-leads', $data);
@@ -156,12 +162,48 @@ class AdminController extends BaseController
     public function approve_payment($id)
     {
         $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $agent_email = $GuestPostLeadsModel->select('*')->where('id', $id)->first();
+
+        // print_r($agent_email['agent_email']);
+        // die('hi');
+
+
+
         $payment_status = 1;
         $data = [
             'payment_approvel' => $payment_status,
 
         ];
-        $GuestPostLeadsModel->update($id, $data);
+        $approved =  $GuestPostLeadsModel->update($id, $data);
+        // print_r($approved);
+        // die('hi');
+
+        if ($approved) {
+
+            // die(1);
+            $to = $agent_email['agent_email'];
+            // print_r($to);
+            // die('hi');
+            $message = "Your guest post has been approved guest post link is " . $agent_email['link'] . "Thank You!";
+
+            // print_r($message);
+            // die('hi');
+            $email = \Config\Services::email();
+            $email->setFrom('rohit.xportssoft@gmail.com', 'sidd');
+            $email->setTo($to);
+            $email->setSubject('this is subject');
+            $email->setMessage($message); //your message here
+
+            // $email->setCC('another@emailHere'); //CC
+            // $email->setBCC('thirdEmail@emialHere'); // and BCC
+            // $filename = '/img/yourPhoto.jpg'; //you can use the App patch 
+            // $email->attach($filename);
+
+            $sent = $email->send();
+            // echo $sent;
+            // die('hi');
+            // $email->printDebugger(['headers']);
+        }
         return redirect()->back();
     }
     public function edit_guestpost($id)
@@ -178,7 +220,7 @@ class AdminController extends BaseController
 
         // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.id as currency_id,currencies.name as currency_name,payment_modes.name as payment_mode')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.Project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
@@ -218,9 +260,12 @@ class AdminController extends BaseController
                     'updated_at' => date('Y-m-d H:s:a'),
 
                 ];
+
+                // print_r($data);
+                // die('hii');
                 $GuestPostLeadsModel->update($id, $data);
                 $session->setFlashdata('success_save', 'Updated successfully');
-                return redirect()->back();
+                return redirect()->to(base_url() . 'admin/guest-posting-leads');
             }
         } else {
             helper(['form', 'url']);
@@ -236,9 +281,9 @@ class AdminController extends BaseController
                 $data = [
                     'project_id' => $this->request->getVar('projectName'),
                     'amount' => $this->request->getVar('amount'),
-                    'currency' => $this->request->getVar('currency'),
+                    'currency_id' => $this->request->getVar('currency'),
                     'reference_number' => $this->request->getVar('reference_number'),
-                    'payment_mode' => $this->request->getVar('paymentmode'),
+                    'payment_mode_id' => $this->request->getVar('paymentmode'),
                     'payment_status' => $this->request->getVar('paymentStatus'),
                     'updated_at' => date('Y-m-d H:s:a'),
 
@@ -370,10 +415,11 @@ class AdminController extends BaseController
         $endDate = $this->request->getPost('end_date');
 
         // $data = $GuestPostLeadsModel = new GuestPostLeadsModel();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency,guestpost_leads.payment_mode,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name, currencies.name as currency_name,payment_modes.name as payment_mode')
+            ->join('currencies', 'guestpost_leads.currency_id = currencies.id', 'left')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
-            ->where('DATE(guestpost_leads.created_at) >=', $startDate)
+            ->join('payment_modes', 'guestpost_leads.payment_mode_id = payment_modes.id', 'left')->where('DATE(guestpost_leads.created_at) >=', $startDate)
             ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->findAll();
 
         $response = [
@@ -448,5 +494,51 @@ class AdminController extends BaseController
         }
         $session->setFlashdata('error_save', 'Duplicate Currency');
         return redirect()->back();
+    }
+
+    public function bloggers()
+    {
+        $session = session();
+
+        $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $data_by_email = $GuestPostLeadsModel->select('blogger_email, blogger_name, COUNT(blogger_email) as leads_count')
+
+            ->groupBy('blogger_email')
+            ->orderBy('guestpost_leads.created_at', 'desc')
+            ->paginate(10);
+
+        // print_r($data_by_email);
+        // print("<pre>" . print_r($data_by_email, true) . "</pre>");
+        // die();
+        $data = [
+            'leads_by_email' => $data_by_email,
+            'pager' => $GuestPostLeadsModel->pager
+        ];
+
+        return view('admin/bloggers', $data);
+    }
+    public function blogger_leads($id)
+    {
+        $session = session();
+
+        $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $data_by_email = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.blogger_email,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
+            ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+            ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+            ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
+            ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
+            ->where('guestpost_leads.blogger_email', $id)
+            ->orderBy('guestpost_leads.created_at', 'desc')
+            ->paginate(10);
+
+        // print_r($data_by_email);
+        // print("<pre>" . print_r($data_by_email, true) . "</pre>");
+        // die();
+        $data = [
+            'bloggers_leads' => $data_by_email,
+            'pager' => $GuestPostLeadsModel->pager
+        ];
+
+        return view('admin/blogger-leads-data', $data);
     }
 }
