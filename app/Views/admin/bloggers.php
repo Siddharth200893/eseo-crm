@@ -7,9 +7,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-12">
                     <!-- <h2>All Leads</h2> -->
-                    <div class="add_btninfos">
-                        <a class="badge bg-success" href="<?= base_url('admin/project') ?>" style="text-decoration:none;">Add Project</a>
-                    </div>
+
                     <table id="businessTable" class="table tabledesign table-hover my-0">
                         <thead>
                             <tr>

@@ -62,14 +62,17 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
     $routes->get('edit-project/(:alphanum)', 'AdminController::edit_project/$1');
     $routes->post('update-project', 'AdminController::update_project/$1');
     $routes->get('view-project-leads/(:alphanum)', 'AdminController::view_project_leads/$1');
-    $routes->post('guestpost-leads-date-range', 'AdminController::guestpost_leads_date_range');
-    // $routes->get('guestpost-leads-date-range', 'AdminController::get_guestpost_leads_pagination');
+    $routes->get('guestpost-leads-date-range', 'AdminController::guestpost_leads_date_range');
+    // $routes->post('guestpost-leads-date-range', 'AdminController::post_guestpost_leads_date_range');
+    $routes->get('guestpost-leads-date-range', 'AdminController::get_guestpost_leads_date_range');
+    $routes->get('guestpost-leads-filter', 'AdminController::guestpost_leads_filter');
     $routes->get('payment-mode', 'AdminController::payment_method');
     $routes->post('add-payment-mode', 'AdminController::add_payment_method');
     $routes->get('currency', 'AdminController::currency');
     $routes->post('add-currency', 'AdminController::add_currency');
     $routes->get('bloggers', 'AdminController::bloggers');
     $routes->get('blogger-leads/(:any)', 'AdminController::blogger_leads/$1');
+    $routes->get('exportdata', 'AdminController::exportdata');
 
 
 

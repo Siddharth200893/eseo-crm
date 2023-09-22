@@ -68,19 +68,19 @@ class AgentController extends BaseController
                 'link' => 'required',
                 'amount' => 'required',
                 'projectName' => 'required',
-                'agent_email' => 'required',
                 'blogger_name' => 'required',
                 'blogger_email' => 'required',
                 'blogger_phone' => 'required',
             ];
             if ($this->validate($rules)) {
+                $session = session();
                 $data = [
                     'user_id' => $ssn_id,
                     'role_id' => $ssn_role_id,
                     'link' => $this->request->getVar('link'),
                     'project_id' => $this->request->getVar('projectName'),
                     'amount' => $this->request->getVar('amount'),
-                    'agent_email' => $this->request->getVar('agent_email'),
+                    'agent_email' => $session->get('email'),
                     'blogger_name' => $this->request->getVar('blogger_name'),
                     'blogger_email' => $this->request->getVar('blogger_email'),
                     'blogger_phone' => $this->request->getVar('blogger_phone'),

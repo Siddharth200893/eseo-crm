@@ -200,8 +200,6 @@ class managerController extends BaseController
             // $email->attach($filename);
 
             $sent = $email->send();
-            // echo $sent;
-            // die('hi');
             // $email->printDebugger(['headers']);
         }
         return redirect()->back();
