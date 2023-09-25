@@ -43,6 +43,19 @@
                         <input type="number" class="form-control" id="amount" name="amount">
                     </div>
                     <div class="mb-3">
+                        <label for="currency" class="form-label">Currency</label>
+                        <select class="form-select" id="currency" name="currency">
+
+                            <option value="">Select</option>
+                            <?php foreach ($all_currencies as $currency) {
+                            ?>
+                                <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                            <?php
+                            } ?>
+                        </select>
+
+                    </div>
+                    <div class="mb-3">
                         <label for="projectName" class="form-label">Project Name</label>
                         <select class="form-select" id="projectName" name="projectName">
                             <option value="">Select</option>
@@ -143,6 +156,9 @@
                     required: true,
                     digits: true
                 },
+                currency: {
+                    required: true,
+                },
                 projectName: {
                     required: true,
                 },
@@ -163,20 +179,8 @@
                     required: true,
                     check_phone: true
                 },
-
             },
-            // messages: {
-            //     link: "Please submit a valid url",
-            //     amount: "Please enter amount",
-            //     projectName: "Please select project name",
-            //     agent_email: "Please enter agent email",
-            //     blogger_name: "Please enter blogger name",
-            //     blogger_email: "Please enter blogger email",
-            //     blogger_phone: "Please enter blogger phone number",
 
-
-
-            // }
         });
     </script>
 

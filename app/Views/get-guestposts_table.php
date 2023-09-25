@@ -3,59 +3,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/daterangepicker.css" />
     <main class="content">
-        <div class="row">
-            <!-- <div class="col-md-2">
-                <input type="text" id="date_range_filter" class="form-control filter ">
-            </div> -->
-            <div class="col-md-2">
-                <select id="paymentModeFilter" class="form-control filter">
-                    <option value="0">All Payment Mode</option>
-                    <?php foreach ($all_payment_modes as $payment_mode) : ?>
-                        <option value="<?= $payment_mode['name'] ?>"><?= $payment_mode['name'] ?></option>
-                    <?php
-                    endforeach;
-                    ?>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <select id="currencyFilter" class="form-control filter">
-                    <!-- <option value="0">No value</option> -->
-                    <option value="0">All Currencies</option>
-                    <?php foreach ($all_Currencies as $currency) : ?>
-                        <option value="<?= $currency['name'] ?>"><?= $currency['name'] ?></option>
-                    <?php
-                    endforeach;
-                    ?>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <select id="projectFilter" class="form-control filter">
-                    <!-- <option value="0">No value</option> -->
-                    <option value="0">All Projects</option>
-                    <?php foreach ($all_projects as $project) : ?>
-                        <option value="<?= $project['name'] ?>"><?= $project['name'] ?></option>
-                    <?php
-                    endforeach; ?>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <select id="paymentFilter" class="form-control filter">
-                    <option value="0">Payment Status</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Completed">Completed</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <select id="bloggerFilter" class="form-control filter">
-                    <!-- <option value="0">No value</option> -->
-                    <option value="0">Bloggers</option>
-                    <?php foreach ($blogger_names as $blogger) : ?>
-                        <option value="<?= $blogger['blogger_name'] ?>"><?= $blogger['blogger_name'] ?></option>
-                    <?php
-                    endforeach; ?>
-                </select>
-            </div>
-        </div>
+
     </main>
     <div class="container-fluid p-0">
         <div class="wrapper_inner">

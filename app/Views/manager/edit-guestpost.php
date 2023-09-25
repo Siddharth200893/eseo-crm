@@ -81,7 +81,7 @@
                                 <!-- Add more currency options here if needed -->
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 reference_number">
                             <label for="paymentMode" class="form-label">Payment Mode</label>
                             <select class="form-select" id="" name="paymentmode">
                                 <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
@@ -91,7 +91,7 @@
                                 endforeach;
                                 ?>
                             </select>
-                            <div id="" class="reference_number" name="">
+                            <div id="" class="" name="">
                                 <label for="paymentMode" class="form-label">Reference Number</label>
                                 <input type="" value="<?= $guest_posts['reference_number'] ?>" class="form-control" id="reference_number" name="reference_number">
                             </div>
@@ -176,18 +176,16 @@
     </script>
     <script>
         $(document).ready(function() {
-
             if ($('#paymentStatus').val() == "0") {
-                $("#reference_number").hide();
+                $(".reference_number").hide();
             } else {
-                $("#reference_number").show();
+                $(".reference_number").show();
             }
-
             $("#paymentStatus").change(function() {
                 if ($(this).val() == "0") {
-                    $("#reference_number").hide();
+                    $(".reference_number").hide();
                 } else {
-                    $("#reference_number").show();
+                    $(".reference_number").show();
                 }
             });
         });

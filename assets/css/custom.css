@@ -201,6 +201,9 @@
 .Pending {
   background: #ffed0063;
 }
+.highlight {
+  background-color: rgb(13, 238, 171);
+}
 
 /* .Approve {
   background-color: red;

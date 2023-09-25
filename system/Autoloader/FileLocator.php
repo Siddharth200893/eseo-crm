@@ -49,7 +49,7 @@ class FileLocator
         $file = $this->ensureExt($file, $ext);
 
         // Clears the folder name if it is at the beginning of the filename
-        if (! empty($folder) && strpos($file, $folder) === 0) {
+        if (!empty($folder) && strpos($file, $folder) === 0) {
             $file = substr($file, strlen($folder . '/'));
         }
 
@@ -99,7 +99,7 @@ class FileLocator
             // If we have a folder name, then the calling function
             // expects this file to be within that folder, like 'Views',
             // or 'libraries'.
-            if (! empty($folder) && strpos($path . $filename, '/' . $folder . '/') === false) {
+            if (!empty($folder) && strpos($path . $filename, '/' . $folder . '/') === false) {
                 $path .= trim($folder, '/') . '/';
             }
 
@@ -129,7 +129,7 @@ class FileLocator
             }
 
             if ((isset($tokens[$i - 2][1]) && ($tokens[$i - 2][1] === 'phpnamespace' || $tokens[$i - 2][1] === 'namespace')) || ($dlm && $tokens[$i - 1][0] === T_NS_SEPARATOR && $token[0] === T_STRING)) {
-                if (! $dlm) {
+                if (!$dlm) {
                     $namespace = 0;
                 }
                 if (isset($token[1])) {
@@ -142,7 +142,8 @@ class FileLocator
 
             if (($tokens[$i - 2][0] === T_CLASS || (isset($tokens[$i - 2][1]) && $tokens[$i - 2][1] === 'phpclass'))
                 && $tokens[$i - 1][0] === T_WHITESPACE
-                && $token[0] === T_STRING) {
+                && $token[0] === T_STRING
+            ) {
                 $className = $token[1];
                 break;
             }
@@ -190,7 +191,7 @@ class FileLocator
             }
         }
 
-        if (! $prioritizeApp && ! empty($appPaths)) {
+        if (!$prioritizeApp && !empty($appPaths)) {
             $foundPaths = [...$foundPaths, ...$appPaths];
         }
 
@@ -259,7 +260,7 @@ class FileLocator
     {
         $path = realpath($path) ?: $path;
 
-        if (! is_file($path)) {
+        if (!is_file($path)) {
             return false;
         }
 
@@ -272,11 +273,11 @@ class FileLocator
 
             if (mb_strpos($path, $namespace['path']) === 0) {
                 $className = '\\' . $namespace['prefix'] . '\\' .
-                        ltrim(str_replace(
-                            '/',
-                            '\\',
-                            mb_substr($path, mb_strlen($namespace['path']))
-                        ), '\\');
+                    ltrim(str_replace(
+                        '/',
+                        '\\',
+                        mb_substr($path, mb_strlen($namespace['path']))
+                    ), '\\');
 
                 // Remove the file extension (.php)
                 $className = mb_substr($className, 0, -4);
@@ -310,13 +311,13 @@ class FileLocator
             $fullPath = $namespace['path'] . $path;
             $fullPath = realpath($fullPath) ?: $fullPath;
 
-            if (! is_dir($fullPath)) {
+            if (!is_dir($fullPath)) {
                 continue;
             }
 
             $tempFiles = get_filenames($fullPath, true, false, false);
 
-            if (! empty($tempFiles)) {
+            if (!empty($tempFiles)) {
                 $files = array_merge($files, $tempFiles);
             }
         }
@@ -344,13 +345,13 @@ class FileLocator
             $fullPath = rtrim($namespacePath, '/') . '/' . $path;
             $fullPath = realpath($fullPath) ?: $fullPath;
 
-            if (! is_dir($fullPath)) {
+            if (!is_dir($fullPath)) {
                 continue;
             }
 
             $tempFiles = get_filenames($fullPath, true, false, false);
 
-            if (! empty($tempFiles)) {
+            if (!empty($tempFiles)) {
                 $files = array_merge($files, $tempFiles);
             }
         }

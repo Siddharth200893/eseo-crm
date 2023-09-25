@@ -8,7 +8,6 @@ use App\Models\ProjectsModel;
 use App\Models\PaymentModeModel;
 use App\Models\CurrenciesModel;
 
-
 class AgentController extends BaseController
 {
     public function __construct()
@@ -24,17 +23,13 @@ class AgentController extends BaseController
     }
     public function guest_posting()
     {
-
         $ProjectsModel = new ProjectsModel();
-
         $PaymentModeModel = new PaymentModeModel();
         $CurrenciesModel = new CurrenciesModel();
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_currencies = $CurrenciesModel->select('*')->findAll();
-
         $projects = $ProjectsModel->select('*')->findAll();
         $data = [
-
             'all_payment_modes' => $all_payment_modes,
             'all_currencies' => $all_currencies,
             'projects' => $projects
@@ -50,23 +45,17 @@ class AgentController extends BaseController
         $guestpostlink = $this->request->getVar('link');
         $existing_guestpostlink = $GuestPostLeadsModel->where('link', $guestpostlink)->first();
         $reference_number = $this->request->getVar('reference_number');
-
         $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
         // echo gettype($existing_guestpostlink);
         // print("<pre>" . print_r($existing_reference_number, true) . "</pre>");
-
         // die('hi');
-
-
         // if (!empty($existing_reference_number['reference_number'])) {
-
         if (!$existing_guestpostlink) {
-
-
             helper(['form', 'url']);
             $rules = [
                 'link' => 'required',
                 'amount' => 'required',
+                'currency' => 'required',
                 'projectName' => 'required',
                 'blogger_name' => 'required',
                 'blogger_email' => 'required',
@@ -80,17 +69,14 @@ class AgentController extends BaseController
                     'link' => $this->request->getVar('link'),
                     'project_id' => $this->request->getVar('projectName'),
                     'amount' => $this->request->getVar('amount'),
+                    'currency_id' => $this->request->getVar('currency'),
                     'agent_email' => $session->get('email'),
                     'blogger_name' => $this->request->getVar('blogger_name'),
                     'blogger_email' => $this->request->getVar('blogger_email'),
                     'blogger_phone' => $this->request->getVar('blogger_phone'),
-
                 ];
-
                 // print_r($data);
                 // die();
-
-
                 $GuestPostLeadsModel->insert($data);
                 $session->setFlashdata('success_save', 'Saved');
                 return redirect()->to(base_url() . 'agent/guest-posting-leads');
@@ -103,44 +89,31 @@ class AgentController extends BaseController
             return  redirect()->to(base_url() . 'agent/guest-posting');
         }
     }
-
-
-
     public function guest_posting_leads()
     {
         $session = session();
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-
-
-
         // print_r($all_currencies);
         // die('hi');
-
         $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')->orderBy('guestpost_leads.id', 'desc')->paginate(20);
-
         $data = [
-
             'guest_posts' => $all_guestposts,
             'pager' => $GuestPostLeadsModel->pager
         ];
-
         return view('agent/guestposts-leads', $data);
     }
-
     public function edit_guestpost($id)
     {
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $ProjectsModel = new ProjectsModel();
-
         $PaymentModeModel = new PaymentModeModel();
         $CurrenciesModel = new CurrenciesModel();
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_currencies = $CurrenciesModel->select('*')->findAll();
-
         // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
         $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
@@ -176,13 +149,11 @@ class AgentController extends BaseController
             if ($this->validate($rules)) {
                 $data = [
                     'project_id' => $this->request->getVar('projectName'),
-
                     'amount' => $this->request->getVar('amount'),
                     'currency_id' => $this->request->getVar('currency'),
                     'payment_mode_id' => $this->request->getVar('paymentmode'),
                     'payment_status' => $this->request->getVar('paymentStatus'),
                     'updated_at' => date('Y-m-d H:s:a'),
-
                 ];
                 // echo gettype($reference_number);
                 // print("<pre>" . print_r($reference_number, true) . "</pre>");
@@ -205,14 +176,12 @@ class AgentController extends BaseController
                 $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
                 $data = [
                     'project_id' => $this->request->getVar('projectName'),
-
                     'amount' => $this->request->getVar('amount'),
                     'currency_id' => $this->request->getVar('currency'),
                     'reference_number' => $this->request->getVar('reference_number'),
                     'payment_mode_id' => $this->request->getVar('paymentmode'),
                     'payment_status' => $this->request->getVar('paymentStatus'),
                     'updated_at' => date('Y-m-d H:s:a'),
-
                 ];
                 // echo gettype($reference_number);
                 // print("<pre>" . print_r($data, true) . "</pre>");

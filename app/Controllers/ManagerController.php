@@ -392,10 +392,10 @@ class managerController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
 
         $project_leads = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id,guestpost_leads.id as guestpost_id, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.project_id, guestpost_leads.link, guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id, guestpost_leads.payment_status,guestpost_leads.payment_approvel,guestpost_leads.payment_approvel,guestpost_leads.reference_number,guestpost_leads.created_at ,guestpost_leads.updated_at,users.name as user_name,currencies.name as currency_name,payment_modes.name as payment_mode')
-            ->join('projects', 'guestpost_leads.project_id = projects.id', 'left')
-            ->join('users', 'guestpost_leads.user_id = users.id', 'left')
-            ->join('currencies', 'guestpost_leads.currency_id = currencies.id', 'left')
-            ->join('payment_modes', 'guestpost_leads.payment_mode_id = payment_modes.id', 'left')
+            ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+            ->join('users', 'users.id = guestpost_leads.user_id', 'left')
+            ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
+            ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
             ->where('md5(guestpost_leads.project_id)', $id)->paginate(20);
 
         $data = [
@@ -414,10 +414,10 @@ class managerController extends BaseController
 
         // $data = $GuestPostLeadsModel = new GuestPostLeadsModel();
         $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name, currencies.name as currency_name,payment_modes.name as payment_mode')
-            ->join('currencies', 'guestpost_leads.currency_id = currencies.id', 'left')
+            ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
-            ->join('payment_modes', 'guestpost_leads.payment_mode_id = payment_modes.id', 'left')->where('DATE(guestpost_leads.created_at) >=', $startDate)
+            ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')->where('DATE(guestpost_leads.created_at) >=', $startDate)
             ->where('DATE(guestpost_leads.created_at) <=', $endDate)->orderBy('guestpost_leads.id', 'desc')->findAll();
 
         $response = [

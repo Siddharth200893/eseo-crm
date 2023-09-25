@@ -1,5 +1,6 @@
 <!DOCTYPE php>
-<?php $session = session(); ?>
+<?php $session = session();
+$session->markAsTempdata('some_name', 10); ?>
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12">
         <?php
@@ -117,17 +118,21 @@
                                 <tbody id="sales_table_body">
                                     <?php
                                     foreach ($guest_posts as $guestpost) : ?>
-                                        <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : ""  ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>">
-                                            <td class="d-xl-table-cell td_date" data-td_date="<?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?>"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
-                                            <td class="td_project_name" data-td_project_name="<?php echo $guestpost['project_name']; ?>"><?php echo $guestpost['project_name']; ?></td>
-                                            <td class="td_blogger_name" data-td_blogger_name="<?php echo $guestpost['blogger_name']; ?>"><?php echo $guestpost['blogger_name']; ?></td>
-                                            <td class="d-xl-table-cell td_link"><?php echo $guestpost['link']; ?></td>
-                                            <td class="d-xl-table-cell range td_amount"><?php echo $guestpost['amount']; ?></td>
-                                            <td class="d-xl-table-cell td_pmt_status" data-td_pmt_status="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>"><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
-                                            <td class="td_currency" data-td_currency="<?php echo $guestpost['currency_name']; ?>"><?php echo $guestpost['currency_name']; ?></td>
-                                            <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payment_mode']; ?>"><?php echo $guestpost['payment_mode']; ?></td>
-                                            <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
-                                            <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
+                                        <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "" ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending" ?> <?php echo $session->get('some_name') == $guestpost['id'] ? "highlight" : "" ?>">
+
+                                            <td class="d-xl-table-cell td_date"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
+                                            <td class=""><?php echo $guestpost['project_name']; ?></td>
+                                            <td class=""><?php echo $guestpost['blogger_name']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['link']; ?></td>
+                                            <td class="d-xl-table-cell range "><?php echo $guestpost['amount']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
+                                            <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
+                                            <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
+                                            <td class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
+                                            <td class="d-xl-table-cell td_username">
+                                                <input type="checkbox" id="check" value="18" onchange="showHidePan()"> <br><br>
+                                            </td>
                                             <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
                                             <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
                                         </tr>
@@ -148,6 +153,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>
+
+    <!-- <script>
+        function showHidePan() {
+            let checkbox = document.getElementById('check');
+            if (checkbox.checked) {
+                alert(1);
+            } else {
+                alert(2);
+            }
+        }
+    </script> -->
     <script>
         $(document).ready(function() {
 
