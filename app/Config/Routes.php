@@ -73,6 +73,7 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
     $routes->get('bloggers', 'AdminController::bloggers');
     $routes->get('blogger-leads/(:any)', 'AdminController::blogger_leads/$1');
     $routes->get('exportdata', 'AdminController::exportdata');
+    $routes->get('is-flag/(:alphanum)', 'AdminController::is_flag/$1');
 
 
 

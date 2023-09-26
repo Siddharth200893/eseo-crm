@@ -80,7 +80,7 @@ class AdminController extends BaseController
         $currentDate = date('Y-m-d');
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
@@ -639,5 +639,23 @@ class AdminController extends BaseController
             'pager' => $GuestPostLeadsModel->pager
         ];
         return view('admin/blogger-leads-data', $data);
+    }
+
+    public function is_flag($id)
+    {
+        $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $is_flag = $GuestPostLeadsModel->select('is_flag')->where('id', $id)->first();
+
+        $to_be_inserted = $is_flag['is_flag'] ==  0 ? 1 : 0;
+        $updated =  $GuestPostLeadsModel->update($id, ['is_flag' => $to_be_inserted]);
+        // echo $updated;
+
+        if ($updated) {
+            if ($to_be_inserted == 0) {
+                echo 0;
+            } else if ($to_be_inserted == 1) {
+                echo 1;
+            }
+        }
     }
 }

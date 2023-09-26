@@ -111,6 +111,7 @@ $session->markAsTempdata('some_name', 10); ?>
                                         <th class="d-xl-table-cell">Payment Mode</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
                                         <th class="d-xl-table-cell">Agent Name</th>
+                                        <th class="d-xl-table-cell">Flag</th>
                                         <th class="d-xl-table-cell">Payment Approvel</th>
                                         <th class="d-xl-table-cell">Action</th>
                                     </tr>
@@ -119,7 +120,6 @@ $session->markAsTempdata('some_name', 10); ?>
                                     <?php
                                     foreach ($guest_posts as $guestpost) : ?>
                                         <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "" ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending" ?> <?php echo $session->get('some_name') == $guestpost['id'] ? "highlight" : "" ?>">
-
                                             <td class="d-xl-table-cell td_date"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
                                             <td class=""><?php echo $guestpost['project_name']; ?></td>
                                             <td class=""><?php echo $guestpost['blogger_name']; ?></td>
@@ -131,7 +131,9 @@ $session->markAsTempdata('some_name', 10); ?>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
                                             <td class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
                                             <td class="d-xl-table-cell td_username">
-                                                <input type="checkbox" id="check" value="18" onchange="showHidePan()"> <br><br>
+                                                <button type="button" class="check btn btn-primary" value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">
+                                                    <?php echo $guestpost['is_flag'] == 1 ? '<i class="fa fa-flag" aria-hidden="true"></i>' : '<i class="fa fa-flag-o" aria-hidden="true"></i>'; ?>
+                                                </button>
                                             </td>
                                             <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
                                             <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('admin/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
@@ -147,32 +149,43 @@ $session->markAsTempdata('some_name', 10); ?>
         </div>
         <div class="pagination_new"><?= $pager->links() ?></div>
         <div id="pagination-container"></div>
-
     </div>
     <?php echo view('admin/footer') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>
-
-    <!-- <script>
-        function showHidePan() {
-            let checkbox = document.getElementById('check');
-            if (checkbox.checked) {
-                alert(1);
-            } else {
-                alert(2);
-            }
-        }
-    </script> -->
+    <script>
+        function change_flag(status, id, el) {
+            let url = `<?= base_url('admin/is-flag/') ?>${id}`;
+            $.ajax({
+                url: url,
+                type: "get",
+                success: function(response) {
+                    if (response == 1) {
+                        // alert('flagged successfully');
+                        // console.log(el);
+                        $(el).html('<i class="fa fa-flag" aria-hidden="true"></i>');
+                        // el.html();
+                    } else if (response == 0) {
+                        // alert(23);
+                        $(el).html('<i class="fa fa-flag-o" aria-hidden="true"></i>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+            });
+        };
+    </script>
     <script>
         $(document).ready(function() {
-
-
             var selectedDateRange = {
                 startDate: moment().startOf('month'),
                 endDate: moment().endOf('month')
             };
-
             $('#date_range_filter').daterangepicker({
                 ranges: {
                     'Today': [moment(), moment()],
@@ -189,12 +202,10 @@ $session->markAsTempdata('some_name', 10); ?>
                 selectedDateRange.endDate = end;
                 // You can perform actions or updates here based on the new selected date range.
             });
-
             $('.filter').change(function() {
                 // Access selectedDateRange.startDate and selectedDateRange.endDate here
                 var start = selectedDateRange.startDate;
                 var end = selectedDateRange.endDate;
-
                 var paymentmodeFilter = $('#paymentModeFilter').val();
                 var currency = $('#currencyFilter').val();
                 var projectValue = $('#projectFilter').val();
@@ -203,8 +214,7 @@ $session->markAsTempdata('some_name', 10); ?>
                 // alert(paymentValue);
                 // console.log(paymentValue);
                 var url = '<?= base_url('admin/guestpost-leads-date-range') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger;
-
-                // console.log(url);
+                console.log(url);
                 $.ajax({
                     url: url,
                     type: "get",
@@ -221,31 +231,22 @@ $session->markAsTempdata('some_name', 10); ?>
                     },
                 });
             });
-
             $('#export_data').click(function() {
                 // alert('clicked');
                 var start = selectedDateRange.startDate;
                 var end = selectedDateRange.endDate;
-
                 var paymentmodeFilter = $('#paymentModeFilter').val();
                 var currency = $('#currencyFilter').val();
                 var projectValue = $('#projectFilter').val();
                 var paymentValue = $('#paymentFilter').val();
                 var blogger = $('#bloggerFilter').val();
-
                 // alert(paymentValue);
                 // console.log(paymentValue);
                 var url = '<?= base_url('admin/exportdata') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger;
-
                 // console.log(url);
                 window.location.href = url;
-
             })
-
-
         });
     </script>
-
-
     </body>
 </php>
