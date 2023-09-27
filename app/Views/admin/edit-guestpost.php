@@ -145,6 +145,8 @@
             });
         });
 
+        //edit form functions....
+
         function prop_disable() {
             var cr = $('#paymentStatus').val();
             if (cr == 1) {
@@ -160,7 +162,6 @@
         function currency_features() {
             var pmt_sts = $('#currency').val();
             if (pmt_sts == 1) {
-                alert(pmt_sts);
                 $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
                 $('#radio-buttons').show();
                 $('#for_ref_no').hide();
@@ -174,7 +175,7 @@
                 $('#reference_number').show();
             }
         }
-        // }
+
         function payment_features() {
             var pmt_mode = $('#paymentmode').val();
             if (pmt_mode == 1) { //using 1 one for paypal and 2 for gpay.......
