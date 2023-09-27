@@ -225,12 +225,16 @@ class AdminController extends BaseController
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
-        // print_r($id);
-        // die('hi');
         $reference_number = $this->request->getVar('reference_number');
-        $paymentmode = $this->request->getVar('paymentmode');
-        if ($paymentmode) {
-            if (!$reference_number) {
+        $existing_payment_status = $GuestPostLeadsModel->select('payment_status')->where('id', $id)->first();
+        $existing_reference_number = $GuestPostLeadsModel->select('reference_number')->where('reference_number', $reference_number)->first();
+
+        // $check_empty = empty($reference_number);
+        // print_r($check_empty);
+        // die('hi');
+        if ($existing_payment_status['payment_status'] == 0 && !empty($reference_number)) {
+
+            if (!$existing_reference_number) {
                 $rules = [
                     'amount' => 'required',
                     'paymentStatus' => 'required',
@@ -242,53 +246,30 @@ class AdminController extends BaseController
                         'currency_id' => $this->request->getVar('currency'),
                         'payment_mode_id' => $this->request->getVar('paymentmode'),
                         'payment_status' => $this->request->getVar('paymentStatus'),
+                        'reference_number' => $this->request->getVar('reference_number'),
+                        'payee_email' => $this->request->getVar('payee_email'),
                         'updated_at' => date('Y-m-d H:s:a'),
                     ];
-                    // print_r($data);
-                    // die('hii');
                     $GuestPostLeadsModel->update($id, $data);
                     $session->setFlashdata('success_save', 'Updated successfully');
                     $session->set('some_name', $id);
                     return redirect()->to(base_url() . 'admin/guest-posting-leads');
                 }
             } else {
-                helper(['form', 'url']);
-                $rules = [
-                    'amount' => 'required',
-                    'paymentStatus' => 'required',
-                ];
-                if ($this->validate($rules)) {
-                    $reference_number = $this->request->getVar('reference_number');
-                    // print_r($reference_number);
-                    // die('111');
-                    $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
-                    $data = [
-                        'project_id' => $this->request->getVar('projectName'),
-                        'amount' => $this->request->getVar('amount'),
-                        'currency_id' => $this->request->getVar('currency'),
-                        'reference_number' => $this->request->getVar('reference_number'),
-                        'payment_mode_id' => $this->request->getVar('paymentmode'),
-                        'payment_status' => $this->request->getVar('paymentStatus'),
-                        'updated_at' => date('Y-m-d H:s:a'),
-                    ];
-                    // echo gettype($reference_number);
-                    // print("<pre>" . print_r($data, true) . "</pre>");
-                    // die('hi');
-                    if (!$existing_reference_number) {
-                        $GuestPostLeadsModel->update($id, $data);
-                        $session->setFlashdata('success_save', 'Updated successfully');
-                        return redirect()->to(base_url() . 'admin/guest-posting-leads');
-                    } else {
-                        $session->setFlashdata('error_save', 'This reference number is already exists');
-                        return  redirect()->back();
-                    }
-                } else {
-                    $session->setFlashdata('error_save', 'Please enter valid details');
-                    return  redirect()->back();
-                }
+                $session->setFlashdata('error_save', 'This reference number is already exists');
+                return  redirect()->back();
             }
+        } else if ($existing_payment_status['payment_status'] == 1 || empty($reference_number)) {
+            $data = [
+                'amount' => $this->request->getVar('amount'),
+
+            ];
+            $GuestPostLeadsModel->update($id, $data);
+            $session->set('some_name', $id);
+            $session->setFlashdata('success_save', 'Updated successfully');
+            return redirect()->to(base_url() . 'admin/guest-posting-leads');
         } else {
-            $session->setFlashdata('error_save', 'Payment status is pending');
+            $session->setFlashdata('error_save', 'Payment status is pending..');
             return  redirect()->back();
         }
     }
@@ -432,7 +413,6 @@ class AdminController extends BaseController
             if (!empty($blogger)) {
                 $all_guestposts->where('guestpost_leads.blogger_name', $blogger);
             }
-
             $all_guestposts->where('DATE(guestpost_leads.created_at) >=', $start_date)
                 ->where('DATE(guestpost_leads.created_at) <=', $end_date);
             // Add pagination (you may want to make 'paginate' dynamic)
@@ -532,14 +512,10 @@ class AdminController extends BaseController
         header("Content-Description: File Transfer");
         header("Content-Disposition: attachment; filename=$filename");
         header("Content-Type: application/csv; ");
-
         // file creation 
         $file = fopen('php://output', 'w');
-
         $header = array("Date", "Project", "Blogger", "Link", "Amount", "Payment_Status", "Currency", "Payment_Mode", "Reference", "Agent_Name", "Payment_Approvel");
         fputcsv($file, $header);
-
-
         foreach ($data as $key => $line) {
             fputcsv($file, $line);
         }
@@ -640,16 +616,13 @@ class AdminController extends BaseController
         ];
         return view('admin/blogger-leads-data', $data);
     }
-
     public function is_flag($id)
     {
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $is_flag = $GuestPostLeadsModel->select('is_flag')->where('id', $id)->first();
-
         $to_be_inserted = $is_flag['is_flag'] ==  0 ? 1 : 0;
         $updated =  $GuestPostLeadsModel->update($id, ['is_flag' => $to_be_inserted]);
         // echo $updated;
-
         if ($updated) {
             if ($to_be_inserted == 0) {
                 echo 0;

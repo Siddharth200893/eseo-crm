@@ -93,15 +93,15 @@
                         <div id="radio-buttons" style="display: none;">
                             <div class="mb-3">
                                 <input type="radio" id="" class="" name="radio_btn" value="email">
-                                <label for="radio_btn">Email</label>
+                                <label for="radio_btn">Payee Email</label>
                                 <input type="radio" id="" class="" name="radio_btn" value="invoice">
                                 <label for="radio_btn">Invoice</label>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div id="for_email" style="display: none;">
-                                <label for="for_email">Email</label>
-                                <input type="email" class="form-control" id="" name="for_email" value="" placeholder="Email">
+                                <label for="payee_email">Payee Email</label>
+                                <input type="email" class="form-control" id="" name="payee_email" value="" placeholder="Payee Email">
                             </div>
                             <div id="for_invoice" style="display: none;">
                                 <label for="reference_number">Invoice</label>
@@ -109,7 +109,7 @@
                             </div>
                             <div id="for_ref_no" style="display: none;">
                                 <label for=" reference_number">Reference Number</label>
-                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Reference Number">
+                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Reference Number" style="display:none;">
                             </div>
                         </div>
                     </div>
@@ -122,53 +122,9 @@
     <?php echo view('admin/footer') ?>
     <script>
         $(document).ready(function() {
-            currency_features();
+            // currency_features();
             payment_features();
-
-            function currency_features(cr) {
-                var cr = $('#currency').val();
-                if (cr) {
-                    $('#currency').prop('disabled', true);
-                    $('#paymentmode').prop('disabled', true);
-                    $('input[type=radio][name=radio_btn]').prop('disabled', true);
-                    $("input[type=text][name=reference_number]").prop('disabled', true);
-
-                } else {
-                    if (cr == 1) {
-                        // alert(cr);
-                        $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
-                        $('#radio-buttons').show();
-                        $('#for_ref_no').hide();
-                        $('#for_invoice').show();
-
-                        // alert(this.value);
-                    } else if (cr == 2) {
-                        $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
-                        $('#for_email').hide();
-                        $('#for_invoice').hide();
-                        $('#radio-buttons').hide();
-                        $('#for_ref_no').show();
-                    }
-                }
-            }
-
-            function payment_features() {
-                var pmt_mode = $('#paymentmode').val();
-
-                if (pmt_mode == 1) { //using 1 one for paypal and 2 for gpay.......
-                    $('#currency').val(1);
-                    $('#for_ref_no').hide();
-                    $('#radio-buttons').show();
-                    $('#for_invoice').show();
-
-                } else if (pmt_mode == 2) {
-                    $('#currency').val(2);
-                    $('#for_ref_no').show();
-                    $('#radio-buttons').hide();
-                    $('#for_invoice').hide();
-
-                }
-            }
+            prop_disable();
             $('input[type=radio][name=radio_btn]').change(function() {
                 // alert(this.value);
                 if (this.value === 'email') {
@@ -188,14 +144,51 @@
                 payment_features();
             });
         });
-    </script>
-    <script>
-        var ref_num = `<?= $guest_posts['reference_number']
-                        ?>`;
-        if (ref_num) {
-            $("#reference_number").prop('disabled', true);
-        } else {
-            $("#reference_number").prop('disabled', false);
+
+        function prop_disable() {
+            var cr = $('#paymentStatus').val();
+            if (cr == 1) {
+                $('#projectName').prop('disabled', true);
+                $('#paymentStatus').prop('disabled', true);
+                $('#currency').prop('disabled', true);
+                $('#paymentmode').prop('disabled', true);
+                $('input[type=radio][name=radio_btn]').prop('disabled', true);
+                $("input[type=text][name=reference_number]").prop('disabled', true);
+            }
+        }
+
+        function currency_features() {
+            var pmt_sts = $('#currency').val();
+            if (pmt_sts == 1) {
+                alert(pmt_sts);
+                $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
+                $('#radio-buttons').show();
+                $('#for_ref_no').hide();
+                $('#for_invoice').show();
+            } else if (pmt_sts == 2) {
+                $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
+                $('#for_email').hide();
+                $('#for_invoice').hide();
+                $('#radio-buttons').hide();
+                $('#for_ref_no').show();
+                $('#reference_number').show();
+            }
+        }
+        // }
+        function payment_features() {
+            var pmt_mode = $('#paymentmode').val();
+            if (pmt_mode == 1) { //using 1 one for paypal and 2 for gpay.......
+                $('#currency').val(1);
+                $('#for_ref_no').hide();
+                $('#radio-buttons').show();
+                $('#for_invoice').show();
+            } else if (pmt_mode == 2) {
+                $('#currency').val(2);
+                $('#for_ref_no').show();
+                $('#radio-buttons').hide();
+                $('#for_invoice').hide();
+                $('#reference_number').show();
+            }
         }
     </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
@@ -220,6 +213,10 @@
                 },
                 reference_number: {
                     required: true,
+                },
+                payee_email: {
+                    required: true,
+                    email: true
                 },
             }
         });
