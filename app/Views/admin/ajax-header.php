@@ -29,6 +29,8 @@ $role = $session->get('role');
     <link href="<?= base_url(); ?>assets/css/app.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- <style>
             .container.mt-5 {

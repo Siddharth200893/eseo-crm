@@ -1,0 +1,1078 @@
+INFO - 2023-09-29 04:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 10:26:55 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 492.
+ 1 APPPATH\Controllers\AdminController.php(492): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->exportdata()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 04:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 12:52:36 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 405.
+ 1 APPPATH\Controllers\AdminController.php(405): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 07:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 12:52:48 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 405.
+ 1 APPPATH\Controllers\AdminController.php(405): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 07:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 12:52:59 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 405.
+ 1 APPPATH\Controllers\AdminController.php(405): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 07:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 07:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 12:53:32 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 492.
+ 1 APPPATH\Controllers\AdminController.php(492): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->exportdata()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 09:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:29:49 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 09:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:29:56 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:30:43 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:30:51 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:30:54 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:31:06 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:32:48 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:34:03 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:34:19 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:37:09 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:37:44 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:40:46 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:41:28 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:43:09 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:43:39 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 15:44:10 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:06:10 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:06:16 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:06:36 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:09:05 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:09:07 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:09:10 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:09:13 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:09:19 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:14:00 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:14:25 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:14:47 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:14:55 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:15:07 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:15:11 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:15:14 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:26:56 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:26:58 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 505.
+ 1 APPPATH\Controllers\AdminController.php(505): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->exportdata()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:28:00 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:28:05 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 505.
+ 1 APPPATH\Controllers\AdminController.php(505): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->exportdata()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 10:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:36:01 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:36:14 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:43:35 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:43:38 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:44:04 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:44:09 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:44:11 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:45:48 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:45:53 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:45:56 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:46:02 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 11:18:02 --> Undefined array key "payee_email"
+in APPPATH\Views\admin\guestposts-leads.php on line 151.
+ 1 APPPATH\Views\admin\guestposts-leads.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_email"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\guestposts-leads.php', 151)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\guestposts-leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/guestposts-leads', [], true)
+ 5 APPPATH\Controllers\AdminController.php(101): view('admin/guestposts-leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guest_posting_leads()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:51:57 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:02 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:05 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:07 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:09 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:33 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:36 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:45 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:52:51 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:54:02 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:54:04 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:54:06 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:56:51 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 16:58:30 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:05 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:07 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:10 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:22 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:25 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:26 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:29 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:31 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:01:34 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:04:43 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:04:47 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 407.
+ 1 APPPATH\Controllers\AdminController.php(407): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 17:04:56 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 465.
+ 1 APPPATH\Controllers\AdminController.php(465): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 11:40:48 --> Undefined array key "payee_number"
+in APPPATH\Views\admin\edit-guestpost.php on line 123.
+ 1 APPPATH\Views\admin\edit-guestpost.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 123)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(236): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c81e728d9d4c2f636f067f89cc14862c')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 11:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 11:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 12:26:42 --> Undefined array key "payee_number"
+in APPPATH\Views\admin\edit-guestpost.php on line 123.
+ 1 APPPATH\Views\admin\edit-guestpost.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 123)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(236): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c81e728d9d4c2f636f067f89cc14862c')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:04:19 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:04:20 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:04:22 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:05:45 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:07:23 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 18:07:23 --> Undefined array key "payee_number"
+in APPPATH\Views\guestposts_table.php on line 44.
+ 1 APPPATH\Views\guestposts_table.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('guestposts_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(456): view('guestposts_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:07:36 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 18:07:36 --> Undefined array key "payee_number"
+in APPPATH\Views\guestposts_table.php on line 44.
+ 1 APPPATH\Views\guestposts_table.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('guestposts_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(456): view('guestposts_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:07:48 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-29 18:07:48 --> Undefined array key "payee_number"
+in APPPATH\Views\guestposts_table.php on line 44.
+ 1 APPPATH\Views\guestposts_table.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payee_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\guestposts_table.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('guestposts_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(456): view('guestposts_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:09:06 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:10:26 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:10:27 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:10:30 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-29 18:10:30 --> mysqli_sql_exception: Unknown column 'guestpost_leads.payee_emailguestpost_leads.payee_number' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(1, 1)
+#6 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1192): CodeIgniter\BaseModel->findAll(1, 1)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(474): CodeIgniter\BaseModel->paginate(1)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 18:10:30 --> Unknown column 'guestpost_leads.payee_emailguestpost_leads.payee_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`agent_email`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`is_flag`, `guestpost_leads`.`payee_emailguestpost_leads`.`payee_number`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-30 23:59:59\'
+ORDER BY `guestpost_leads`.`id` DESC
+ LIMIT 1, 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`agent_email`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`is_flag`, `guestpost_leads`.`payee_emailguestpost_leads`.`payee_number`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-30 23:59:59\'
+ORDER BY `guestpost_leads`.`id` DESC
+ LIMIT 1, 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`agent_email`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`is_flag`, `guestpost_leads`.`payee_emailguestpost_leads`.`payee_number`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-09-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-09-30 23:59:59\'
+ORDER BY `guestpost_leads`.`id` DESC
+ LIMIT 1, 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id`, `guestpost_leads`.`agent_email`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`reference_number`, `guestpost_leads`.`created_at`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`is_flag`, `guestpost_leads`.`payee_emailguestpost_leads`.`payee_number`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+ORDER BY `guestpost_leads`.`id` DESC
+ LIMIT 1, 1', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(1, 1)
+ 7 SYSTEMPATH\BaseModel.php(1192): CodeIgniter\BaseModel->findAll(1, 1)
+ 8 APPPATH\Controllers\AdminController.php(474): CodeIgniter\BaseModel->paginate(1)
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:10:58 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:13 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:20 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:30 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:34 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:37 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:41 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:42 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 408.
+ 1 APPPATH\Controllers\AdminController.php(408): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:47 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:51 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:53 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:55 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:12:57 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 466.
+ 1 APPPATH\Controllers\AdminController.php(466): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 18:14:50 --> [DEPRECATED] Implicit conversion from float 1696098599.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 506.
+ 1 APPPATH\Controllers\AdminController.php(506): date('Y-m-d H:i:s', 1696098599.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->exportdata()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 12:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 12:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

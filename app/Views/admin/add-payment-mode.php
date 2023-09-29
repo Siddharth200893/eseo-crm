@@ -39,6 +39,16 @@ if ($session->getFlashdata('error_save')) { ?>
                                         <label class="form-label">Payment Mode Name:</label>
                                         <input id="name" class="form-control form-control-lg form-control-lg-1 focus" type="text" name="name" placeholder="Payment Mode Name " />
                                     </div>
+                                    <div class="mb-3 ">
+                                        <label for="currency" class="form-label">Currencies</label>
+                                        <select class="form-select" id="currency" name="currency">
+                                            <?php foreach ($currencies as $currency) : ?>
+                                                <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                            <?php
+                                            endforeach;
+                                            ?>
+                                        </select>
+                                    </div>
 
 
                                     <div class="right_submit">

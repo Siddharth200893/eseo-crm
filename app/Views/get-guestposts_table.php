@@ -26,7 +26,9 @@
                                     <th class="d-xl-table-cell">Currency</th>
                                     <th class="d-xl-table-cell">Payment Mode</th>
                                     <th class="d-xl-table-cell">Reference No.</th>
+                                    <th class="d-xl-table-cell">Payee Email</th>
                                     <th class="d-xl-table-cell">Agent Name</th>
+                                    <th class="d-xl-table-cell">Flag</th>
                                     <th class="d-xl-table-cell">Payment Approvel</th>
                                     <th class="d-xl-table-cell">Action</th>
                                 </tr>
@@ -44,7 +46,15 @@
                                         <td class="td_currency" data-td_currency="<?php echo $guestpost['currency_name']; ?>"><?php echo $guestpost['currency_name']; ?></td>
                                         <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payment_mode']; ?>"><?php echo $guestpost['payment_mode']; ?></td>
                                         <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
+                                        <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
+
                                         <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
+
+                                        <td class="d-xl-table-cell td_username">
+                                            <button type="button" class="check btn btn-success" value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">
+                                                <?php echo $guestpost['is_flag'] == 1 ? '<i class="fa fa-flag" aria-hidden="true"></i>' : '<i class="fa fa-flag-o" aria-hidden="true"></i>'; ?>
+                                            </button>
+                                        </td>
                                         <td class="d-xl-table-cell td_edit"><button class="btn <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved badge bg-success" : "Approve badge bg-danger"  ?>" type="button" onclick="payemnt_approvel(<?php echo $guestpost['payment_status']; ?>,<?php echo $guestpost['id']; ?>, this)"><?php echo $guestpost['payment_approvel'] == 1 ? "Approved <i class='fa fa-check-square-o' aria-hidden='true'></i>" : "Approve"  ?></button></td>
 
 
@@ -189,6 +199,8 @@
         });
     }
 </script>
+
+
 
 
 

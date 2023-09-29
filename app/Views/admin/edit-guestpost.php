@@ -67,14 +67,17 @@
                     <div id="" class="reference_number">
                         <div id="currencyINR">
                             <div class="mb-3">
-                                <label for="currencyINR" class="form-label">Currency (INR)</label>
+                                <label for="currencyINR" class="form-label">Currency</label>
                                 <select class="form-select" id="currency" name="currency">
-                                    <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
-                                    <?php foreach ($all_currencies as $currency) : ?>
-                                        <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+
+                                    <?php if ($guest_posts['payment_mode_id']) { ?>
+                                        <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
                                     <?php
-                                    endforeach;
+                                    }
                                     ?>
+
+                                    <option value="<?= $selected_currency['id'] ?>"><?= $selected_currency['name'] ?></option>
+
                                     <!-- Add more currency options here if needed -->
                                 </select>
                             </div>
@@ -82,15 +85,19 @@
                         <div class="mb-3 ">
                             <label for="paymentMode" class="form-label">Payment Mode</label>
                             <select class="form-select" id="paymentmode" name="paymentmode">
-                                <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
-                                <?php foreach ($all_payment_modes as $payment_mode) : ?>
+                                <?php if ($guest_posts['payment_mode_id']) { ?>
+                                    <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
+                                <?php
+                                }
+                                ?>
+                                <?php foreach ($currency_payment_modes as $payment_mode) : ?>
                                     <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
                                 <?php
                                 endforeach;
                                 ?>
                             </select>
                         </div>
-                        <div id="radio-buttons" style="display: none;">
+                        <div id="radio-buttons" style="display:none;">
                             <div class="mb-3">
                                 <input type="radio" id="" class="" name="radio_btn" value="email">
                                 <label for="radio_btn">Payee Email</label>
@@ -99,17 +106,21 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <div id="for_email" style="display: none;">
+                            <div id="for_email" style="display:none;">
                                 <label for="payee_email">Payee Email</label>
                                 <input type="email" class="form-control" id="" name="payee_email" value="" placeholder="Payee Email">
                             </div>
-                            <div id="for_invoice" style="display: none;">
+                            <div id="for_invoice" style="display:none;">
                                 <label for="reference_number">Invoice</label>
                                 <input type="text" class="form-control" id="invoice_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Invoice Number">
                             </div>
-                            <div id="for_ref_no" style="display: none;">
-                                <label for=" reference_number">Reference Number</label>
+                            <div id="for_ref_no" style="display:none;">
+                                <label for="reference_number">Reference Number</label>
                                 <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Reference Number" style="display:none;">
+                            </div>
+                            <div id="for_payee_number" class="mt-3" style="display:none;">
+                                <label for="payee_number">Payee Number</label>
+                                <input type="text" class="form-control" id="payee_number" name="payee_number" value="<?= $guest_posts['payee_number'] ?>" placeholder="Payee Number">
                             </div>
                         </div>
                     </div>
@@ -133,6 +144,9 @@
                 } else if (this.value === 'invoice') {
                     $('#for_email').hide();
                     $('#for_invoice').show();
+                    $('#reference_number').prop('disabled', true);
+
+
                 }
             });
             $('#currency').on('change', function() { //calling function once again ....
@@ -154,6 +168,7 @@
                 $('#paymentStatus').prop('disabled', true);
                 $('#currency').prop('disabled', true);
                 $('#paymentmode').prop('disabled', true);
+                $('#payee_number').prop('disabled', true);
                 $('input[type=radio][name=radio_btn]').prop('disabled', true);
                 $("input[type=text][name=reference_number]").prop('disabled', true);
             }
@@ -166,6 +181,8 @@
                 $('#radio-buttons').show();
                 $('#for_ref_no').hide();
                 $('#for_invoice').show();
+
+
             } else if (pmt_sts == 2) {
                 $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
                 $('#for_email').hide();
@@ -178,17 +195,18 @@
 
         function payment_features() {
             var pmt_mode = $('#paymentmode').val();
+
             if (pmt_mode == 1) { //using 1 one for paypal and 2 for gpay.......
-                $('#currency').val(1);
+
                 $('#for_ref_no').hide();
                 $('#radio-buttons').show();
                 $('#for_invoice').show();
             } else if (pmt_mode == 2) {
-                $('#currency').val(2);
                 $('#for_ref_no').show();
                 $('#radio-buttons').hide();
                 $('#for_invoice').hide();
                 $('#reference_number').show();
+                $('#for_payee_number').show();
             }
         }
     </script>
@@ -218,6 +236,9 @@
                 payee_email: {
                     required: true,
                     email: true
+                },
+                payee_number: {
+                    required: true,
                 },
             }
         });

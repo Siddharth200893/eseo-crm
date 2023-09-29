@@ -82,6 +82,24 @@ $session->markAsTempdata('some_name', 10); ?>
         </div>
         <div class="row">
             <div class="col-md-2 mt-3">
+                <select id="urgent-flag" name="urgent_flag" class="form-control filter">
+                    <!-- <option value="0">No value</option> -->
+                    <option value="">Select Flag</option>
+                    <option value="1">Flag </option>
+                    <option value="0">Unflag</option>
+
+                </select>
+            </div>
+            <div class="col-md-2 mt-3">
+                <select id="invoice-options" name="invoice_options" class="form-control filter">
+                    <!-- <option value="0">No value</option> -->
+                    <option value="">Invoice Options</option>
+                    <option value="1">Email</option>
+                    <option value="0">Invoice /Reference Number</option>
+
+                </select>
+            </div>
+            <div class="col-md-2 mt-3">
                 <button type="button" id="export_data" class="edit-gp-btn">Export Csv</button>
             </div>
         </div>
@@ -109,7 +127,9 @@ $session->markAsTempdata('some_name', 10); ?>
                                         <th class="d-xl-table-cell">Payment Status</th>
                                         <th class="d-xl-table-cell">Currency</th>
                                         <th class="d-xl-table-cell">Payment Mode</th>
+                                        <th class="d-xl-table-cell">Payee Number</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
+                                        <th class="d-xl-table-cell">Payee Email</th>
                                         <th class="d-xl-table-cell">Agent Name</th>
                                         <th class="d-xl-table-cell">Flag</th>
                                         <th class="d-xl-table-cell">Payment Approvel</th>
@@ -119,7 +139,7 @@ $session->markAsTempdata('some_name', 10); ?>
                                 <tbody id="sales_table_body">
                                     <?php
                                     foreach ($guest_posts as $guestpost) : ?>
-                                        <tr class="<?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "" ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending" ?> <?php echo $session->get('some_name') == $guestpost['id'] ? "highlight" : "" ?>">
+                                        <tr class="<?php echo $guestpost['is_flag'] == 1 ? "highlight_flag" : ""  ?> <?php echo $guestpost['payment_approvel'] == 1 ? "Approved" : "" ?> <?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending" ?> <?php echo $session->get('some_name') == $guestpost['id'] ? "highlight" : "" ?>">
                                             <td class="d-xl-table-cell td_date"><?php echo date("F j, Y", strtotime($guestpost['created_at'])); ?></td>
                                             <td class=""><?php echo $guestpost['project_name']; ?></td>
                                             <td class=""><?php echo $guestpost['blogger_name']; ?></td>
@@ -128,10 +148,12 @@ $session->markAsTempdata('some_name', 10); ?>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
                                             <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
+                                            <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
                                             <td class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
                                             <td class="d-xl-table-cell td_username">
-                                                <button type="button" class="check btn btn-primary" value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">
+                                                <button type="button" class="check btn btn-success " value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">
                                                     <?php echo $guestpost['is_flag'] == 1 ? '<i class="fa fa-flag" aria-hidden="true"></i>' : '<i class="fa fa-flag-o" aria-hidden="true"></i>'; ?>
                                                 </button>
                                             </td>
@@ -154,7 +176,7 @@ $session->markAsTempdata('some_name', 10); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>
-    <script>
+    <!-- <script>
         function change_flag(status, id, el) {
             let url = `<?= base_url('admin/is-flag/') ?>${id}`;
             $.ajax({
@@ -179,7 +201,7 @@ $session->markAsTempdata('some_name', 10); ?>
                 },
             });
         };
-    </script>
+    </script> -->
     <script>
         $(document).ready(function() {
             var selectedDateRange = {
@@ -211,9 +233,11 @@ $session->markAsTempdata('some_name', 10); ?>
                 var projectValue = $('#projectFilter').val();
                 var paymentValue = $('#paymentFilter').val();
                 var blogger = $('#bloggerFilter').val();
+                var urgent_flag = $('#urgent-flag').val();
+                var invoice_options = $('#invoice-options').val();
                 // alert(paymentValue);
                 // console.log(paymentValue);
-                var url = '<?= base_url('admin/guestpost-leads-date-range') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger;
+                var url = '<?= base_url('admin/guestpost-leads-date-range') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger + '&urgent_flag=' + urgent_flag + '&invoice_options=' + invoice_options;
                 console.log(url);
                 $.ajax({
                     url: url,
@@ -240,9 +264,11 @@ $session->markAsTempdata('some_name', 10); ?>
                 var projectValue = $('#projectFilter').val();
                 var paymentValue = $('#paymentFilter').val();
                 var blogger = $('#bloggerFilter').val();
+                var urgent_flag = $('#urgent-flag').val();
+                var invoice_options = $('#invoice-options').val();
                 // alert(paymentValue);
                 // console.log(paymentValue);
-                var url = '<?= base_url('admin/exportdata') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger;
+                var url = '<?= base_url('admin/exportdata') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger + '&urgent_flag=' + urgent_flag + '&invoice_options=' + invoice_options;
                 // console.log(url);
                 window.location.href = url;
             })

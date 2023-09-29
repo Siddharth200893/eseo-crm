@@ -204,6 +204,9 @@
 .highlight {
   background-color: rgb(13, 238, 171);
 }
+tr.highlight_flag {
+  background: #6495ed8a;
+}
 
 /* .Approve {
   background-color: red;

@@ -80,7 +80,7 @@ class AdminController extends BaseController
         $currentDate = date('Y-m-d');
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_email,guestpost_leads.payee_number')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
@@ -201,14 +201,28 @@ class AdminController extends BaseController
         $CurrenciesModel = new CurrenciesModel();
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_currencies = $CurrenciesModel->select('*')->findAll();
+
+
+
         // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.id as currency_id,currencies.name as currency_name,payment_modes.name as payment_mode')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.id as currency_id,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_number')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.Project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
             ->where('md5(guestpost_leads.id)', $id)->orderBy('guestpost_leads.id', 'desc')->first();
+
+
+
+        $guestpost_currency_id = $all_guestposts['currency_id'];
+        $selected_currency = $CurrenciesModel->select('*')->where('id', $guestpost_currency_id)->first();
+
+        $currency_payment_modes = $PaymentModeModel->select('*')->where('currency_id', $guestpost_currency_id)->findAll();
+
+        // print("<pre>" . print_r($selected_currency['name'], true) . "</pre>");
+        // die('hii');
+
         // print_r($all_guestposts);
         // die('hi');
         $data = [
@@ -216,6 +230,8 @@ class AdminController extends BaseController
             'projects' => $projects,
             'all_payment_modes' => $all_payment_modes,
             'all_currencies' => $all_currencies,
+            'currency_payment_modes' => $currency_payment_modes,
+            'selected_currency' => $selected_currency,
         ];
         return view('admin/edit-guestpost', $data);
     }
@@ -226,13 +242,11 @@ class AdminController extends BaseController
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
         $reference_number = $this->request->getVar('reference_number');
+        $payee_email = $this->request->getVar('payee_email');
         $existing_payment_status = $GuestPostLeadsModel->select('payment_status')->where('id', $id)->first();
         $existing_reference_number = $GuestPostLeadsModel->select('reference_number')->where('reference_number', $reference_number)->first();
 
-        // $check_empty = empty($reference_number);
-        // print_r($check_empty);
-        // die('hi');
-        if ($existing_payment_status['payment_status'] == 0 && !empty($reference_number)) {
+        if ($existing_payment_status['payment_status'] == 0 && (!empty($reference_number)) || !empty($payee_email)) { //we need atlist one from ref no. or payee email for proceed further
 
             if (!$existing_reference_number) {
                 $rules = [
@@ -248,6 +262,7 @@ class AdminController extends BaseController
                         'payment_status' => $this->request->getVar('paymentStatus'),
                         'reference_number' => $this->request->getVar('reference_number'),
                         'payee_email' => $this->request->getVar('payee_email'),
+                        'payee_number' => $this->request->getVar('payee_number'),
                         'updated_at' => date('Y-m-d H:s:a'),
                     ];
                     $GuestPostLeadsModel->update($id, $data);
@@ -382,6 +397,8 @@ class AdminController extends BaseController
             $project = $this->request->getGet('projectFilter');
             $pmt_status = $this->request->getGet('paymentFilter');
             $blogger = $this->request->getGet('bloggerFilter');
+            $invoice_options = $this->request->getGet('invoice_options');
+            $urgent_flag = $this->request->getGet('urgent_flag');
             // $integer = intval($pmt_status);
             // Convert start and end dates from milliseconds to seconds
             date_default_timezone_set("Asia/Kolkata");
@@ -390,7 +407,7 @@ class AdminController extends BaseController
             $endTimestamp = $endDate / 1000; // Convert milliseconds to seconds
             $end_date = date("Y-m-d H:i:s", $endTimestamp);
             $GuestPostLeadsModel = new GuestPostLeadsModel();
-            $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id, guestpost_leads.agent_email, guestpost_leads.blogger_name, guestpost_leads.payment_approvel, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.link, guestpost_leads.amount, guestpost_leads.currency_id, guestpost_leads.payment_mode_id, guestpost_leads.payment_status, guestpost_leads.reference_number, guestpost_leads.created_at, users.id as userid, users.name as username, projects.id as project_id, projects.name as project_name, currencies.name as currency_name,currencies.id as currency_id, payment_modes.name as payment_mode')
+            $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id, guestpost_leads.agent_email, guestpost_leads.blogger_name, guestpost_leads.payment_approvel, guestpost_leads.user_id, guestpost_leads.role_id, guestpost_leads.link, guestpost_leads.amount, guestpost_leads.currency_id, guestpost_leads.payment_mode_id, guestpost_leads.payment_status, guestpost_leads.reference_number, guestpost_leads.created_at, users.id as userid, users.name as username, projects.id as project_id, projects.name as project_name, currencies.name as currency_name,currencies.id as currency_id,guestpost_leads.is_flag,guestpost_leads.payee_email, payment_modes.name as payment_mode,guestpost_leads.payee_number')
                 ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
                 ->join('users', 'users.id = guestpost_leads.user_id', 'left')
                 ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
@@ -410,13 +427,22 @@ class AdminController extends BaseController
             if ($pmt_status === "0" || $pmt_status === "1") {
                 $all_guestposts->where('guestpost_leads.payment_status', $pmt_status);
             }
+            if ($invoice_options === "0") {
+                $all_guestposts->where('guestpost_leads.reference_number IS NOT NULL AND guestpost_leads.reference_number <> ""');
+            } else if ($invoice_options === "1") {
+                $all_guestposts->where('guestpost_leads.payee_email IS NOT NULL AND guestpost_leads.payee_email <> ""');
+            }
+
+            if ($urgent_flag === "0" || $urgent_flag === "1") {
+                $all_guestposts->where('guestpost_leads.is_flag', $urgent_flag);
+            }
             if (!empty($blogger)) {
                 $all_guestposts->where('guestpost_leads.blogger_name', $blogger);
             }
             $all_guestposts->where('DATE(guestpost_leads.created_at) >=', $start_date)
                 ->where('DATE(guestpost_leads.created_at) <=', $end_date);
             // Add pagination (you may want to make 'paginate' dynamic)
-            $pageLimit = 20; // Change this to a dynamic value if needed
+            $pageLimit = 1; // Change this to a dynamic value if needed
             $all_guestposts = $all_guestposts->orderBy('guestpost_leads.id', 'desc')->paginate($pageLimit);
             // Prepare data for response
             $data = [
@@ -440,12 +466,12 @@ class AdminController extends BaseController
             $end_date = date("Y-m-d H:i:s", $timestamp);
             // echo $date;
             // $data = $GuestPostLeadsModel = new GuestPostLeadsModel();
-            $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.agent_email,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name, currencies.name as currency_name,payment_modes.name as payment_mode')
+            $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id ,guestpost_leads.agent_email,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name, currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.is_flag,guestpost_leads.payee_email,guestpost_leads.payee_number')
                 ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
                 ->join('users', 'users.id = guestpost_leads.user_id', 'left')
                 ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
                 ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')->where('DATE(guestpost_leads.created_at) >=', $start_date)
-                ->where('DATE(guestpost_leads.created_at) <=', $end_date)->orderBy('guestpost_leads.id', 'desc')->paginate(20);
+                ->where('DATE(guestpost_leads.created_at) <=', $end_date)->orderBy('guestpost_leads.id', 'desc')->paginate(1);
             // $data['guestposts'] = $all_guestposts;
             $data = [
                 'guestposts' => $all_guestposts,
@@ -469,6 +495,8 @@ class AdminController extends BaseController
         $project = $this->request->getGet('projectFilter');
         $pmt_status = $this->request->getGet('paymentFilter');
         $blogger = $this->request->getGet('bloggerFilter');
+        $invoice_options = $this->request->getGet('invoice_options');
+        $urgent_flag = $this->request->getGet('urgent_flag');
         // $integer = intval($pmt_status);
         // Convert start and end dates from milliseconds to seconds
         date_default_timezone_set("Asia/Kolkata");
@@ -477,7 +505,7 @@ class AdminController extends BaseController
         $endTimestamp = $endDate / 1000; // Convert milliseconds to seconds
         $end_date = date("Y-m-d H:i:s", $endTimestamp);
         $GuestPostLeadsModel = new GuestPostLeadsModel();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.created_at, projects.name as project_name, guestpost_leads.blogger_name, guestpost_leads.link, guestpost_leads.amount, guestpost_leads.payment_status, currencies.name as currency_name,  payment_modes.name as payment_mode, guestpost_leads.reference_number, users.name as username, guestpost_leads.payment_approvel')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.created_at, projects.name as project_name, guestpost_leads.blogger_name, guestpost_leads.link, guestpost_leads.amount, guestpost_leads.payment_status, currencies.name as currency_name,  payment_modes.name as payment_mode,guestpost_leads.payee_number, guestpost_leads.reference_number,guestpost_leads.payee_email, users.name as username, guestpost_leads.payment_approvel')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
@@ -497,6 +525,15 @@ class AdminController extends BaseController
         if ($pmt_status === "0" || $pmt_status === "1") {
             $all_guestposts->where('guestpost_leads.payment_status', $pmt_status);
         }
+        if ($invoice_options === "0") {
+            $all_guestposts->where('guestpost_leads.reference_number IS NOT NULL AND guestpost_leads.reference_number <> ""');
+        } else if ($invoice_options === "1") {
+            $all_guestposts->where('guestpost_leads.payee_email IS NOT NULL AND guestpost_leads.payee_email <> ""');
+        }
+
+        if ($urgent_flag === "0" || $urgent_flag === "1") {
+            $all_guestposts->where('guestpost_leads.is_flag', $urgent_flag);
+        }
         if (!empty($blogger)) {
             $all_guestposts->where('guestpost_leads.blogger_name', $blogger);
         }
@@ -514,7 +551,7 @@ class AdminController extends BaseController
         header("Content-Type: application/csv; ");
         // file creation 
         $file = fopen('php://output', 'w');
-        $header = array("Date", "Project", "Blogger", "Link", "Amount", "Payment_Status", "Currency", "Payment_Mode", "Reference", "Agent_Name", "Payment_Approvel");
+        $header = array("Date", "Project", "Blogger", "Link", "Amount", "Payment_Status", "Currency", "Payment_Mode", "Payee_Number", "Reference_No", "Payee_Email", "Agent_Name", "Payment_Approvel");
         fputcsv($file, $header);
         foreach ($data as $key => $line) {
             fputcsv($file, $line);
@@ -522,17 +559,18 @@ class AdminController extends BaseController
         fclose($file);
         exit;
     }
-    public function payment_method()
+
+    public function currency()
     {
-        return view('admin/add-payment-mode');
+        return view('admin/add-currency');
     }
-    public function add_payment_method()
+    public function add_currency()
     {
         $session = session();
-        $PaymentModeModel = new PaymentModeModel();
+        $CurrenciesModel = new CurrenciesModel();
         helper(['form', 'url']);
         $prjoect_name = $this->request->getVar('name');
-        $existing_project_name = $PaymentModeModel->where('name', $prjoect_name)->first();
+        $existing_project_name = $CurrenciesModel->where('name', $prjoect_name)->first();
         if (!$existing_project_name) {
             $rules = [
                 'name' => 'required',
@@ -540,6 +578,47 @@ class AdminController extends BaseController
             if ($this->validate($rules)) {
                 $data = [
                     'name' => $prjoect_name,
+                    'user_id' => $session->get('id'),
+                ];
+                $CurrenciesModel->insert($data);
+                $session->setFlashdata('success_save', 'Currency added successfully');
+                return redirect()->back();
+            }
+        }
+        $session->setFlashdata('error_save', 'Duplicate Currency');
+        return redirect()->back();
+    }
+    public function payment_method()
+    {
+        $CurrenciesModel = new CurrenciesModel();
+
+        $currencies = $CurrenciesModel->select('*')->findAll();
+        // print_r($currencies);
+        // print("<pre>" . print_r($currencies, true) . "</pre>");
+        // die('hi');
+        $data = [
+            'currencies' => $currencies
+        ];
+        return view('admin/add-payment-mode', $data);
+    }
+    public function add_payment_method()
+    {
+        $session = session();
+        $PaymentModeModel = new PaymentModeModel();
+
+        helper(['form', 'url']);
+        $prjoect_name = $this->request->getVar('name');
+        $currency_id = $this->request->getVar('currency');
+        $existing_project_name = $PaymentModeModel->where('name', $prjoect_name)->first();
+        if (!$existing_project_name) {
+            $rules = [
+                'name' => 'required',
+                'currency' => 'required',
+            ];
+            if ($this->validate($rules)) {
+                $data = [
+                    'name' => $prjoect_name,
+                    'currency_id' => $currency_id,
                     'user_id' => $session->get('id'),
                 ];
                 $PaymentModeModel->insert($data);
@@ -550,34 +629,8 @@ class AdminController extends BaseController
         $session->setFlashdata('error_save', 'Duplicate payment mode');
         return redirect()->back();
     }
-    public function currency()
-    {
-        return view('admin/add-currency');
-    }
-    public function add_currency()
-    {
-        $session = session();
-        $PaymentModeModel = new CurrenciesModel();
-        helper(['form', 'url']);
-        $prjoect_name = $this->request->getVar('name');
-        $existing_project_name = $PaymentModeModel->where('name', $prjoect_name)->first();
-        if (!$existing_project_name) {
-            $rules = [
-                'name' => 'required',
-            ];
-            if ($this->validate($rules)) {
-                $data = [
-                    'name' => $prjoect_name,
-                    'user_id' => $session->get('id'),
-                ];
-                $PaymentModeModel->insert($data);
-                $session->setFlashdata('success_save', 'Currency added successfully');
-                return redirect()->back();
-            }
-        }
-        $session->setFlashdata('error_save', 'Duplicate Currency');
-        return redirect()->back();
-    }
+
+
     public function bloggers()
     {
         $session = session();
