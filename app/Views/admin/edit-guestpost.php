@@ -40,6 +40,38 @@
                 </div>
                 <form id="update-guestpost-form" method="post" action="<?= base_url() ?>admin/update-guestpost">
                     <input type="hidden" value="<?= $guest_posts['guestpost_id'] ?>" class="form-control" id="" name="id">
+                    <div id="currencyINR">
+                        <div class="mb-3">
+                            <label for="currencyINR" class="form-label">Currency</label>
+                            <select class="form-select" id="currency" name="currency">
+
+                                <?php if ($guest_posts['payment_mode_id']) { ?>
+                                    <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
+                                <?php
+                                }
+                                ?>
+
+                                <option value="<?= $selected_currency['id'] ?>"><?= $selected_currency['name'] ?></option>
+
+                                <!-- Add more currency options here if needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="paymentMode" class="form-label">Payment Mode</label>
+                        <select class="form-select" id="paymentmode" name="paymentmode">
+                            <?php if ($guest_posts['payment_mode_id']) { ?>
+                                <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
+                            <?php
+                            }
+                            ?>
+                            <?php foreach ($currency_payment_modes as $payment_mode) : ?>
+                                <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
+                            <?php
+                            endforeach;
+                            ?>
+                        </select>
+                    </div>
                     <div class="mb-3">
                         <label for="amount" class="form-label">Amount</label>
                         <input type="number" value="<?= $guest_posts['amount'] ?>" class="form-control focus" id="amount" name="amount">
@@ -65,38 +97,7 @@
                         </select>
                     </div>
                     <div id="" class="reference_number">
-                        <div id="currencyINR">
-                            <div class="mb-3">
-                                <label for="currencyINR" class="form-label">Currency</label>
-                                <select class="form-select" id="currency" name="currency">
 
-                                    <?php if ($guest_posts['payment_mode_id']) { ?>
-                                        <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
-                                    <?php
-                                    }
-                                    ?>
-
-                                    <option value="<?= $selected_currency['id'] ?>"><?= $selected_currency['name'] ?></option>
-
-                                    <!-- Add more currency options here if needed -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3 ">
-                            <label for="paymentMode" class="form-label">Payment Mode</label>
-                            <select class="form-select" id="paymentmode" name="paymentmode">
-                                <?php if ($guest_posts['payment_mode_id']) { ?>
-                                    <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
-                                <?php
-                                }
-                                ?>
-                                <?php foreach ($currency_payment_modes as $payment_mode) : ?>
-                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
-                                <?php
-                                endforeach;
-                                ?>
-                            </select>
-                        </div>
                         <div id="radio-buttons" style="display:none;">
                             <div class="mb-3">
                                 <input type="radio" id="" class="" name="radio_btn" value="email">
@@ -212,6 +213,29 @@
     </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <script>
+        jQuery.validator.addMethod('check_phone',
+            function(value, element) {
+                return this.optional(element) || /^[0-9]{10}$/i.test(value);
+            },
+            'Enter valid phone number'
+        );
+        jQuery.validator.addMethod(
+            'letters',
+            function(value, element) {
+                return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
+            },
+            'Letters only please'
+        );
+        jQuery.validator.addMethod("customEmailValidation", function(value, element) {
+            // Define a custom regular expression for email validation
+            // This regex requires a dot (.) in the domain part
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            return this.optional(element) || emailRegex.test(value);
+        }, "Please enter a valid email address with a dot (.) in the domain part.");
+    </script>
+
     <script>
         $("#update-guestpost-form").validate({
             rules: {
@@ -235,10 +259,11 @@
                 },
                 payee_email: {
                     required: true,
-                    email: true
+                    customEmailValidation: true
                 },
                 payee_number: {
                     required: true,
+                    check_phone: true
                 },
             }
         });

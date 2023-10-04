@@ -26,7 +26,6 @@ $session->markAsTempdata('some_name', 10); ?>
     </div>
 </div>
 <?php echo view('admin/header') ?>
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/daterangepicker.css" />
 <main class="content">
     <div class="row">
         <div class="col-md-2">
@@ -174,11 +173,11 @@ $session->markAsTempdata('some_name', 10); ?>
     </div>
     <?php echo view('admin/footer') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>
+
     <!-- <script>
         function change_flag(status, id, el) {
-            let url = `<?= base_url('admin/is-flag/') ?>${id}`;
+            let url = `<? //= base_url('admin/is-flag/') 
+                        ?>${id}`;
             $.ajax({
                 url: url,
                 type: "get",

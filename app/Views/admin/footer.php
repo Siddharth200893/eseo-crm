@@ -345,3 +345,5 @@
          }
      })
  </script>
+ <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
+ <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>

@@ -202,10 +202,10 @@
   background: #ffed0063;
 }
 .highlight {
-  background-color: rgb(13, 238, 171);
+  background-color: rgb(13 124 238 / 45%) !important;
 }
 tr.highlight_flag {
-  background: #6495ed8a;
+  background: #64ed8982;
 }
 
 /* .Approve {

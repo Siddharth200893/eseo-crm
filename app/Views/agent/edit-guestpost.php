@@ -41,7 +41,21 @@
                 <form id="update-guestpost-form" method="post" action="<?= base_url() ?>agent/update-guestpost">
                     <input type="hidden" value="<?= $guest_posts['guestpost_id'] ?>" class="form-control" id="" name="id">
 
+                    <div id="currencyINR">
+                        <div class="mb-3">
+                            <label for="currencyINR" class="form-label">Currency (INR)</label>
+                            <select class="form-select" id="" name="currency">
+                                <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
+                                <?php foreach ($all_currencies as $currency) : ?>
+                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                <?php
+                                endforeach;
+                                ?>
+                                <!-- Add more currency options here if needed -->
+                            </select>
+                        </div>
 
+                    </div>
                     <div class="mb-3">
                         <label for="amount" class="form-label">Amount</label>
                         <input type="number" value="<?= $guest_posts['amount'] ?>" class="form-control focus" id="amount" name="amount">
@@ -60,43 +74,8 @@
                         </select>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="paymentStatus" class="form-label">Payment Status</label>
-                        <select class="form-select" id="paymentStatus" name="paymentStatus">
-                            <option value="<?= $guest_posts['payment_status'] ?>"><?= $guest_posts['payment_status'] == 1 ? "Completed" : "Pending" ?></option>
-                            <option value="0">Pending</option>
-                            <option value="1">Completed</option>
-                        </select>
-                    </div>
-                    <div id="currencyINR">
-                        <div class="mb-3">
-                            <label for="currencyINR" class="form-label">Currency (INR)</label>
-                            <select class="form-select" id="" name="currency">
-                                <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
-                                <?php foreach ($all_currencies as $currency) : ?>
-                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
-                                <?php
-                                endforeach;
-                                ?>
-                                <!-- Add more currency options here if needed -->
-                            </select>
-                        </div>
-                        <div class="mb-3 reference_number">
-                            <label for="paymentMode" class="form-label">Payment Mode</label>
-                            <select class="form-select" id="" name="paymentmode">
-                                <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
-                                <?php foreach ($all_payment_modes as $payment_mode) : ?>
-                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
-                                <?php
-                                endforeach;
-                                ?>
-                            </select>
-                            <div id="" class="" name="">
-                                <label for="paymentMode" class="form-label">Reference Number</label>
-                                <input type="" value="<?= $guest_posts['reference_number'] ?>" class="form-control" id="reference_number" name="reference_number">
-                            </div>
-                        </div>
-                    </div>
+
+
                     <div class="right_submit"> <button type="submit" class="btn btn-primary">Submit</button></div>
                 </form>
             </div>
@@ -104,35 +83,7 @@
     </main>
     </main>
     <?php echo view('agent/footer') ?>
-    <!-- <script>
-        $(document).ready(function() {
 
-            var payment_status = $('#paymentStatus').val();
-            // alert(payment_status);
-            if (payment_status == 1) {
-                $('#currencyINR').show();
-            }
-
-            $('#paymentStatus').on('change', function() {
-                if (this.value === '1') {
-                    $('#currencyINR').show();
-                } else {
-                    $('#currencyINR').hide();
-                }
-            });
-        })
-    </script> -->
-    <!-- <script>
-        $(document).ready(function() {
-            $('#paymentmode').on('change', function() {
-                if (this.value === 'upi' || this.value === 'paypal') {
-                    $('#reference_number').show();
-                } else {
-                    $('#reference_number').hide();
-                }
-            });
-        })
-    </script> -->
 
     <script>
         var ref_num = `<?= $guest_posts['reference_number'] ?>`;
@@ -156,20 +107,11 @@
                 projectName: {
                     required: true,
                 },
-                paymentStatus: {
-                    required: true,
-                },
+
                 currency: {
                     required: true,
                 },
-                paymentmode: {
-                    required: true,
 
-                },
-                reference_number: {
-                    required: true,
-
-                },
             }
         });
     </script>

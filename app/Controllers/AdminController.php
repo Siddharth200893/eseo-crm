@@ -75,8 +75,7 @@ class AdminController extends BaseController
         $blogger_names = $GuestPostLeadsModel->select('blogger_name')
             ->groupBy('blogger_name')
             ->findAll();
-        // print("<pre>" . print_r($blogger_names, true) . "</pre>");
-        // die();
+
         $currentDate = date('Y-m-d');
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
@@ -148,7 +147,8 @@ class AdminController extends BaseController
             // die('hi');
             $UsersModel->update($id, $data);
             $session->setFlashdata('success_save', 'updated succesfully');
-            return redirect()->back();
+            $session->set('some_name', $id);
+            return redirect()->to(base_url() . 'admin/manage-users');
         } else {
             $session->setFlashdata('error_save', 'Please enter valid details');
             return redirect()->back();
@@ -442,7 +442,7 @@ class AdminController extends BaseController
             $all_guestposts->where('DATE(guestpost_leads.created_at) >=', $start_date)
                 ->where('DATE(guestpost_leads.created_at) <=', $end_date);
             // Add pagination (you may want to make 'paginate' dynamic)
-            $pageLimit = 1; // Change this to a dynamic value if needed
+            $pageLimit = 20; // Change this to a dynamic value if needed
             $all_guestposts = $all_guestposts->orderBy('guestpost_leads.id', 'desc')->paginate($pageLimit);
             // Prepare data for response
             $data = [
@@ -453,7 +453,7 @@ class AdminController extends BaseController
                 'blogger_names' => $blogger_names, // Define $blogger_names if necessary.
                 'pager' => $GuestPostLeadsModel->pager
             ];
-            echo view('guestposts_table', $data);
+            echo view('admin/guestposts_table', $data);
         } else {
             // die('hi');
             $startDate = $this->request->getGet('start_date');
@@ -471,7 +471,7 @@ class AdminController extends BaseController
                 ->join('users', 'users.id = guestpost_leads.user_id', 'left')
                 ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
                 ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')->where('DATE(guestpost_leads.created_at) >=', $start_date)
-                ->where('DATE(guestpost_leads.created_at) <=', $end_date)->orderBy('guestpost_leads.id', 'desc')->paginate(1);
+                ->where('DATE(guestpost_leads.created_at) <=', $end_date)->orderBy('guestpost_leads.id', 'desc')->paginate(20);
             // $data['guestposts'] = $all_guestposts;
             $data = [
                 'guestposts' => $all_guestposts,
@@ -481,7 +481,7 @@ class AdminController extends BaseController
                 'blogger_names' => $blogger_names,
                 'pager' => $GuestPostLeadsModel->pager
             ];
-            echo view('get-guestposts_table', $data);
+            echo view('admin/get-guestposts_table', $data);
         }
         // return $this->response->setJSON($response);
     }

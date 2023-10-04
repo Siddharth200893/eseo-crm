@@ -37,7 +37,8 @@ $routes->get('/', 'UsersController::login');
 // $routes->post('/users-registration', 'UsersController::users_registration');
 $routes->post('/logining-in', 'UsersController::loginAuth');
 $routes->get('/logout', 'UsersController::logout');
-
+$routes->get('/import', 'Import::index');
+$routes->post('import-file', 'Import::importFile');
 
 
 
@@ -64,7 +65,7 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
     $routes->get('view-project-leads/(:alphanum)', 'AdminController::view_project_leads/$1');
     $routes->get('guestpost-leads-date-range', 'AdminController::guestpost_leads_date_range');
     // $routes->post('guestpost-leads-date-range', 'AdminController::post_guestpost_leads_date_range');
-    $routes->get('guestpost-leads-date-range', 'AdminController::get_guestpost_leads_date_range');
+    // $routes->get('guestpost-leads-date-range', 'AdminController::get_guestpost_leads_date_range');
     $routes->get('guestpost-leads-filter', 'AdminController::guestpost_leads_filter');
     $routes->get('payment-mode', 'AdminController::payment_method');
     $routes->post('add-payment-mode', 'AdminController::add_payment_method');
@@ -89,6 +90,9 @@ $routes->group("agent", ["filter" => "authGuard"], function ($routes) {
     $routes->get('guest-posting-leads', 'AgentController::guest_posting_leads');
     $routes->get('edit-guestpost/(:alphanum)', 'AgentController::edit_guestpost/$1');
     $routes->post('update-guestpost', 'AgentController::update_guestpost');
+    $routes->get('guestpost-leads-date-range', 'AgentController::guestpost_leads_date_range');
+    $routes->get('exportdata', 'AgentController::exportdata');
+    $routes->get('is-flag/(:alphanum)', 'AgentController::is_flag/$1');
 });
 
 $routes->group("manager", ["filter" => "authGuard"], function ($routes) {
@@ -109,7 +113,7 @@ $routes->group("manager", ["filter" => "authGuard"], function ($routes) {
     $routes->get('edit-project/(:alphanum)', 'ManagerController::edit_project/$1');
     $routes->post('update-project', 'ManagerController::update_project/$1');
     $routes->get('view-project-leads/(:alphanum)', 'ManagerController::view_project_leads/$1');
-    $routes->post('guestpost-leads-date-range', 'ManagerController::guestpost_leads_date_range');
+    // $routes->post('guestpost-leads-date-range', 'ManagerController::guestpost_leads_date_range');
     // $routes->get('guestpost-leads-date-range', 'ManagerController::get_guestpost_leads_pagination');
     $routes->get('payment-mode', 'ManagerController::payment_method');
     $routes->post('add-payment-mode', 'ManagerController::add_payment_method');
@@ -117,6 +121,9 @@ $routes->group("manager", ["filter" => "authGuard"], function ($routes) {
     $routes->post('add-currency', 'ManagerController::add_currency');
     $routes->get('bloggers', 'ManagerController::bloggers');
     $routes->get('blogger-leads/(:any)', 'ManagerController::blogger_leads/$1');
+    $routes->get('guestpost-leads-date-range', 'ManagerController::guestpost_leads_date_range');
+    $routes->get('exportdata', 'ManagerController::exportdata');
+    $routes->get('is-flag/(:alphanum)', 'ManagerController::is_flag/$1');
 
 
 

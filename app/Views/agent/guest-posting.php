@@ -39,10 +39,6 @@
                         <input type="text" class="form-control focus" id="guestPosting" name="link">
                     </div>
                     <div class="mb-3">
-                        <label for="amount" class="form-label">Amount</label>
-                        <input type="number" class="form-control" id="amount" name="amount">
-                    </div>
-                    <div class="mb-3">
                         <label for="currency" class="form-label">Currency</label>
                         <select class="form-select" id="currency" name="currency">
 
@@ -55,6 +51,11 @@
                         </select>
 
                     </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" name="amount">
+                    </div>
+
                     <div class="mb-3">
                         <label for="projectName" class="form-label">Project Name</label>
                         <select class="form-select" id="projectName" name="projectName">
@@ -142,6 +143,12 @@
             },
             'Letters only please'
         );
+        jQuery.validator.addMethod("customEmailValidation", function(value, element) {
+            // Define a custom regular expression for email validation
+            // This regex requires a dot (.) in the domain part
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            return this.optional(element) || emailRegex.test(value);
+        }, "Please enter a valid email address with a dot (.) in the domain part.");
     </script>
 
     <script>
@@ -150,30 +157,24 @@
                 link: {
                     required: true,
                     url: true,
-                    // url_check: true,
+                },
+                currency: {
+                    required: true,
                 },
                 amount: {
                     required: true,
                     digits: true
                 },
-                currency: {
-                    required: true,
-                },
                 projectName: {
                     required: true,
                 },
-                agent_email: {
-                    required: true,
-                    email: true
-                },
-
                 blogger_name: {
                     required: true,
                     letters: true
                 },
                 blogger_email: {
                     required: true,
-                    email: true
+                    customEmailValidation: true
                 },
                 blogger_phone: {
                     required: true,

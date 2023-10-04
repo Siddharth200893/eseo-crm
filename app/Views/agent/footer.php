@@ -38,6 +38,110 @@
     ?>
  <script src="<?= base_url() ?>assets/js/app.js"></script>
  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+ <script>
+     function change_flag(status, id, el) {
+         let url = `<?= base_url('agent/is-flag/') ?>${id}`;
+         $.ajax({
+             url: url,
+             type: "get",
+             success: function(response) {
+                 if (response == 1) {
+                     // alert('flagged successfully');
+                     console.log(el.parentNode.parentNode);
+                     $(el).html('<i class="fa fa-flag" aria-hidden="true"></i>');
+
+                     $(el.parentNode.parentNode).addClass('highlight_flag');
+                     // el.html();
+                 } else if (response == 0) {
+                     // alert(23);
+                     $(el).html('<i class="fa fa-flag-o" aria-hidden="true"></i>');
+                     $(el.parentNode.parentNode).removeClass('highlight_flag');
+
+                 }
+             },
+             error: function(xhr, status, error) {
+                 console.log(error);
+             },
+             headers: {
+                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+             },
+         });
+     };
+ </script>
+
+ <script>
+     $(document).ready(function() {
+         var selectedDateRange = {
+             startDate: moment().startOf('month'),
+             endDate: moment().endOf('month')
+         };
+         $('#date_range_filter').daterangepicker({
+             ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+             },
+             startDate: selectedDateRange.startDate,
+             endDate: selectedDateRange.endDate,
+         }, function(start, end, label) {
+             selectedDateRange.startDate = start;
+             selectedDateRange.endDate = end;
+             // You can perform actions or updates here based on the new selected date range.
+         });
+         $('.filter').change(function() {
+             // Access selectedDateRange.startDate and selectedDateRange.endDate here
+             var start = selectedDateRange.startDate;
+             var end = selectedDateRange.endDate;
+             var paymentmodeFilter = $('#paymentModeFilter').val();
+             var currency = $('#currencyFilter').val();
+             var projectValue = $('#projectFilter').val();
+             var paymentValue = $('#paymentFilter').val();
+             var blogger = $('#bloggerFilter').val();
+             var urgent_flag = $('#urgent-flag').val();
+             var invoice_options = $('#invoice-options').val();
+             // alert(paymentValue);
+             // console.log(paymentValue);
+             var url = '<?= base_url('agent/guestpost-leads-date-range') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger + '&urgent_flag=' + urgent_flag + '&invoice_options=' + invoice_options;
+             console.log(url);
+             $.ajax({
+                 url: url,
+                 type: "get",
+                 success: function(response) {
+                     $('#replace_data').html(response);
+                     // console.log(response);
+                     // filter();
+                 },
+                 error: function(xhr, status, error) {
+                     console.log(error);
+                 },
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 },
+             });
+         });
+         $('#export_data').click(function() {
+             // alert('clicked');
+             var start = selectedDateRange.startDate;
+             var end = selectedDateRange.endDate;
+             var paymentmodeFilter = $('#paymentModeFilter').val();
+             var currency = $('#currencyFilter').val();
+             var projectValue = $('#projectFilter').val();
+             var paymentValue = $('#paymentFilter').val();
+             var blogger = $('#bloggerFilter').val();
+             var urgent_flag = $('#urgent-flag').val();
+             var invoice_options = $('#invoice-options').val();
+             // alert(paymentValue);
+             // console.log(paymentValue);
+             var url = '<?= base_url('agent/exportdata') ?>?start_date=' + start + '&end_date=' + end + '&paymentModeFilter=' + paymentmodeFilter + '&currencyFilter=' + currency + '&projectFilter=' + projectValue + '&paymentFilter=' + paymentValue + '&bloggerFilter=' + blogger + '&urgent_flag=' + urgent_flag + '&invoice_options=' + invoice_options;
+             console.log(url);
+             window.location.href = url;
+         })
+     });
+ </script>
  <!-- <script>
      if (document.readyState) {
          let tab = document.getElementsByClassName('tab-link');
@@ -305,3 +409,5 @@
 
      })
  </script>
+ <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
+ <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>

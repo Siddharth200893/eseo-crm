@@ -7,22 +7,22 @@
          <!-- <div class="row text-muted">
              <div class="col-6 text-start">
                  <p class="mb-0">
-                     <a class="text-muted" href="https://managerkit.io/" target="_blank"><strong>ll</strong></a> - <a class="text-muted" href="https://managerkit.io/" target="_blank"><strong>Bootstrap manager Template</strong></a> &copy;
+                     <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>ll</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a> &copy;
                  </p>
              </div>
              <div class="col-6 text-end">
                  <ul class="list-inline">
                      <li class="list-inline-item">
-                         <a class="text-muted" href="https://managerkit.io/" target="_blank">Support</a>
+                         <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
                      </li>
                      <li class="list-inline-item">
-                         <a class="text-muted" href="https://managerkit.io/" target="_blank">Help Center</a>
+                         <a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
                      </li>
                      <li class="list-inline-item">
-                         <a class="text-muted" href="https://managerkit.io/" target="_blank">Privacy</a>
+                         <a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
                      </li>
                      <li class="list-inline-item">
-                         <a class="text-muted" href="https://managerkit.io/" target="_blank">Terms</a>
+                         <a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
                      </li>
                  </ul>
              </div>
@@ -38,6 +38,37 @@
  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.21/sweetalert2.all.min.js" integrity="sha512-9pxXmgs5Ol+b8ko21zSalDCVBeUEeKXFqDt1oRHrZJ04WIjhLWsbXmS+0QogsYLnb7r/U9pZWULgZaqIGK/K1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <script>
+     function change_flag(status, id, el) {
+         let url = `<?= base_url('manager/is-flag/') ?>${id}`;
+         $.ajax({
+             url: url,
+             type: "get",
+             success: function(response) {
+                 if (response == 1) {
+                     // alert('flagged successfully');
+                     console.log(el.parentNode.parentNode);
+                     $(el).html('<i class="fa fa-flag" aria-hidden="true"></i>');
+
+                     $(el.parentNode.parentNode).addClass('highlight_flag');
+                     // el.html();
+                 } else if (response == 0) {
+                     // alert(23);
+                     $(el).html('<i class="fa fa-flag-o" aria-hidden="true"></i>');
+                     $(el.parentNode.parentNode).removeClass('highlight_flag');
+
+                 }
+             },
+             error: function(xhr, status, error) {
+                 console.log(error);
+             },
+             headers: {
+                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+             },
+         });
+     };
+ </script>
  <script>
      function payemnt_approvel(payment, id, el) {
          if (payment === 0) {
@@ -305,14 +336,14 @@
          var currentUrl = window.location.href;
          var paymentMode = currentUrl.substr(-4) === 'mode' ? 'active' : '';
          var currency = currentUrl.substr(-8) === 'currency' ? 'active' : '';
-         var bloggers = currentUrl.substr(-8) === 'bloggers' ? 'active' : '';
 
-         if (paymentMode === "active" || currency === "active" || bloggers === "active") {
+         if (paymentMode === "active" || currency === "active") {
              //  console.log('yes');
              $('.sidebar-link').attr('aria-expanded', 'true');
              $('.sidebar-link').removeClass('collapsed');
              $('#collapseExample').addClass('show');
-             $('#collapseExample1').addClass('show');
          }
      })
  </script>
+ <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
+ <script src="<?php echo base_url(); ?>assets/js/daterangepicker.js"></script>

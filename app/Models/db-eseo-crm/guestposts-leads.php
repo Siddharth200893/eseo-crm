@@ -45,7 +45,7 @@
                 <div class="row justify-content-md-center">
                     <div class="col-12">
                         <h2>
-                            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+                            <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
                         </h2>
                         <div class="table-responsive">
                             <span id="sale_result"></span>

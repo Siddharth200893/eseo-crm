@@ -1,7 +1,9 @@
 <!DOCTYPE php>
 <php lang="en">
 
-    <?php echo view('admin/header') ?>
+    <?php echo view('admin/header');
+    $session = session();
+    $session->markAsTempdata('some_name', 10); ?>
     <main class="content">
         <div class="container-fluid p-0">
             <div class="row justify-content-md-center">
@@ -25,7 +27,7 @@
                         <tbody>
                             <?php
                             foreach ($Users as $user) : ?>
-                                <tr>
+                                <tr class="<?php echo $session->get('some_name') == $user['user_id'] ? "highlight" : "" ?>">
 
                                     <td class="d-xl-table-cell"><?php echo $user['username']; ?></td>
                                     <td class="d-xl-table-cell"><?php echo $user['phone']; ?></td>
