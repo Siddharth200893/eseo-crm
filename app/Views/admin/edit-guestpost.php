@@ -44,16 +44,16 @@
                         <div class="mb-3">
                             <label for="currencyINR" class="form-label">Currency</label>
                             <select class="form-select" id="currency" name="currency">
-
                                 <?php if ($guest_posts['payment_mode_id']) { ?>
                                     <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
+                                    <?php
+                                } else {
+                                    foreach ($all_currencies as $currency) : ?>
+                                        <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
                                 <?php
+                                    endforeach;
                                 }
                                 ?>
-
-                                <option value="<?= $selected_currency['id'] ?>"><?= $selected_currency['name'] ?></option>
-
-                                <!-- Add more currency options here if needed -->
                             </select>
                         </div>
                     </div>
@@ -61,14 +61,15 @@
                         <label for="paymentMode" class="form-label">Payment Mode</label>
                         <select class="form-select" id="paymentmode" name="paymentmode">
                             <?php if ($guest_posts['payment_mode_id']) { ?>
-                                <option value="<?= $guest_posts['payment_mode_id'] ?>"><?= $guest_posts['payment_mode'] ?></option>
+                                <!-- selected_payment_mode -->
+                                <option value="<?= $selected_payment_mode['id'] ?>"><?= $selected_payment_mode['name'] ?></option>
+                                <?php
+                            } else {
+                                foreach ($all_payment_modes as $payment_mode) : ?>
+                                    <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
                             <?php
+                                endforeach;
                             }
-                            ?>
-                            <?php foreach ($currency_payment_modes as $payment_mode) : ?>
-                                <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
-                            <?php
-                            endforeach;
                             ?>
                         </select>
                     </div>
@@ -97,7 +98,6 @@
                         </select>
                     </div>
                     <div id="" class="reference_number">
-
                         <div id="radio-buttons" style="display:none;">
                             <div class="mb-3">
                                 <input type="radio" id="" class="" name="radio_btn" value="email">
@@ -109,19 +109,27 @@
                         <div class="mb-3">
                             <div id="for_email" style="display:none;">
                                 <label for="payee_email">Payee Email</label>
-                                <input type="email" class="form-control" id="" name="payee_email" value="" placeholder="Payee Email">
+                                <input type="email" class="form-control" id="payee_email" name="payee_email" value="<?= $guest_posts['payee_email'] ?>" placeholder="Payee Email">
                             </div>
                             <div id="for_invoice" style="display:none;">
                                 <label for="reference_number">Invoice</label>
-                                <input type="text" class="form-control" id="invoice_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Invoice Number">
+                                <input type="text" class="form-control" id="invoice_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Invoice Number">
                             </div>
                             <div id="for_ref_no" style="display:none;">
                                 <label for="reference_number">Reference Number</label>
-                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['reference_number'] ?>" placeholder="Reference Number" style="display:none;">
+                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Reference Number" style="display:none;">
                             </div>
                             <div id="for_payee_number" class="mt-3" style="display:none;">
                                 <label for="payee_number">Payee Number</label>
-                                <input type="text" class="form-control" id="payee_number" name="payee_number" value="<?= $guest_posts['payee_number'] ?>" placeholder="Payee Number">
+                                <input type="text" class="form-control" id="payee_number" name="payee_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Payee Number">
+                            </div>
+                            <div id="for_bank_details" class="mt-3" style="display:none;">
+                                <label for="acct_no" class="form-label">Account No.</label>
+                                <input type="number" class="form-control" id="acct_no" name="acct_no" value="<?= $guest_posts['account_no'] ?>">
+                                <label for="acct_name" class="form-label">Account Name</label>
+                                <input type="text" class="form-control" id="acct_name" name="acct_name" value="<?= $guest_posts['account_name'] ?>">
+                                <label for="ifsc" class="form-label">IFSC Code</label>
+                                <input type="text" class="form-control" id="ifsc" name="ifsc" value="<?= $guest_posts['ifsc_code'] ?>">
                             </div>
                         </div>
                     </div>
@@ -134,6 +142,36 @@
     <?php echo view('admin/footer') ?>
     <script>
         $(document).ready(function() {
+            const check_payee_email = `<?php echo $guest_posts['payee_email'] ?>`
+            const selected_payment_mode = `<?= $guest_posts['payment_mode_id'] ?>`;
+            // alert(selected_payment_mode);
+            if (check_payee_email) {
+                $('#for_invoice').hide();
+                $('#for_email').show();
+            } else if (selected_payment_mode == 3) {
+                // $('#paymentmode').val('3'); //using value 3 for for bank details....
+                $('#for_email').hide();
+                // $('#for_invoice').hide();
+                $('#radio-buttons').hide();
+                $('#for_ref_no').hide();
+                $('#reference_number').hide();
+                $('#for_bank_details').show();
+            } else if (selected_payment_mode == 2) {
+                // $('#paymentmode').val('3'); //using value 3 for for bank details....
+                $('#for_email').hide();
+                // $('#for_invoice').hide();
+                $('#radio-buttons').hide();
+                $('#for_ref_no').show();
+                $('#reference_number').show();
+                $('#for_bank_details').hide();
+                $('#for_payee_number').show();
+            } else if (selected_payment_mode == 1) {
+                // $('#paymentmode').val('3'); //using value 3 for for bank details....
+                // $('#for_invoice').hide();
+                $('#radio-buttons').hide();
+                $('#for_bank_details').hide();
+                $('#for_payee_number').hide();
+            }
             // currency_features();
             payment_features();
             prop_disable();
@@ -146,8 +184,6 @@
                     $('#for_email').hide();
                     $('#for_invoice').show();
                     $('#reference_number').prop('disabled', true);
-
-
                 }
             });
             $('#currency').on('change', function() { //calling function once again ....
@@ -159,13 +195,15 @@
                 payment_features();
             });
         });
-
         //edit form functions....
-
         function prop_disable() {
             var cr = $('#paymentStatus').val();
             if (cr == 1) {
+                $('#acct_no').prop('disabled', true);
+                $('#acct_name').prop('disabled', true);
+                $('#ifsc').prop('disabled', true);
                 $('#projectName').prop('disabled', true);
+                $('#payee_email').prop('disabled', true);
                 $('#paymentStatus').prop('disabled', true);
                 $('#currency').prop('disabled', true);
                 $('#paymentmode').prop('disabled', true);
@@ -175,45 +213,40 @@
             }
         }
 
-        function currency_features() {
-            var pmt_sts = $('#currency').val();
-            if (pmt_sts == 1) {
-                $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
-                $('#radio-buttons').show();
-                $('#for_ref_no').hide();
-                $('#for_invoice').show();
-
-
-            } else if (pmt_sts == 2) {
-                $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
-                $('#for_email').hide();
-                $('#for_invoice').hide();
-                $('#radio-buttons').hide();
-                $('#for_ref_no').show();
-                $('#reference_number').show();
-            }
-        }
-
         function payment_features() {
             var pmt_mode = $('#paymentmode').val();
-
             if (pmt_mode == 1) { //using 1 one for paypal and 2 for gpay.......
-
                 $('#for_ref_no').hide();
                 $('#radio-buttons').show();
-                $('#for_invoice').show();
+                // $('#for_invoice').show();
             } else if (pmt_mode == 2) {
                 $('#for_ref_no').show();
                 $('#radio-buttons').hide();
-                $('#for_invoice').hide();
+                // $('#for_invoice').hide();
                 $('#reference_number').show();
                 $('#for_payee_number').show();
             }
         }
+        // function currency_features() {
+        //     var pmt_sts = $('#currency').val();
+        //     if (pmt_sts == 1) {
+        //         $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
+        //         $('#radio-buttons').show();
+        //         $('#for_ref_no').hide();
+        //         // $('#for_invoice').show();
+        //         $('#invoice_number').show();
+        //     } else if (pmt_sts == 2) {
+        //         $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
+        //         $('#for_email').hide();
+        //         // $('#for_invoice').hide();
+        //         $('#radio-buttons').hide();
+        //         $('#for_ref_no').show();
+        //         $('#reference_number').show();
+        //     }
+        // }
     </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-
     <script>
         jQuery.validator.addMethod('check_phone',
             function(value, element) {
@@ -235,7 +268,6 @@
             return this.optional(element) || emailRegex.test(value);
         }, "Please enter a valid email address with a dot (.) in the domain part.");
     </script>
-
     <script>
         $("#update-guestpost-form").validate({
             rules: {
@@ -268,7 +300,7 @@
             }
         });
     </script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             if ($('#paymentStatus').val() == "0") {
                 $(".reference_number").hide();
@@ -283,6 +315,6 @@
                 }
             });
         });
-    </script>
+    </script> -->
     </body>
 </php>

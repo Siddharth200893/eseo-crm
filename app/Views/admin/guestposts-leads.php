@@ -122,13 +122,16 @@ $session->markAsTempdata('some_name', 10); ?>
                                         <th class="d-xl-table-cell">Project Name</th>
                                         <th class="d-xl-table-cell">Blogger Name</th>
                                         <th class="d-xl-table-cell">Link</th>
-                                        <th class="d-xl-table-cell">Amount</th>
                                         <th class="d-xl-table-cell">Payment Status</th>
+                                        <th class="d-xl-table-cell">Amount</th>
                                         <th class="d-xl-table-cell">Currency</th>
                                         <th class="d-xl-table-cell">Payment Mode</th>
                                         <th class="d-xl-table-cell">Payee Number</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
                                         <th class="d-xl-table-cell">Payee Email</th>
+                                        <th class="d-xl-table-cell">Account Number</th>
+                                        <th class="d-xl-table-cell">Account Holder</th>
+                                        <th class="d-xl-table-cell">IFSC Code</th>
                                         <th class="d-xl-table-cell">Agent Name</th>
                                         <th class="d-xl-table-cell">Flag</th>
                                         <th class="d-xl-table-cell">Payment Approvel</th>
@@ -143,13 +146,16 @@ $session->markAsTempdata('some_name', 10); ?>
                                             <td class=""><?php echo $guestpost['project_name']; ?></td>
                                             <td class=""><?php echo $guestpost['blogger_name']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['link']; ?></td>
-                                            <td class="d-xl-table-cell range "><?php echo $guestpost['amount']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
+                                            <td class="d-xl-table-cell range "><?php echo $guestpost['amount']; ?></td>
                                             <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['account_name']; ?></td>
+                                            <td class="d-xl-table-cell "><?php echo $guestpost['ifsc_code']; ?></td>
                                             <td class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
                                             <td class="d-xl-table-cell td_username">
                                                 <button type="button" class="check btn btn-success " value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">

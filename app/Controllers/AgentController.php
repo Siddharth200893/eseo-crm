@@ -7,6 +7,7 @@ use App\Models\GuestPostLeadsModel;
 use App\Models\ProjectsModel;
 use App\Models\PaymentModeModel;
 use App\Models\CurrenciesModel;
+use App\Models\PaymentDetails;
 
 class AgentController extends BaseController
 {
@@ -29,10 +30,17 @@ class AgentController extends BaseController
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_currencies = $CurrenciesModel->select('*')->findAll();
         $projects = $ProjectsModel->select('*')->findAll();
+        // $guestpost_currency_id = $this->request->getVar('currency');
+        $usd_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 1)->findAll();
+        $inr_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 2)->findAll();
+        // print("<pre>" . print_r($usd_payment_modes, true) . "</pre>");
+        // die('hi');
         $data = [
             'all_payment_modes' => $all_payment_modes,
             'all_currencies' => $all_currencies,
-            'projects' => $projects
+            'projects' => $projects,
+            'usd_payment_modes' => $usd_payment_modes,
+            'inr_payment_modes' => $inr_payment_modes,
         ];
         return view('agent/guest-posting', $data);
     }
@@ -42,58 +50,156 @@ class AgentController extends BaseController
         $ssn_id = $session->get('id');
         $ssn_role_id = $session->get('role_id');
         $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $PaymentDetails = new PaymentDetails();
         $guestpostlink = $this->request->getVar('link');
         $existing_guestpostlink = $GuestPostLeadsModel->where('link', $guestpostlink)->first();
         $reference_number = $this->request->getVar('reference_number');
-        $existing_reference_number = $GuestPostLeadsModel->where('reference_number', $reference_number)->first();
-        // echo gettype($existing_guestpostlink);
-        // print("<pre>" . print_r($existing_reference_number, true) . "</pre>");
+        $payee_email = $this->request->getVar('payee_email');
+        $acct_no = $this->request->getVar('acct_no');
+        $payment_status = $this->request->getVar('paymentStatus');
+        $existing_reference_number = $GuestPostLeadsModel->select()->where('reference_number', $reference_number)->first();
+
+        // print_r($reference_number);
         // die('hi');
-        // if (!empty($existing_reference_number['reference_number'])) {
-        if (!$existing_guestpostlink) {
+
+        if ($existing_guestpostlink) {
+            $session->setFlashdata('error_save', 'This guest post link already exists');
+            return redirect()->to(base_url() . 'agent/guest-posting');
+        } elseif (!empty($reference_number || $payee_email || $acct_no)) {
+            if ($existing_reference_number && !empty($reference_number)) {
+                $session->setFlashdata('error_save', 'Cannot enter duplicate reference number!');
+                return redirect()->to(base_url() . 'agent/guest-posting');
+            } else {
+
+                helper(['form', 'url']);
+                $rules = [
+                    'link' => 'required',
+                    'blogger_name' => 'required',
+                    'blogger_email' => 'required',
+                    'projectName' => 'required',
+                    'paymentStatus' => 'required',
+                    'currency' => 'required',
+                    'amount' => 'required',
+                    'paymentmode' => 'required',
+                ];
+
+                if ($this->validate($rules)) {
+                    $data = [
+                        'user_id' => $ssn_id,
+                        'role_id' => $ssn_role_id,
+                        'link' => $this->request->getVar('link'),
+                        'blogger_name' => $this->request->getVar('blogger_name'),
+                        'blogger_phone' => $this->request->getVar('blogger_phone'),
+                        'project_id' => $this->request->getVar('projectName'),
+                        'payment_status' => $payment_status,
+                        'currency_id' => $this->request->getVar('currency'),
+                        'payment_mode_id' => $this->request->getVar('paymentmode'),
+                        'amount' => $this->request->getVar('amount'),
+                        'agent_email' => $session->get('email'),
+                        'blogger_email' => $this->request->getVar('blogger_email'),
+                        'reference_number' => $this->request->getVar('reference_number'),
+                        'payee_number' => $this->request->getVar('payee_number'),
+                        'payee_email' => $this->request->getVar('payee_email'),
+
+                    ];
+
+
+
+                    $insert_id =  $GuestPostLeadsModel->insert($data);
+                    $payment_detail = [
+                        'guestpost_id' => $insert_id,
+                        'currency_id' => $this->request->getVar('currency'),
+                        'payment_mode_id' => $this->request->getVar('paymentmode'),
+                        'amount' => $this->request->getVar('amount'),
+                        'agent_email' => $session->get('email'),
+                        'blogger_email' => $this->request->getVar('blogger_email'),
+                        'reference_number' => $this->request->getVar('reference_number'),
+                        'payee_number' => $this->request->getVar('payee_number'),
+                        'payee_email' => $this->request->getVar('payee_email'),
+                        'account_no' => $this->request->getVar('acct_no'),
+                        'account_name' => $this->request->getVar('acct_name'),
+                        'ifsc_code' => $this->request->getVar('ifsc'),
+                    ];
+                    // print_r($payment_detail);
+                    // die('hi');
+                    $PaymentDetails->insert($payment_detail);
+
+
+
+                    $session->setFlashdata('success_save', 'Saved');
+
+
+                    return redirect()->to(base_url() . 'agent/guest-posting-leads');
+                } else {
+                    $validationErrors = $this->validator->getErrors();
+                    print_r($validationErrors);
+                    die('errrors');
+                    $session->setFlashdata('error_save', 'Please enter valid details');
+                    return redirect()->to(base_url() . 'agent/guest-posting');
+                }
+            }
+        } elseif ($payment_status == 0) {
             helper(['form', 'url']);
             $rules = [
                 'link' => 'required',
-                'amount' => 'required',
-                'currency' => 'required',
-                'projectName' => 'required',
                 'blogger_name' => 'required',
                 'blogger_email' => 'required',
-                'blogger_phone' => 'required',
+                'projectName' => 'required',
+                'paymentStatus' => 'required',
             ];
+
             if ($this->validate($rules)) {
-                $session = session();
                 $data = [
                     'user_id' => $ssn_id,
                     'role_id' => $ssn_role_id,
                     'link' => $this->request->getVar('link'),
-                    'project_id' => $this->request->getVar('projectName'),
-                    'amount' => $this->request->getVar('amount'),
-                    'currency_id' => $this->request->getVar('currency'),
                     'agent_email' => $session->get('email'),
                     'blogger_name' => $this->request->getVar('blogger_name'),
-                    'blogger_email' => $this->request->getVar('blogger_email'),
                     'blogger_phone' => $this->request->getVar('blogger_phone'),
+                    'project_id' => $this->request->getVar('projectName'),
+                    'payment_status' => $payment_status,
+                    'blogger_email' => $this->request->getVar('blogger_email'),
                 ];
-                // print_r($data);
-                // die();
-                $GuestPostLeadsModel->insert($data);
+
+                $insert_id =  $GuestPostLeadsModel->insert($data);
+                // $payment_detail = [
+                //     'guestpost_id' => $insert_id,
+                //     'currency_id' => $this->request->getVar('currency'),
+                //     'payment_mode_id' => $this->request->getVar('paymentmode'),
+                //     'amount' => $this->request->getVar('amount'),
+                //     'agent_email' => $session->get('email'),
+                //     'blogger_email' => $this->request->getVar('blogger_email'),
+                //     'reference_number' => $this->request->getVar('reference_number'),
+                //     'payee_number' => $this->request->getVar('payee_number'),
+                //     'payee_email' => $this->request->getVar('payee_email'),
+                //     'account_no' => $this->request->getVar('acct_no'),
+                //     'account_name' => $this->request->getVar('acct_name'),
+                //     'ifsc_code' => $this->request->getVar('ifsc'),
+                // ];
+                $payment_detail = [
+                    'guestpost_id' => $insert_id,
+                ];
+                // print_r($payment_detail);
+                // die('hi');
+                $PaymentDetails->insert($payment_detail);
                 $session->setFlashdata('success_save', 'Saved');
                 return redirect()->to(base_url() . 'agent/guest-posting-leads');
             } else {
                 $session->setFlashdata('error_save', 'Please enter valid details');
-                return  redirect()->to(base_url() . 'agent/guest-posting');
+                return redirect()->to(base_url() . 'agent/guest-posting');
             }
         } else {
-            $session->setFlashdata('error_save', 'this guest post link already exists');
-            return  redirect()->to(base_url() . 'agent/guest-posting');
+            $session->setFlashdata('error_save', 'something went wrong! ');
+            return redirect()->to(base_url() . 'agent/guest-posting');
         }
     }
+
+
+
     public function guest_posting_leads()
     {
         $session = session();
         $currenct_agent_id = session()->get('id');
-
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $ProjectsModel = new ProjectsModel();
         $PaymentModeModel = new PaymentModeModel();
@@ -105,15 +211,14 @@ class AgentController extends BaseController
             ->groupBy('blogger_name')
             ->findAll();
         $currentDate = date('Y-m-d');
-
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
-
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_email,guestpost_leads.payee_number')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_email,payment_details.currency_id as pmt_currency,payment_details.payment_mode_id,payment_details.amount,payment_details.currency_id,payment_details.payee_number,payment_details.account_name,payment_details.account_no,payment_details.ifsc_code,payment_details.reference_number')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
+            ->join('payment_details', 'payment_details.guestpost_id = guestpost_leads.id', 'left')
             ->where('DATE(guestpost_leads.created_at) >=', $firstDayOfMonth)
             ->where('DATE(guestpost_leads.created_at) <=', $lastDayOfMonth)
             ->where('guestpost_leads.user_id', $currenct_agent_id)
@@ -157,10 +262,9 @@ class AgentController extends BaseController
     public function update_guestpost()
     {
         $session = session();
-        $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $PaymentDetails = new PaymentDetails();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
-
         $rules = [
             'amount' => 'required',
         ];
@@ -171,20 +275,16 @@ class AgentController extends BaseController
                 'currency_id' => $this->request->getVar('currency'),
                 'updated_at' => date('Y-m-d H:s:a'),
             ];
-
-            $GuestPostLeadsModel->update($id, $data);
+            $PaymentDetails->update($id, $data);
             $session->setFlashdata('success_save', 'Updated successfully');
             $session->set('some_name', $id);
             return redirect()->to(base_url() . 'agent/guest-posting-leads');
         }
     }
-
-
     public function guestpost_leads_date_range()
     {
         // die('hi');
         $currenct_agent_id = session()->get('id');
-
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $ProjectsModel = new ProjectsModel();
         $PaymentModeModel = new PaymentModeModel();
@@ -198,7 +298,6 @@ class AgentController extends BaseController
             ->findAll();
         if ($this->request->isAJAX()) {
             $currenct_agent_id = session()->get('id');
-
             $startDate = $this->request->getGet('start_date');
             $startDate = $this->request->getGet('start_date');
             $endDate = $this->request->getGet('end_date');
@@ -242,16 +341,13 @@ class AgentController extends BaseController
             } else if ($invoice_options === "1") {
                 $all_guestposts->where('guestpost_leads.payee_email IS NOT NULL AND guestpost_leads.payee_email <> ""');
             }
-
             if ($urgent_flag === "0" || $urgent_flag === "1") {
                 $all_guestposts->where('guestpost_leads.is_flag', $urgent_flag);
             }
             if (!empty($blogger)) {
                 $all_guestposts->where('guestpost_leads.blogger_name', $blogger);
             }
-
             // die($currenct_agent_id);
-
             $all_guestposts->where('guestpost_leads.user_id', $currenct_agent_id)
                 ->where('DATE(guestpost_leads.created_at) >=', $start_date)
                 ->where('DATE(guestpost_leads.created_at) <=', $end_date);
@@ -270,7 +366,6 @@ class AgentController extends BaseController
             echo view('agent/guestposts_table', $data);
         } else {
             // die('hi');
-
             $startDate = $this->request->getGet('start_date');
             $endDate = $this->request->getGet('end_date');
             $startDate = $this->request->getGet('start_date');
@@ -305,7 +400,6 @@ class AgentController extends BaseController
     public function exportdata()
     {
         $currenct_agent_id = session()->get('id');
-
         $startDate = $this->request->getGet('start_date');
         $startDate = $this->request->getGet('start_date');
         $endDate = $this->request->getGet('end_date');
@@ -349,21 +443,16 @@ class AgentController extends BaseController
         } else if ($invoice_options === "1") {
             $all_guestposts->where('guestpost_leads.payee_email IS NOT NULL AND guestpost_leads.payee_email <> ""');
         }
-
         if ($urgent_flag === "0" || $urgent_flag === "1") {
             $all_guestposts->where('guestpost_leads.is_flag', $urgent_flag);
         }
         if (!empty($blogger)) {
             $all_guestposts->where('guestpost_leads.blogger_name', $blogger);
         }
-
         // Filter by date range
-
-
         $all_guestposts->where('guestpost_leads.user_id', $currenct_agent_id)
             ->where('DATE(guestpost_leads.created_at) >=', $start_date)
             ->where('DATE(guestpost_leads.created_at) <=', $end_date);
-
         $data = $all_guestposts->orderBy('guestpost_leads.id', 'desc')->findAll();
         // print("<pre>" . print_r($data, true) . "</pre>");
         // die('hhh');
@@ -381,7 +470,6 @@ class AgentController extends BaseController
         fclose($file);
         exit;
     }
-
     public function is_flag($id)
     {
         $GuestPostLeadsModel = new GuestPostLeadsModel();

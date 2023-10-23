@@ -9,6 +9,7 @@ use App\Models\RoleModel;
 use App\Models\ProjectsModel;
 use App\Models\PaymentModeModel;
 use App\Models\CurrenciesModel;
+use App\Models\PaymentDetails;
 use function PHPSTORM_META\type;
 
 class AdminController extends BaseController
@@ -79,11 +80,12 @@ class AdminController extends BaseController
         $currentDate = date('Y-m-d');
         $firstDayOfMonth = date('Y-m-01', strtotime($currentDate));
         $lastDayOfMonth = date('Y-m-t', strtotime($currentDate));
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_email,guestpost_leads.payee_number')
+        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id,guestpost_leads.updated_at ,guestpost_leads.blogger_name,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.payment_mode_id,guestpost_leads.is_flag,guestpost_leads.payment_status,guestpost_leads.created_at,users.id as userid,users.name as username,projects.id as project_id,projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_email,guestpost_leads.payee_number,payment_details.amount,payment_details.currency_id,payment_details.payee_number,payment_details.account_name,payment_details.account_no,payment_details.ifsc_code,payment_details.reference_number')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
+            ->join('payment_details', 'payment_details.guestpost_id = guestpost_leads.id', 'left')
             ->where('DATE(guestpost_leads.created_at) >=', $firstDayOfMonth)
             ->where('DATE(guestpost_leads.created_at) <=', $lastDayOfMonth)
             ->orderBy('guestpost_leads.id', 'desc')->paginate(20);
@@ -206,32 +208,37 @@ class AdminController extends BaseController
 
         // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
-        $all_guestposts = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.reference_number,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.id as currency_id,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.payee_number')
+        $guestpost_details = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.payee_email,guestpost_leads.created_at,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,payment_details.amount,payment_details.currency_id,payment_details.payee_number,payment_details.account_name,payment_details.account_no,payment_details.ifsc_code,payment_details.reference_number as ref_num')
             ->join('users', 'users.id = guestpost_leads.user_id', 'left')
             ->join('projects', 'projects.id = guestpost_leads.Project_id', 'left')
             ->join('currencies', 'currencies.id = guestpost_leads.currency_id', 'left')
             ->join('payment_modes', 'payment_modes.id = guestpost_leads.payment_mode_id', 'left')
-            ->where('md5(guestpost_leads.id)', $id)->orderBy('guestpost_leads.id', 'desc')->first();
+            ->join('payment_details', 'payment_details.guestpost_id = guestpost_leads.id', 'left')
+            ->where('md5(guestpost_leads.id)', $id)->first();
 
 
+        // $check_payment = $CurrenciesModel->select('*')->where('id', $guestpost_currency_id)->first();
 
-        $guestpost_currency_id = $all_guestposts['currency_id'];
+        $guestpost_currency_id = $guestpost_details['currency_id'];
+        $guestpost_payment_mode_id = $guestpost_details['payment_mode_id'];
         $selected_currency = $CurrenciesModel->select('*')->where('id', $guestpost_currency_id)->first();
+        $selected_payment_mode = $PaymentModeModel->select('*')->where('id', $guestpost_payment_mode_id)->first();
 
         $currency_payment_modes = $PaymentModeModel->select('*')->where('currency_id', $guestpost_currency_id)->findAll();
 
-        // print("<pre>" . print_r($selected_currency['name'], true) . "</pre>");
+        // print("<pre>" . print_r($guestpost_details, true) . "</pre>");
         // die('hii');
 
         // print_r($all_guestposts);
         // die('hi');
         $data = [
-            'guest_posts' => $all_guestposts,
+            'guest_posts' => $guestpost_details,
             'projects' => $projects,
             'all_payment_modes' => $all_payment_modes,
             'all_currencies' => $all_currencies,
             'currency_payment_modes' => $currency_payment_modes,
             'selected_currency' => $selected_currency,
+            'selected_payment_mode' => $selected_payment_mode,
         ];
         return view('admin/edit-guestpost', $data);
     }
@@ -239,6 +246,7 @@ class AdminController extends BaseController
     {
         $session = session();
         $GuestPostLeadsModel = new GuestPostLeadsModel();
+        $PaymentDetails = new PaymentDetails();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
         $reference_number = $this->request->getVar('reference_number');
@@ -279,7 +287,11 @@ class AdminController extends BaseController
                 'amount' => $this->request->getVar('amount'),
 
             ];
-            $GuestPostLeadsModel->update($id, $data);
+
+            $chk = $PaymentDetails->where('guestpost_id', $id)->set($data)->update();
+            // print_r($chk);
+            // die('hi');
+
             $session->set('some_name', $id);
             $session->setFlashdata('success_save', 'Updated successfully');
             return redirect()->to(base_url() . 'admin/guest-posting-leads');
