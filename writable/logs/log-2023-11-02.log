@@ -1,0 +1,803 @@
+INFO - 2023-11-02 04:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 04:46:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`payment_modes`, CONSTRAINT `FK_currency_name` FOREIGN KEY (`currency_name`) REFERENCES `currencies` (`name`)) in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(636): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->add_payment_method()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-02 04:46:45 --> Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`payment_modes`, CONSTRAINT `FK_currency_name` FOREIGN KEY (`currency_name`) REFERENCES `currencies` (`name`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `payment_modes` (`name`, `currency_name`, `user_id`) VALUES (\'test\', \'4\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `payment_modes` (`name`, `currency_name`, `user_id`) VALUES (\'test\', \'4\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `payment_modes` (`name`, `currency_name`, `user_id`) VALUES (\'test\', \'4\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `payment_modes` (`name`, `currency_name`, `user_id`) VALUES (:name:, :currency_name:, :user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminController.php(636): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->add_payment_method()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 05:15:37 --> mysqli_sql_exception: Unknown column 'currency_id' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 05:15:37 --> Unknown column 'currency_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = :currency_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 05:17:25 --> mysqli_sql_exception: Unknown column 'currency_id' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 05:17:25 --> Unknown column 'currency_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = :currency_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 05:17:54 --> mysqli_sql_exception: Unknown column 'currency_id' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 05:17:54 --> Unknown column 'currency_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = :currency_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 05:24:30 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`guestpost_leads`, CONSTRAINT `fk_payment_mode_id` FOREIGN KEY (`payment_mode_id`) REFERENCES `payment_modes` (`id`)) in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(126): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-02 05:24:30 --> Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`guestpost_leads`, CONSTRAINT `fk_payment_mode_id` FOREIGN KEY (`payment_mode_id`) REFERENCES `payment_modes` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'122323\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SSSSS888\', NULL, NULL, \'565666\', \'test\', \'SBIN0115455\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'122323\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SSSSS888\', NULL, NULL, \'565666\', \'test\', \'SBIN0115455\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'122323\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SSSSS888\', NULL, NULL, \'565666\', \'test\', \'SBIN0115455\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(126): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:06:33 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:06:36 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:06:38 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:06:39 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 05:48:43 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`guestpost_leads`, CONSTRAINT `FK_payment_mode_name` FOREIGN KEY (`payment_mode_name`) REFERENCES `payment_modes` (`currency_name`)) in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(126): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-02 05:48:43 --> Cannot add or update a child row: a foreign key constraint fails (`eseo_crm_db`.`guestpost_leads`, CONSTRAINT `FK_payment_mode_name` FOREIGN KEY (`payment_mode_name`) REFERENCES `payment_modes` (`currency_name`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_name`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'45454\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SDSD444\', NULL, NULL, \'44544\', \'testing\', \'SBIN0111111\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_name`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'45454\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SDSD444\', NULL, NULL, \'44544\', \'testing\', \'SBIN0111111\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_name`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'Bank Details\', \'45454\', \'priyanka@eseo.com\', \'testing@gmail.com\', \'SDSD444\', NULL, NULL, \'44544\', \'testing\', \'SBIN0111111\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `payment_mode_name`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :payment_mode_name:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(126): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:57:44 --> Undefined array key "payment_mode_name"
+in APPPATH\Views\agent\guestposts-leads.php on line 156.
+ 1 APPPATH\Views\agent\guestposts-leads.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "payment_mode_name"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\agent\\guestposts-leads.php', 156)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\agent\\guestposts-leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('agent/guestposts-leads', [], true)
+ 5 APPPATH\Controllers\AgentController.php(216): view('agent/guestposts-leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:29:09 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:33:57 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:35:44 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:38:49 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-02 11:38:49 --> mysqli_sql_exception: Unknown column 'payment_modes.payment_mode' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(338): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 11:38:49 --> Unknown column 'payment_modes.payment_mode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE `payment_modes`.`payment_mode` = \'Bank Details\'
+AND `guestpost_leads`.`user_id` = \'2\'
+AND DATE(guestpost_leads.created_at) >= \'2023-11-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-11-30 23:59:59\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE `payment_modes`.`payment_mode` = \'Bank Details\'
+AND `guestpost_leads`.`user_id` = \'2\'
+AND DATE(guestpost_leads.created_at) >= \'2023-11-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-11-30 23:59:59\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE `payment_modes`.`payment_mode` = \'Bank Details\'
+AND `guestpost_leads`.`user_id` = \'2\'
+AND DATE(guestpost_leads.created_at) >= \'2023-11-01 00:00:00\'
+AND DATE(guestpost_leads.created_at) <= \'2023-11-30 23:59:59\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+WHERE `payment_modes`.`payment_mode` = :payment_modes.payment_mode:
+AND `guestpost_leads`.`user_id` = :guestpost_leads.user_id:
+AND DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AgentController.php(338): CodeIgniter\BaseModel->paginate(20)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 11:39:38 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 299.
+ 1 APPPATH\Controllers\AgentController.php(299): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 11:56:46 --> Unsupported operand types: string / int
+in APPPATH\Controllers\AgentController.php on line 296.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 14:31:05 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 308.
+ 1 APPPATH\Controllers\AgentController.php(308): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 09:10:01 --> mysqli_sql_exception: Unknown column 'currency_id' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 09:10:01 --> Unknown column 'currency_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = :currency_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AgentController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 09:11:01 --> mysqli_sql_exception: Unknown column 'currency_id' in 'where clause' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(50): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->payment_modes('INR')
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-02 09:11:01 --> Unknown column 'currency_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = \'INR\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = \'INR\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = \'INR\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `payment_modes`
+WHERE `currency_id` = :currency_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AgentController.php(50): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->payment_modes('INR')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 09:17:05 --> mysqli_sql_exception: Unknown column 'payment_mode_name' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(138): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-02 09:17:05 --> Unknown column 'payment_mode_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :currency_id:, :payment_mode_name:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(138): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 09:18:08 --> mysqli_sql_exception: Unknown column 'payment_mode_name' in 'field list' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(138): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-02 09:18:08 --> Unknown column 'payment_mode_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.html.com\', \'testing\', \'7206771558\', \'1\', \'1\', \'2\', \'Bank Details\', \'3\', \'787787\', \'priyanka@eseo.com\', \'test@gmail.com\', \'S44444\', NULL, NULL, \'21212121\', \'test\', \'SBIN0112225\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_name`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :currency_id:, :payment_mode_name:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(138): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 15:06:22 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 425.
+ 1 APPPATH\Controllers\AdminController.php(425): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 15:06:24 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 425.
+ 1 APPPATH\Controllers\AdminController.php(425): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 15:06:26 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AdminController.php on line 425.
+ 1 APPPATH\Controllers\AdminController.php(425): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 09:53:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eseo_crm_db', 3306, '', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(608): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->payment_method()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\eseo-crm\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(608): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->payment_method()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-02 09:53:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `currencies`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(608): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->payment_method()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 09:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 17:34:30 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 311.
+ 1 APPPATH\Controllers\AgentController.php(311): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 12:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-02 17:34:33 --> [DEPRECATED] Implicit conversion from float 1701368999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 311.
+ 1 APPPATH\Controllers\AgentController.php(311): date('Y-m-d H:i:s', 1701368999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 12:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 12:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

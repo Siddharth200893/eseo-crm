@@ -20,9 +20,13 @@
                                     <th class="d-xl-table-cell">Payment Status</th>
                                     <th class="d-xl-table-cell">Currency</th>
                                     <th class="d-xl-table-cell">Payment Mode</th>
-                                    <th class="d-xl-table-cell">Payee Number</th>
                                     <th class="d-xl-table-cell">Reference No.</th>
+
+                                    <th class="d-xl-table-cell">Payee Number</th>
                                     <th class="d-xl-table-cell">Payee Email</th>
+                                    <th class="d-xl-table-cell">Account Number</th>
+                                    <th class="d-xl-table-cell">Account Holder</th>
+                                    <th class="d-xl-table-cell">IFSC Code</th>
                                     <th class="d-xl-table-cell">Agent Name</th>
                                     <th class="d-xl-table-cell">Flag</th>
                                     <th class="d-xl-table-cell">Payment Approvel</th>
@@ -41,9 +45,14 @@
                                         <td class="d-xl-table-cell td_pmt_status" data-td_pmt_status="<?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?>"><?php echo $guestpost['payment_status'] == 1 ? "Completed" : "Pending"  ?></td>
                                         <td class="td_currency" data-td_currency="<?php echo $guestpost['currency_name']; ?>"><?php echo $guestpost['currency_name']; ?></td>
                                         <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payment_mode']; ?>"><?php echo $guestpost['payment_mode']; ?></td>
-                                        <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payee_number']; ?>"><?php echo $guestpost['payee_number']; ?></td>
                                         <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
+
+                                        <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payee_number']; ?>"><?php echo $guestpost['payee_number']; ?></td>
                                         <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
+
+                                        <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
+                                        <td class="d-xl-table-cell "><?php echo $guestpost['account_name']; ?></td>
+                                        <td class="d-xl-table-cell "><?php echo $guestpost['ifsc_code']; ?></td>
 
                                         <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
 

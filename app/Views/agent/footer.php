@@ -181,7 +181,7 @@
      }
  </script>
 
- <script>
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
          var gradient = ctx.createLinearGradient(0, 0, 0, 225);
@@ -250,8 +250,8 @@
              }
          });
      });
- </script>
- <script>
+ </script> -->
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          // Pie chart
          new Chart(document.getElementById("chartjs-dashboard-pie"), {
@@ -278,8 +278,8 @@
              }
          });
      });
- </script>
- <script>
+ </script> -->
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          // Bar chart
          new Chart(document.getElementById("chartjs-dashboard-bar"), {
@@ -322,8 +322,8 @@
              }
          });
      });
- </script>
- <script>
+ </script> -->
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          var markers = [{
                  coords: [31.230391, 121.473701],
@@ -389,8 +389,8 @@
              map.updateSize();
          });
      });
- </script>
- <script>
+ </script> -->
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
          var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
@@ -401,7 +401,7 @@
              defaultDate: defaultDate
          });
      });
- </script>
+ </script> -->
  <script>
      $(document).ready(function() {
          //  alert(1);

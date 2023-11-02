@@ -43,7 +43,7 @@ if ($session->getFlashdata('error_save')) { ?>
                                         <label for="currency" class="form-label">Currencies</label>
                                         <select class="form-select" id="currency" name="currency">
                                             <?php foreach ($currencies as $currency) : ?>
-                                                <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                                <option value="<?= $currency['name'] ?>"><?= $currency['name'] ?></option>
                                             <?php
                                             endforeach;
                                             ?>
@@ -71,19 +71,22 @@ if ($session->getFlashdata('error_save')) { ?>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
 <script>
+    $.validator.addMethod("capitalLettersOnly", function(value, element) {
+        return /^[A-Z\s]*$/.test(value);
+    }, "Please enter only capital letters.");
     jQuery.validator.addMethod('check_phone',
         function(value, element) {
             return this.optional(element) || /^[0-9]{10}$/i.test(value);
         },
         'Enter valid phone number'
     );
-    jQuery.validator.addMethod(
-        'letters',
-        function(value, element) {
-            return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
-        },
-        'Letters only please'
-    );
+    // jQuery.validator.addMethod(
+    //     'letters',
+    //     function(value, element) {
+    //         return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
+    //     },
+    //     'Letters only please'
+    // );
 </script>
 
 <script>
@@ -91,7 +94,7 @@ if ($session->getFlashdata('error_save')) { ?>
         rules: {
             name: {
                 required: true,
-                letters: true,
+                capitalLettersOnly: true,
             }
 
 

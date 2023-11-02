@@ -112,9 +112,9 @@
             <div class="container-fluid p-0">
                 <div class=" row justify-content-md-center">
                     <div class="col-12">
-                        <h2>
+                        <!-- <h2>
                             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-                        </h2>
+                        </h2> -->
                         <div class="add_btninfos">
                             <a class="badge bg-success" href="<?= base_url('agent/guest-posting') ?>" style="text-decoration:none;">Add Guestpost</a>
                         </div>
@@ -130,8 +130,9 @@
                                         <th class="d-xl-table-cell">Amount</th>
                                         <th class="d-xl-table-cell">Currency</th>
                                         <th class="d-xl-table-cell">Payment Mode</th>
-                                        <th class="d-xl-table-cell">Payee Number</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
+                                        <th class="d-xl-table-cell">Payee Number</th>
+
                                         <th class="d-xl-table-cell">Payee Email</th>
                                         <th class="d-xl-table-cell">Account Number</th>
                                         <th class="d-xl-table-cell">Account Holder</th>
@@ -153,8 +154,9 @@
                                             <td class="d-xl-table-cell range "><?php echo $guestpost['amount']; ?></td>
                                             <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
-                                            <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
+
+                                            <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['account_name']; ?></td>

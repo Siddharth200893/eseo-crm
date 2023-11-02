@@ -103,7 +103,7 @@
      }
  </script>
 
- <script>
+ <!-- <script>
      document.addEventListener("DOMContentLoaded", function() {
          var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
          var gradient = ctx.createLinearGradient(0, 0, 0, 225);
@@ -323,7 +323,7 @@
              defaultDate: defaultDate
          });
      });
- </script>
+ </script> -->
  <script>
      $(document).ready(function() {
          //  alert(1);

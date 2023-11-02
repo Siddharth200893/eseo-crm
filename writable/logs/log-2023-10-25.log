@@ -1,0 +1,1250 @@
+INFO - 2023-10-25 04:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 04:49:48 --> Undefined variable $usd_payment_modes
+in APPPATH\Views\admin\edit-guestpost.php on line 199.
+ 1 APPPATH\Views\admin\edit-guestpost.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usd_payment_modes', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 199)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(243): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('eccbc87e4b5ce2fe28308fd9f2a7baf3')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 04:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 05:25:32 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\edit-guestpost.php on line 103.
+ 1 APPPATH\Views\admin\edit-guestpost.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 103)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('eccbc87e4b5ce2fe28308fd9f2a7baf3')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 05:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 05:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 05:55:27 --> Undefined array key "blogger_name"
+in APPPATH\Views\admin\edit-guestpost.php on line 53.
+ 1 APPPATH\Views\admin\edit-guestpost.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "blogger_name"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 53)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('e4da3b7fbbce2345d7772b0674a318d5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 05:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 05:56:00 --> Undefined array key "blogger_name"
+in APPPATH\Views\admin\edit-guestpost.php on line 53.
+ 1 APPPATH\Views\admin\edit-guestpost.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "blogger_name"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 53)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('e4da3b7fbbce2345d7772b0674a318d5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 05:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 06:01:33 --> Undefined array key "blogger_phone"
+in APPPATH\Views\admin\edit-guestpost.php on line 61.
+ 1 APPPATH\Views\admin\edit-guestpost.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "blogger_phone"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('e4da3b7fbbce2345d7772b0674a318d5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 06:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 06:06:26 --> Undefined array key "reference_number"
+in APPPATH\Views\admin\edit-guestpost.php on line 235.
+ 1 APPPATH\Views\admin\edit-guestpost.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reference_number"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 235)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(248): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('e4da3b7fbbce2345d7772b0674a318d5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 06:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 06:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 07:42:14 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 07:42:14 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+AND `guestpost_leads`.`user_id` = :guestpost_leads.user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 07:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 07:43:42 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 07:43:42 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+AND `guestpost_leads`.`user_id` = :guestpost_leads.user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 07:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 07:45:08 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 07:45:08 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+AND `guestpost_leads`.`user_id` = :guestpost_leads.user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AgentController.php(225): CodeIgniter\BaseModel->paginate(20)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 07:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 07:46:18 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(223): CodeIgniter\BaseModel->paginate(20)
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 07:46:18 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= \'2023-10-01\'
+AND DATE(guestpost_leads.created_at) <= \'2023-10-31\'
+AND `guestpost_leads`.`user_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`project_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE DATE(guestpost_leads.created_at) >= :DATE(guestpost_leads.created_at):
+AND DATE(guestpost_leads.created_at) <= :DATE(guestpost_leads.created_at).1:
+AND `guestpost_leads`.`user_id` = :guestpost_leads.user_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\AgentController.php(223): CodeIgniter\BaseModel->paginate(20)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guest_posting_leads()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 07:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 07:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:43:30 --> mysqli_sql_exception: Column 'account_no' cannot be null in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(126): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-25 08:43:30 --> Column 'account_no' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :currency_id:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(126): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:43:56 --> mysqli_sql_exception: Column 'account_name' cannot be null in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(126): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-25 08:43:56 --> Column 'account_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :currency_id:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(126): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:44:12 --> mysqli_sql_exception: Column 'ifsc_code' cannot be null in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `gu...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gu...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gu...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gu...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\eseo-crm\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\eseo-crm\app\Controllers\AgentController.php(126): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+#10 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-25 08:44:12 --> Column 'ifsc_code' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (\'2\', \'2\', \'https://www.ddd.com\', \'asdsd\', \'7206771558\', \'1\', \'1\', \'1\', \'1\', \'1212\', \'priyanka@eseo.com\', \'sharmasiddharth385@gmail.com\', \'\', NULL, \'sharmasiddharth385@gmail.com\', NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `guestpost_leads` (`user_id`, `role_id`, `link`, `blogger_name`, `blogger_phone`, `project_id`, `payment_status`, `currency_id`, `payment_mode_id`, `amount`, `agent_email`, `blogger_email`, `reference_number`, `payee_number`, `payee_email`, `account_no`, `account_name`, `ifsc_code`) VALUES (:user_id:, :role_id:, :link:, :blogger_name:, :blogger_phone:, :project_id:, :payment_status:, :currency_id:, :payment_mode_id:, :amount:, :agent_email:, :blogger_email:, :reference_number:, :payee_number:, :payee_email:, :account_no:, :account_name:, :ifsc_code:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AgentController.php(126): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->save_guestpost()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:49:31 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b9238...')
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 08:49:31 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = :md5(guestpost_leads.id):
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b923820dcc509a6f75849b')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:51:31 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b9238...')
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 08:51:31 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = :md5(guestpost_leads.id):
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b923820dcc509a6f75849b')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 08:52:06 --> mysqli_sql_exception: Not unique table/alias: 'guestpost_leads' in C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\eseo-crm\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpo...', 0)
+#1 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpo...')
+#2 C:\xampp\htdocs\eseo-crm\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpo...')
+#3 C:\xampp\htdocs\eseo-crm\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpo...', Array, false)
+#4 C:\xampp\htdocs\eseo-crm\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\eseo-crm\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\eseo-crm\app\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b9238...')
+#8 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp\htdocs\eseo-crm\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\eseo-crm\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-25 08:52:06 --> Not unique table/alias: 'guestpost_leads'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = \'c4ca4238a0b923820dcc509a6f75849b\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `guestpost_leads`.`id` as `guestpost_id`, `guestpost_leads`.`payment_approvel`, `guestpost_leads`.`user_id`, `guestpost_leads`.`role_id`, `guestpost_leads`.`link`, `guestpost_leads`.`amount`, `guestpost_leads`.`payment_mode_id`, `guestpost_leads`.`payment_status`, `guestpost_leads`.`payee_email`, `guestpost_leads`.`created_at`, `guestpost_leads`.`blogger_name`, `guestpost_leads`.`blogger_email`, `guestpost_leads`.`blogger_phone`, `users`.`id` as `userid`, `users`.`name` as `username`, `projects`.`id` as `project_id`, `projects`.`name` as `project_name`, `currencies`.`name` as `currency_name`, `payment_modes`.`name` as `payment_mode`, `guestpost_leads`.`amount`, `guestpost_leads`.`currency_id`, `guestpost_leads`.`payee_number`, `guestpost_leads`.`account_name`, `guestpost_leads`.`account_no`, `guestpost_leads`.`ifsc_code`, `guestpost_leads`.`reference_number` as `ref_num`
+FROM `guestpost_leads`
+LEFT JOIN `users` ON `users`.`id` = `guestpost_leads`.`user_id`
+LEFT JOIN `projects` ON `projects`.`id` = `guestpost_leads`.`Project_id`
+LEFT JOIN `currencies` ON `currencies`.`id` = `guestpost_leads`.`currency_id`
+LEFT JOIN `payment_modes` ON `payment_modes`.`id` = `guestpost_leads`.`payment_mode_id`
+LEFT JOIN `guestpost_leads` ON `guestpost_leads`.`guestpost_id` = `guestpost_leads`.`id`
+WHERE md5(guestpost_leads.id) = :md5(guestpost_leads.id):
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\AdminController.php(219): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c4ca4238a0b923820dcc509a6f75849b')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 08:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 08:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:29 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:32 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:40 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:42 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:43 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-10-25 14:43:48 --> [DEPRECATED] Implicit conversion from float 1698776999.999 to int loses precision in APPPATH\Controllers\AgentController.php on line 280.
+ 1 APPPATH\Controllers\AgentController.php(280): date('Y-m-d H:i:s', 1698776999.999)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AgentController->guestpost_leads_date_range()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgentController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 09:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 09:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 10:26:36 --> syntax error, unexpected end of file
+in APPPATH\Views\admin\edit-guestpost.php on line 380.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 3 APPPATH\Controllers\AdminController.php(246): view('admin/edit-guestpost', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('8f14e45fceea167a5a36dedd4bea2543')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 10:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 10:57:07 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-10-25 10:57:07 --> 220 smtp.gmail.com ESMTP 4-20020a170902ee4400b001c877f27d1fsm8965254plo.11 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [103.223.11.28]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [103.223.11.28]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. Learn more at
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 4-20020a170902ee4400b001c877f27d1fsm8965254plo.11 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. Learn more at
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError 4-20020a170902ee4400b001c877f27d1fsm8965254plo.11 - gsmtp
+
+quit: 221 2.0.0 closing connection 4-20020a170902ee4400b001c877f27d1fsm8965254plo.11 - gsmtp
+
+INFO - 2023-10-25 10:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-25 10:57:19 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-10-25 10:57:19 --> 220 smtp.gmail.com ESMTP bs1-20020a632801000000b005b0b7ede830sm8688882pgb.50 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [103.223.11.28]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [103.223.11.28]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+from: 530-5.7.0 Authentication Required. Learn more at
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError bs1-20020a632801000000b005b0b7ede830sm8688882pgb.50 - gsmtp
+
+The following SMTP error was encountered: 530-5.7.0 Authentication Required. Learn more at
+530 5.7.0  https://support.google.com/mail/?p=WantAuthError bs1-20020a632801000000b005b0b7ede830sm8688882pgb.50 - gsmtp
+
+quit: 221 2.0.0 closing connection bs1-20020a632801000000b005b0b7ede830sm8688882pgb.50 - gsmtp
+
+INFO - 2023-10-25 10:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 10:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-25 11:05:29 --> Undefined array key "agent_email"
+in APPPATH\Views\admin\edit-guestpost.php on line 49.
+ 1 APPPATH\Views\admin\edit-guestpost.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "agent_email"', 'C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php', 49)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\eseo-crm\\app\\Views\\admin\\edit-guestpost.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('admin/edit-guestpost', [], true)
+ 5 APPPATH\Controllers\AdminController.php(235): view('admin/edit-guestpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminController->edit_guestpost('c81e728d9d4c2f636f067f89cc14862c')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-25 11:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 11:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 12:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 12:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 12:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 12:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-25 12:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

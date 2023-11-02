@@ -85,6 +85,7 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
 
 $routes->group("agent", ["filter" => "authGuard"], function ($routes) {
     $routes->get("/", "AgentController::guest_posting_leads");
+    $routes->get('payment-modes/(:alphanum)', 'AgentController::payment_modes/$1');
     $routes->get('guest-posting', 'AgentController::guest_posting');
     $routes->post('save-guestpost', 'AgentController::save_guestpost');
     $routes->get('guest-posting-leads', 'AgentController::guest_posting_leads');

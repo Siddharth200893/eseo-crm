@@ -71,14 +71,14 @@
                             <option value="1">Completed</option>
                         </select>
                     </div>
-                    <div id="" class="reference_number">
+                    <div id="" class="payment_features">
                         <div class="mb-3">
                             <label for="currency" class="form-label">Currency</label>
                             <select class="form-select" id="currency" name="currency">
                                 <option value="">Select</option>
                                 <?php foreach ($all_currencies as $currency) {
                                 ?>
-                                    <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                    <option value="<?= $currency['name'] ?>"><?= $currency['name'] ?></option>
                                 <?php
                                 } ?>
                             </select>
@@ -101,8 +101,6 @@
                             </div>
                         </div>
                         <div class="mb-3" id="payment_details">
-
-
                         </div>
                     </div>
                     <div class="right_submit"> <button type="submit" class="btn btn-primary">Submit</button></div>
@@ -119,23 +117,12 @@
         function show_hide() {
             const p_sts = $('#paymentStatus').val();
             if (p_sts === '1') {
-                $('.reference_number').show();
+                $('.payment_features').show();
             } else {
-                $('.reference_number').hide();
+                $('.payment_features').hide();
             }
         }
     </script>
-    <!-- <script>
-        $(document).ready(function() {
-            $('#paymentmode').on('change', function() {
-                if (this.value === 'upi' || this.value === 'paypal') {
-                    $('#reference_number').show();
-                } else {
-                    $('#reference_number').hide();
-                }
-            });
-        })
-    </script> -->
     <script>
         var agent_email = `<?= $session->get('email') ?>`;
         if (agent_email) {
@@ -145,11 +132,7 @@
     <script>
         $(document).ready(function() {
             show_hide();
-            // currency_features();
-            // payment_mode_features();
-            // prop_disable();
             $('input[type=radio][name=radio_btn]').change(function() {
-                // alert(this.value);
                 if (this.value === 'email') {
                     $('#for_invoice').hide();
                     $('#for_email').show();
@@ -159,84 +142,65 @@
                     $('#reference_number').prop('disabled', true);
                 }
             });
-            $('#currency').on('change', function() { //calling function once again ....
+            $('#currency').on('change', function() {
                 var cr = $('#currency').val();
                 var pmt_mode = $('#paymentmode').val();
-
                 currency_features();
-                // payment_mode_features();
-                const usd_pmt_modes = `<?php foreach ($usd_payment_modes as $usd_payment_mode) : ?>
-                                    <option value="">Select</option>
-                                    <option value="<?= $usd_payment_mode['id'] ?>"><?= $usd_payment_mode['name'] ?></option>
-                                <?php
-                                        endforeach;
-                                ?>`;
-                const inr_pmt_modes = `<?php foreach ($inr_payment_modes as $inr_payment_mode) : ?>
-                                    
-
-                                    <option value="<?= $inr_payment_mode['id'] ?>"><?= $inr_payment_mode['name'] ?></option>
-                                <?php
-                                        endforeach;
-                                ?>`;
-
-                if (cr == 1) {
-                    let selectOptions = `<option value="">Select</option> ${usd_pmt_modes}`;
-                    $('#paymentmode').html(selectOptions);
-                } else if (cr == 2) {
-                    let selectOptions = `<option value="">Select</option> ${inr_pmt_modes}`;
-                    $('#paymentmode').html(selectOptions);
-                }
-                // alert(this.value);
+                $.ajax({
+                    type: "GET",
+                    url: '<?php echo base_url() ?>agent/payment-modes/' + cr,
+                    success: function(response) {
+                        $('#paymentmode').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+                payment_mode_features();
             });
             $('#paymentmode').on('change', function() {
                 var pmt_mode = $('#paymentmode').val();
-
-
                 payment_mode_features();
             });
         });
-        //edit form functions....
-        // function prop_disable() {
-        //     var cr = $('#paymentStatus').val();
-        //     if (cr == 1) {
-        //         $('#projectName').prop('disabled', true);
-        //         $('#paymentStatus').prop('disabled', true);
-        //         $('#currency').prop('disabled', true);
-        //         $('#paymentmode').prop('disabled', true);
-        //         $('#payee_number').prop('disabled', true);
-        //         $('input[type=radio][name=radio_btn]').prop('disabled', true);
-        //         $("input[type=text][name=reference_number]").prop('disabled', true);
-        //     }
-        // }
 
         function currency_features() {
-            var pmt_sts = $('#currency').val();
-            if (pmt_sts == 1) {
-                $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
+            var crncy = $('#currency').val();
+            if (crncy === "USD") {
                 $('#radio-buttons').show();
                 $('#for_ref_no').hide();
                 $('#for_invoice').show();
-            } else if (pmt_sts == 2) {
-                $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
+            } else if (crncy === "INR") {
                 $('#for_email').hide();
                 $('#for_invoice').hide();
                 $('#radio-buttons').hide();
                 $('#for_ref_no').show();
                 $('#reference_number').show();
+            } else {
+                $('#radio-buttons').show();
+                $('#for_ref_no').show();
+                $('#for_invoice').show();
             }
         }
 
         function payment_mode_features() {
             var pmt_mode = $('#paymentmode').val();
-            // alert(pmt_mode);
-
-
-            const bank_details = `<label for="acct_no" class="form-label">Account No.</label>
-                            <input type="number" class="form-control" id="acct_no" name="acct_no">
-                            <label for="acct_name" class="form-label">Account Name</label>
-                            <input type="text" class="form-control" id="acct_name" name="acct_name">
-                            <label for="ifsc" class="form-label">IFSC Code</label>
-                            <input type="text" class="form-control" id="ifsc" name="ifsc">`;
+            const bank_details = `<div class="mb-3">
+            <label for="acct_no" class="form-label">Account No.</label>
+        <input type="number" class="form-control" id="acct_no" name="acct_no" value="" >
+        </div>
+        <div class="mb-3">
+        <label for="acct_name" class="form-label">Account Name</label>
+        <input type="text" class="form-control" id="acct_name" name="acct_name" value="">
+        </div>
+        <div class="mb-3">
+        <label for="ifsc" class="form-label">IFSC Code</label>
+        <input type="text" class="form-control" id="ifsc" name="ifsc" value="">
+        </div>
+        <div id="for_ref_no" >
+                                <label for="reference_number">Transaction Number</label>
+                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="" placeholder="Transaction Number">
+                            </div>`;
             const paypal = `<div id="for_email" >
                                 <label for="payee_email">Payee Email</label>
                                 <input type="email" class="form-control" id="" name="payee_email" value="" placeholder="Payee Email">
@@ -244,7 +208,8 @@
                             <div id="for_invoice" style="display:none;>
                                 <label for="reference_number">Invoice</label>
                                 <input type="text" class="form-control" id="invoice_number" name="reference_number" value="" placeholder="Invoice Number">
-                            </div>`;
+                            </div>
+                            `;
             const upi = `<div id="for_ref_no" >
                                 <label for="reference_number">Reference Number</label>
                                 <input type="text" class="form-control" id="reference_number" name="reference_number" value="" placeholder="Reference Number">
@@ -253,38 +218,29 @@
                                 <label for="payee_number">Payee Number</label>
                                 <input type="text" class="form-control" id="payee_number" name="payee_number" value="" placeholder="Payee Number">
                             </div>`;
-
-
-            if (pmt_mode == 3) {
+            if (pmt_mode === 'BANK DETAILS') {
                 $('#payment_details').html(bank_details);
-            } else if (pmt_mode == 2) {
+            } else if (pmt_mode === 'UPI') {
                 $('#payment_details').html(upi);
-            } else if (pmt_mode == 1) {
+            } else if (pmt_mode === 'PAYPAL') {
+                $('#payment_details').html(paypal);
+            } else {
                 $('#payment_details').html(paypal);
             }
-
-            // if (pmt_mode === "Paypal") { //using 1 one for paypal and 2 for gpay.......
-            //     $('#for_ref_no').hide();
-            //     $('#radio-buttons').show();
-            //     $('#for_invoice').show();
-            // } else if (pmt_mode === "UPI") {
-            //     $('#for_ref_no').show();
-            //     $('#radio-buttons').hide();
-            //     $('#for_invoice').hide();
-            //     $('#reference_number').show();
-            //     $('#for_payee_number').show();
-            // } else if (pmt_mode === "Bank Details") {
-            //     $('#for_ref_no').show();
-            //     $('#radio-buttons').hide();
-            //     $('#for_invoice').hide();
-            //     $('#reference_number').show();
-            //     $('#for_payee_number').show();
-            // }
         }
     </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script>
+        $.validator.addMethod("bankTransactionNumber", function(value, element) {
+            return /^[A-Z0-9]*$/.test(value);
+        }, "Invalid format. Please use capital letters and digits only.");
+        jQuery.validator.addMethod("ifscCode", function(value, element) {
+            // Regular expression to match IFSC code
+            var ifscRegex = /^[A-Z]{4}\d{7}$/;
+            // Check if the input value matches the IFSC code pattern
+            return this.optional(element) || ifscRegex.test(value);
+        }, "Please enter a valid IFSC code.");
         jQuery.validator.addMethod('check_phone',
             function(value, element) {
                 return this.optional(element) || /^[0-9]{10}$/i.test(value);
@@ -333,19 +289,27 @@
                 blogger_phone: {
                     check_phone: true
                 },
+                ifsc: {
+                    required: true,
+                    ifscCode: true
+                },
+                acct_name: {
+                    required: true,
+                    letters: true
+                },
+                acct_no: {
+                    required: true,
+                    digits: true
+                },
+                reference_number: {
+                    required: true,
+                    bankTransactionNumber: true
+                },
+                paymentmode: {
+                    required: true,
+                },
             },
         });
     </script>
-    <!-- <script>
-        $(document).ready(function() {
-            $("#paymentStatus").change(function() {
-                if ($(this).val() == "0") {
-                    $("#reference_number").hide();
-                } else {
-                    $("#reference_number").show();
-                }
-            });
-        });
-    </script> -->
     </body>
 </php>

@@ -110,9 +110,9 @@ $session->markAsTempdata('some_name', 10); ?>
             <div class="wrapper_inner">
                 <div class="row justify-content-md-center">
                     <div class="col-12">
-                        <h2>
+                        <!-- <h2>
                             <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-                        </h2>
+                        </h2> -->
                         <div class="table-responsive" id="table_dat">
                             <span id="sale_result"></span>
                             <table id="replace_table_data" class="table default_table table-hover my-0">
@@ -126,8 +126,9 @@ $session->markAsTempdata('some_name', 10); ?>
                                         <th class="d-xl-table-cell">Amount</th>
                                         <th class="d-xl-table-cell">Currency</th>
                                         <th class="d-xl-table-cell">Payment Mode</th>
-                                        <th class="d-xl-table-cell">Payee Number</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
+                                        <th class="d-xl-table-cell">Payee Number</th>
+
                                         <th class="d-xl-table-cell">Payee Email</th>
                                         <th class="d-xl-table-cell">Account Number</th>
                                         <th class="d-xl-table-cell">Account Holder</th>
@@ -150,8 +151,9 @@ $session->markAsTempdata('some_name', 10); ?>
                                             <td class="d-xl-table-cell range "><?php echo $guestpost['amount']; ?></td>
                                             <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
-                                            <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
+
+                                            <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['account_name']; ?></td>

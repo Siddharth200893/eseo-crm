@@ -46,11 +46,11 @@
                             <label for="currencyINR" class="form-label">Currency (INR)</label>
                             <select class="form-select" id="" name="currency">
                                 <option value="<?= $guest_posts['currency_id'] ?>"><?= $guest_posts['currency_name'] ?></option>
-                                <?php foreach ($all_currencies as $currency) : ?>
+                                <!-- <?php foreach ($all_currencies as $currency) : ?>
                                     <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
                                 <?php
-                                endforeach;
-                                ?>
+                                        endforeach;
+                                ?> -->
                                 <!-- Add more currency options here if needed -->
                             </select>
                         </div>
