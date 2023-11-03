@@ -16,15 +16,11 @@ if ($session->getFlashdata('error_save')) { ?>
 }
 ?>
 <?php echo view('admin/header') ?>
-
 <main class="d-flex w-100">
     <div class="container d-flex flex-column">
         <div class="row vh-100">
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 mx-auto d-table h-100">
                 <div class="d-table-cell align-middle">
-
-
-
                     <div class="card">
                         <div class="text-center mt-4">
                             <h1 class="add-user-btn">Add Project</h1>
@@ -39,8 +35,6 @@ if ($session->getFlashdata('error_save')) { ?>
                                         <label class="form-label">Project Name:</label>
                                         <input id="name" class="form-control form-control-lg form-control-lg-1 focus" type="text" name="name" placeholder="Project Name " />
                                     </div>
-
-
                                     <div class="right_submit">
                                         <button type="submit" class="btn btn-primary add-user-button">Add Project</button>
                                     </div>
@@ -48,18 +42,15 @@ if ($session->getFlashdata('error_save')) { ?>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </main>
-
 <script src="<?= base_url() ?>assests/js/app.js"></script>
 <?php echo view('admin/footer') ?>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-
 <script>
     jQuery.validator.addMethod('check_phone',
         function(value, element) {
@@ -75,7 +66,6 @@ if ($session->getFlashdata('error_save')) { ?>
         'Letters only please'
     );
 </script>
-
 <script>
     $("#add-project-form").validate({
         rules: {
@@ -83,12 +73,9 @@ if ($session->getFlashdata('error_save')) { ?>
                 required: true,
                 letters: true,
             }
-
-
         }
     });
 </script>
-
 </body>
 
 </html>

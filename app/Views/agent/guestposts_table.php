@@ -1,5 +1,4 @@
 <div id="replace_data">
-
     <div class="container-fluid p-0">
         <div class="wrapper_inner">
             <div class="row justify-content-md-center">
@@ -23,7 +22,6 @@
                                     <th class="d-xl-table-cell">Payee Number</th>
                                     <th class="d-xl-table-cell">Reference No.</th>
                                     <th class="d-xl-table-cell">Payee Email</th>
-
                                     <th class="d-xl-table-cell">Account Number</th>
                                     <th class="d-xl-table-cell">Account Holder</th>
                                     <th class="d-xl-table-cell">IFSC Code</th>
@@ -47,22 +45,15 @@
                                         <td class="td_pmt_mode" data-td_pmt_mode="<?php echo $guestpost['payee_number']; ?>"><?php echo $guestpost['payee_number']; ?></td>
                                         <td class="d-xl-table-cell td_reference_number"><?php echo $guestpost['reference_number']; ?></td>
                                         <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
-
                                         <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
                                         <td class="d-xl-table-cell "><?php echo $guestpost['account_name']; ?></td>
                                         <td class="d-xl-table-cell "><?php echo $guestpost['ifsc_code']; ?></td>
-
-
                                         <td data-username="<?php echo $guestpost['username']; ?>" class="d-xl-table-cell td_username"><?php echo $guestpost['username']; ?></td>
-
                                         <td class="d-xl-table-cell td_username">
                                             <button type="button" class="check btn btn-success" value="" onclick="change_flag(<?php echo $guestpost['is_flag'] ?>,<?php echo $guestpost['id']; ?>, this)">
                                                 <?php echo $guestpost['is_flag'] == 1 ? '<i class="fa fa-flag" aria-hidden="true"></i>' : '<i class="fa fa-flag-o" aria-hidden="true"></i>'; ?>
                                             </button>
                                         </td>
-
-
-
                                         <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
                                     </tr>
                                 <?php
@@ -70,13 +61,10 @@
                             </tbody>
                         </table>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
-
     <div class="pagination_new"><?= $pager->links() ?></div>
     <div id="pagination-container"></div>
 </div>

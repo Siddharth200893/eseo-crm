@@ -2,8 +2,6 @@
 <php lang="en">
     <?php $session = session();
     $session->markAsTempdata('some_name', 10); ?>
-
-
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12">
             <?php
@@ -28,7 +26,6 @@
             ?>
         </div>
     </div>
-
     <?php echo view('agent/header') ?>
     <main class="content">
         <div class="row">
@@ -90,7 +87,6 @@
                         <option value="">Select Flag</option>
                         <option value="1">Flag </option>
                         <option value="0">Unflag</option>
-
                     </select>
                 </div>
                 <div class="col-md-2 mt-3">
@@ -99,7 +95,6 @@
                         <option value="">Invoice Options</option>
                         <option value="1">Email</option>
                         <option value="0">Invoice /Reference Number</option>
-
                     </select>
                 </div>
                 <div class="col-md-2 mt-3">
@@ -108,7 +103,6 @@
             </div>
         </div>
         <div id="replace_data">
-
             <div class="container-fluid p-0">
                 <div class=" row justify-content-md-center">
                     <div class="col-12">
@@ -132,7 +126,6 @@
                                         <th class="d-xl-table-cell">Payment Mode</th>
                                         <th class="d-xl-table-cell">Reference No.</th>
                                         <th class="d-xl-table-cell">Payee Number</th>
-
                                         <th class="d-xl-table-cell">Payee Email</th>
                                         <th class="d-xl-table-cell">Account Number</th>
                                         <th class="d-xl-table-cell">Account Holder</th>
@@ -155,7 +148,6 @@
                                             <td class="td_currency"><?php echo $guestpost['currency_name']; ?></td>
                                             <td class="td_pmt_mode"><?php echo $guestpost['payment_mode']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['reference_number']; ?></td>
-
                                             <td class="td_pmt_mode"><?php echo $guestpost['payee_number']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['payee_email']; ?></td>
                                             <td class="d-xl-table-cell "><?php echo $guestpost['account_no']; ?></td>
@@ -167,7 +159,6 @@
                                                     <?php echo $guestpost['is_flag'] == 1 ? '<i class="fa fa-flag" aria-hidden="true"></i>' : '<i class="fa fa-flag-o" aria-hidden="true"></i>'; ?>
                                                 </button>
                                             </td>
-
                                             <td class="d-xl-table-cell"><a class="sidebar-link edit-gp-btn <?php echo $guestpost['payment_approvel'] == 1 ? "edited" : ""  ?>" href="<?= base_url('agent/edit-guestpost/') . md5($guestpost['id']); ?>"><?php echo $guestpost['payment_approvel'] == 1 ? "Edited" : "Edit" ?></a></td>
                                         </tr>
                                     <?php
@@ -178,11 +169,8 @@
                     </div>
                 </div>
                 <div class="pagination_new"><?= $pager->links() ?></div>
-
             </div>
     </main>
     <?php echo view('agent/footer') ?>
-
     </body>
-
 </php>
