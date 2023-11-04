@@ -191,6 +191,24 @@ class AdminController extends BaseController
         }
         return redirect()->back();
     }
+    public function payment_modes($id)
+    {
+        $PaymentModeModel = new PaymentModeModel();
+
+        $payment_modes = $PaymentModeModel->select('*')->where('currency_name', $id)->findAll();
+
+        if ($payment_modes) {
+            $p_modes = ""; // Initialize an empty string to store the HTML options
+
+            foreach ($payment_modes as $payment_mode) {
+                $p_modes .= "<option value=\"{$payment_mode['name']}\">{$payment_mode['name']}</option>";
+            }
+
+            echo '<select><option value="">Select</option>' . $p_modes . '</select>';
+        } else {
+            echo '<select><option value="">Select</option><option value="PAYPAL">Paypal</option></select>';
+        }
+    }
     public function edit_guestpost($id)
     {
         // print_r($id);
@@ -201,8 +219,8 @@ class AdminController extends BaseController
         $CurrenciesModel = new CurrenciesModel();
         $all_payment_modes = $PaymentModeModel->select('*')->findAll();
         $all_currencies = $CurrenciesModel->select('*')->findAll();
-        $usd_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 1)->findAll();
-        $inr_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 2)->findAll();
+        // $usd_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 1)->findAll();
+        // $inr_payment_modes = $PaymentModeModel->select('*')->where('currency_id', 2)->findAll();
         // $project = $ProjectsModel->select('*')->where('id', $id)->first();
         $projects = $ProjectsModel->select('*')->findAll();
         $guestpost_details = $GuestPostLeadsModel->select('guestpost_leads.id as guestpost_id ,guestpost_leads.payment_approvel,guestpost_leads.user_id,guestpost_leads.role_id,guestpost_leads.link,guestpost_leads.amount,guestpost_leads.payment_mode_id,guestpost_leads.payment_status,guestpost_leads.payee_email,guestpost_leads.created_at,guestpost_leads.blogger_name,guestpost_leads.blogger_email,guestpost_leads.blogger_phone,guestpost_leads.agent_email,users.id as userid,users.name as username, projects.id as project_id, projects.name as project_name,currencies.name as currency_name,payment_modes.name as payment_mode,guestpost_leads.amount,guestpost_leads.currency_id,guestpost_leads.payee_number,guestpost_leads.account_name,guestpost_leads.account_no,guestpost_leads.ifsc_code,guestpost_leads.reference_number as ref_num')
@@ -216,8 +234,8 @@ class AdminController extends BaseController
         $guestpost_payment_mode_id = $guestpost_details['payment_mode_id'];
         $selected_currency = $CurrenciesModel->select('*')->where('id', $guestpost_currency_id)->first();
         $selected_payment_mode = $PaymentModeModel->select('*')->where('id', $guestpost_payment_mode_id)->first();
-        $currency_payment_modes = $PaymentModeModel->select('*')->where('currency_id', $guestpost_currency_id)->findAll();
-        // print("<pre>" . print_r($selected_payment_mode, true) . "</pre>");
+        // $currency_payment_modes = $PaymentModeModel->select('*')->where('currency_id', $guestpost_currency_id)->findAll();
+        // print("<pre>" . print_r($guestpost_details, true) . "</pre>");
         // die('hii');
         // print_r($all_guestposts);
         // die('hi');
@@ -226,11 +244,11 @@ class AdminController extends BaseController
             'projects' => $projects,
             'all_payment_modes' => $all_payment_modes,
             'all_currencies' => $all_currencies,
-            'currency_payment_modes' => $currency_payment_modes,
+            // 'currency_payment_modes' => $currency_payment_modes,
             'selected_currency' => $selected_currency,
             'selected_payment_mode' => $selected_payment_mode,
-            'usd_payment_modes' => $usd_payment_modes,
-            'inr_payment_modes' => $inr_payment_modes,
+            // 'usd_payment_modes' => $usd_payment_modes,
+            // 'inr_payment_modes' => $inr_payment_modes,
         ];
         return view('admin/edit-guestpost', $data);
     }
@@ -239,6 +257,8 @@ class AdminController extends BaseController
         $session = session();
         $GuestPostLeadsModel = new GuestPostLeadsModel();
         $PaymentDetails = new PaymentDetails();
+        $PaymentModeModel = new PaymentModeModel();
+        $CurrenciesModel = new CurrenciesModel();
         helper(['form', 'url']);
         $id = $this->request->getVar('id');
         $reference_number = $this->request->getVar('reference_number');
@@ -247,14 +267,18 @@ class AdminController extends BaseController
         $acct_no = $this->request->getVar('acct_no');
         $existing_payment_status = $GuestPostLeadsModel->select('payment_status')->where('id', $id)->first();
         $existing_reference_number = $GuestPostLeadsModel->select('reference_number')->where('reference_number', $reference_number)->first();
+        $payment_mode = $this->request->getVar('paymentmode');
+        $currency = $this->request->getVar('currency');
+        $payment_mode_id = $PaymentModeModel->select('id')->where('name', $payment_mode)->first();
+        $cuurency_id = $CurrenciesModel->select('id')->where('name', $currency)->first();
         if ($existing_reference_number && !empty($existing_reference_number && isset($reference_number))) {
             $session->setFlashdata('error_save', 'This reference number is already exists');
             return  redirect()->back();
-        } elseif (!empty($reference_number || $payee_email || $acct_no)) {
+        } elseif (!empty($reference_number || $payee_email || $acct_no && $existing_payment_status['payment_status'] == 0)) {
             if ($existing_reference_number && !empty($reference_number)) {
                 $session->setFlashdata('error_save', 'Cannot enter duplicate reference number!');
                 return redirect()->back();
-            } else { //we need atlist one from ref no. or payee email for proceed further
+            } { //we need atlist one from ref no. or payee email for proceed further
                 // print_r($reference_number);
                 // die('hi');
                 $rules = [
@@ -266,12 +290,13 @@ class AdminController extends BaseController
 
                     $data = [
                         'amount' => $this->request->getVar('amount'),
-                        'currency_id' => $this->request->getVar('currency'),
-                        'payment_mode_id' => $this->request->getVar('paymentmode'),
-                        'reference_number' => $this->request->getVar('reference_number'),
+                        'currency_id' => $cuurency_id['id'],
+                        'payment_mode_id' => $payment_mode_id['id'],
                         'payee_number' => $this->request->getVar('payee_number'),
                         'project_id' => $this->request->getVar('projectName'),
                         'payment_status' => $this->request->getVar('paymentStatus'),
+                        'reference_number' => $this->request->getVar('reference_number'),
+
                         'payee_email' => $this->request->getVar('payee_email'),
                         'account_no' => $this->request->getVar('acct_no'),
                         'account_name' => $this->request->getVar('acct_name'),
@@ -284,14 +309,20 @@ class AdminController extends BaseController
                     return redirect()->back();
                 }
             }
-        } else if ($existing_payment_status['payment_status'] == 1 || empty($reference_number)) {
+        } else if ($existing_payment_status['payment_status'] == 1) {
             // die('hello');
             $data = [
                 'amount' => $this->request->getVar('amount'),
+                'currency_id' => $cuurency_id['id'],
+                'payment_mode_id' => $payment_mode_id['id'],
+                'payee_number' => $this->request->getVar('payee_number'),
                 'project_id' => $this->request->getVar('projectName'),
                 'payment_status' => $this->request->getVar('paymentStatus'),
                 'payee_email' => $this->request->getVar('payee_email'),
-                'updated_at' => date('Y-m-d H:s:a'),
+                'account_no' => $this->request->getVar('acct_no'),
+                'account_name' => $this->request->getVar('acct_name'),
+                'ifsc_code' => $this->request->getVar('ifsc'),
+                'updated_at' => date('Y-m-d H:s:a')
             ];
             // $chk = $PaymentDetails->where('guestpost_id', $id)->set($data)->update();
             // print_r($chk);

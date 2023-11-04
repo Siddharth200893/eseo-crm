@@ -86,10 +86,10 @@
                                 <?php if ($guest_posts['payment_mode_id']) {
                                     // If $guest_posts['payment_mode_id'] is not empty, select the appropriate currency.
                                 ?>
-                                    <option value="<?= $guest_posts['currency_id'] ?>" selected><?= $guest_posts['currency_name'] ?></option>
+                                    <option value="<?= $guest_posts['currency_name'] ?>" selected><?= $guest_posts['currency_name'] ?></option>
                                     <?php } else {
                                     foreach ($all_currencies as $currency) : ?>
-                                        <option value="<?= $currency['id'] ?>"><?= $currency['name'] ?></option>
+                                        <option value="<?= $currency['name'] ?>"><?= $currency['name'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -106,11 +106,11 @@
                             <select class="form-select" id="paymentmode" name="paymentmode">
                                 <?php if ($guest_posts['payment_mode_id']) { ?>
                                     <!-- selected_payment_mode -->
-                                    <option value="<?= $selected_payment_mode['id'] ?>"><?= $selected_payment_mode['name'] ?></option>
+                                    <option value="<?= $selected_payment_mode['name'] ?>"><?= $selected_payment_mode['name'] ?></option>
                                     <?php
                                 } else {
                                     foreach ($all_payment_modes as $payment_mode) : ?>
-                                        <option value="<?= $payment_mode['id'] ?>"><?= $payment_mode['name'] ?></option>
+                                        <option value="<?= $payment_mode['name'] ?>"><?= $payment_mode['name'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -176,40 +176,24 @@
                 }
             });
             $('#currency').on('change', function() {
-                // alert(1);
                 var cr = $('#currency').val();
-                var pmt_mode = $('#paymentmode').val();
-
-                // currency_features();
-                payment_mode_features();
-                const usd_pmt_modes = `<?php foreach ($usd_payment_modes as $usd_payment_mode) : ?>
-                                    <option value="<?= $usd_payment_mode['id'] ?>"><?= $usd_payment_mode['name'] ?></option>
-                                <?php
-                                        endforeach;
-                                ?>`;
-                const inr_pmt_modes = `<?php foreach ($inr_payment_modes as $inr_payment_mode) : ?>
-                                    
-
-                                    <option value="<?= $inr_payment_mode['id'] ?>"><?= $inr_payment_mode['name'] ?></option>
-                                <?php
-                                        endforeach;
-                                ?>`;
                 // alert(cr);
-                if (cr == 1) {
-                    let selectOptions = `<option value="">Select</option> ${usd_pmt_modes}`;
-                    $('#paymentmode').html(selectOptions);
-                } else if (cr == 2) {
-                    let selectOptions = `<option value="">Select</option> ${inr_pmt_modes}`;
-
-                    console.log(selectOptions);
-                    $('#paymentmode').html(selectOptions);
-                }
-                // alert(this.value);
+                var pmt_mode = $('#paymentmode').val();
+                currency_features();
+                $.ajax({
+                    type: "GET",
+                    url: '<?php echo base_url() ?>admin/payment-modes/' + cr,
+                    success: function(response) {
+                        $('#paymentmode').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+                payment_mode_features();
             });
             $('#paymentmode').on('change', function() {
                 var pmt_mode = $('#paymentmode').val();
-
-
                 payment_mode_features();
             });
         });
@@ -218,12 +202,9 @@
     <script>
         function payment_mode_features() {
             var pmt_mode = $('#paymentmode').val();
-            var chk_email = `<?php echo $guest_posts['payee_email'] ?>`;
-
-
             const bank_details = `<div class="mb-3">
             <label for="acct_no" class="form-label">Account No.</label>
-        <input type="number" class="form-control" id="acct_no" name="acct_no" value="<?= $guest_posts['account_no'] ?>" >
+        <input type="number" class="form-control" id="acct_no" name="acct_no" value="<?= $guest_posts['account_no'] ?>"" >
         </div>
         <div class="mb-3">
         <label for="acct_name" class="form-label">Account Name</label>
@@ -237,99 +218,58 @@
                                 <label for="reference_number">Transaction Number</label>
                                 <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Transaction Number">
                             </div>`;
-            const paypal = `<div id="for_email">
-            <label for="payee_email">Payee Email</label>
-            <input type="email" class="form-control" id="payee_email" name="payee_email" value="<?= $guest_posts['payee_email'] ?>" placeholder="Payee Email">
-        </div>
-        <div id="for_invoice" style="display:none;>
-                                <label for=" reference_number">Invoice</label>
-            <input type="text" class="form-control" id="" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Invoice Number">
-        </div>`;
-            const upi = `<div id="for_ref_no">
-            <label for="reference_number">Reference Number</label>
-            <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Reference Number">
-        </div>
-        <div id="for_payee_number" class="mt-3">
-            <label for="payee_number">Payee Number</label>
-            <input type="text" class="form-control" id="payee_number" name="payee_number" value="<?= $guest_posts['payee_number'] ?>" placeholder="Payee Number">
-        </div>`;
-
-
-            if (pmt_mode == 3) {
+            const paypal = `<div id="for_email" >
+                                <label for="payee_email">Payee Email</label>
+                                <input type="email" class="form-control" id="" name="payee_email" value="<?= $guest_posts['payee_email'] ?>" placeholder="Payee Email">
+                            </div>
+                            <div id="for_invoice" style="display:none;>
+                                <label for="reference_number">Invoice</label>
+                                <input type="text" class="form-control" id="invoice_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Invoice Number">
+                            </div>
+                            `;
+            const upi = `<div id="for_ref_no" >
+                                <label for="reference_number">Reference Number</label>
+                                <input type="text" class="form-control" id="reference_number" name="reference_number" value="<?= $guest_posts['ref_num'] ?>" placeholder="Reference Number">
+                            </div>
+                            <div id="for_payee_number" class="mt-3">
+                                <label for="payee_number">Payee Number</label>
+                                <input type="text" class="form-control" id="payee_number" name="payee_number" value="<?= $guest_posts['payee_number'] ?>" placeholder="Payee Number">
+                            </div>`;
+            if (pmt_mode === 'BANK DETAILS') {
                 $('#payment_details').html(bank_details);
-                $('#for_ref_no').show();
-
-            } else if (pmt_mode == 2) {
+            } else if (pmt_mode === 'UPI') {
                 $('#payment_details').html(upi);
-            } else if (pmt_mode == 1) {
-                // alert(chk_email);
-
+            } else if (pmt_mode === 'PAYPAL') {
                 $('#payment_details').html(paypal);
-
-                if (chk_email == "") {
-                    alert(chk_email);
-
-                    $('#for_email').hide();
-                    $('#for_invoice').show();
-                } else {
-                    $('#for_email').show();
-                    $('#for_invoice').hide();
-
-                }
+            } else {
+                $('#payment_details').html(paypal);
             }
-
-            // if (pmt_mode === "Paypal") { //using 1 one for paypal and 2 for gpay.......
-            // $('#for_ref_no').hide();
-            // $('#radio-buttons').show();
-            // $('#for_invoice').show();
-            // } else if (pmt_mode === "UPI") {
-            // $('#for_ref_no').show();
-            // $('#radio-buttons').hide();
-            // $('#for_invoice').hide();
-            // $('#reference_number').show();
-            // $('#for_payee_number').show();
-            // } else if (pmt_mode === "Bank Details") {
-            // $('#for_ref_no').show();
-            // $('#radio-buttons').hide();
-            // $('#for_invoice').hide();
-            // $('#reference_number').show();
-            // $('#for_payee_number').show();
-            // }
         }
 
         function currency_features() {
-            var pmt_sts = $('#currency').val();
-            if (pmt_sts == 1) {
-                // $('#paymentmode').val('1'); //using value 1 for USD and 2 for INR FROM database....
+            var crncy = $('#currency').val();
+            if (crncy === "USD") {
                 $('#radio-buttons').show();
                 $('#for_ref_no').hide();
                 $('#for_invoice').show();
-            } else if (pmt_sts == 2) {
-                // $('#paymentmode').val('2'); //using value 1 for USD and 2 for INR FROM database....
+            } else if (crncy === "INR") {
                 $('#for_email').hide();
                 $('#for_invoice').hide();
                 $('#radio-buttons').hide();
                 $('#for_ref_no').show();
                 $('#reference_number').show();
+            } else {
+                $('#radio-buttons').show();
+                $('#for_ref_no').show();
+                $('#for_invoice').show();
             }
         }
     </script>
     <script>
         function prop_disable() {
-            var cr = $('#paymentStatus').val();
-            if (cr == 1) {
-                // $('#acct_no').prop('disabled', true);
-                // $('#acct_name').prop('disabled', true);
-                // $('#ifsc').prop('disabled', true);
-                // $('#projectName').prop('disabled', true);
-                // $('#payee_email').prop('disabled', true);
-                // $('#paymentStatus').prop('disabled', true);
-                // $('#currency').prop('disabled', true);
-                // $('#paymentmode').prop('disabled', true);
+            var pmt_status = $('#paymentStatus').val();
+            if (pmt_status == 1) {
                 $('#reference_number').prop('disabled', true);
-                // $('#payee_number').prop('disabled', true);
-                // $('input[type=radio][name=radio_btn]').prop('disabled', true);
-                // $("input[type=text][name=reference_number]").prop('disabled', true);
             }
         }
     </script>

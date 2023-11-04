@@ -55,6 +55,8 @@ $routes->group("admin", ["filter" => "authGuard"], function ($routes) {
     $routes->get('approve-payment/(:alphanum)', 'AdminController::approve_payment/$1');
     $routes->get('add-user', 'AdminController::add_user');
     $routes->post('users-registration', 'AdminController::users_registration');
+    $routes->get('payment-modes/(:alphanum)', 'AdminController::payment_modes/$1');
+
     $routes->get('edit-guestpost/(:alphanum)', 'AdminController::edit_guestpost/$1');
     $routes->post('update-guestpost', 'AdminController::update_guestpost');
     $routes->get('project', 'AdminController::project');
@@ -106,6 +108,7 @@ $routes->group("manager", ["filter" => "authGuard"], function ($routes) {
     $routes->get('approve-payment/(:alphanum)', 'ManagerController::approve_payment/$1');
     $routes->get('add-user', 'ManagerController::add_user');
     $routes->post('users-registration', 'ManagerController::users_registration');
+    $routes->get('payment-modes/(:alphanum)', 'ManagerController::payment_modes/$1');
     $routes->get('edit-guestpost/(:alphanum)', 'ManagerController::edit_guestpost/$1');
     $routes->post('update-guestpost', 'ManagerController::update_guestpost');
     $routes->get('project', 'ManagerController::project');
